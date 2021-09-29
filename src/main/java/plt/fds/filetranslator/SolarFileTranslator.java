@@ -29,9 +29,6 @@ public class SolarFileTranslator {
 
         try {
 
-//			File inputFile = new File(string);
-//			File outputFile = new File ("C:\\Users\\albac\\OneDrive\\Escritorio\\NEXT\\PLATINO FDS\\TASKS\\20.09.21\\Solar Flux\\" + DateTime.now().toString("dd.MM.yyyy  HH-mm-ss") + ".txt");
-
             BufferedReader br = new BufferedReader(new FileReader(string));
             String line;
             int j = 0;
@@ -84,8 +81,7 @@ public class SolarFileTranslator {
 
             String europeanDatePattern = "dd.MM.yyyy  HH-mm-ss";
             DateTimeFormatter europeanDateFormatter = DateTimeFormatter.ofPattern(europeanDatePattern);
-            System.out.println(europeanDateFormatter.format(LocalDateTime.now()));
-            rb = new BufferedWriter(new FileWriter("./data/output/" + europeanDateFormatter.format(LocalDateTime.now()) + ".txt"));
+            rb = new BufferedWriter(new FileWriter("./data/output/solar flux/" + europeanDateFormatter.format(LocalDateTime.now()) + ".txt"));
             rb.write(Lines);
             for (int i = 0; i<osa.size(); i++) {
                 String month,year,day;
