@@ -8,6 +8,8 @@ import java.util.regex.Pattern;
 
 public class EOPTranslator {
 
+    public String output_file_eop;
+
     private class OutputStructure {
         String MJD_utc;
         String flags;
@@ -64,18 +66,25 @@ public class EOPTranslator {
 
             String europeanDatePattern = "dd.MM.yyyy  HH-mm-ss";
             DateTimeFormatter europeanDateFormatter = DateTimeFormatter.ofPattern(europeanDatePattern);
-            rb = new BufferedWriter(new FileWriter("./data/output/EOP/ut1utc.dat " + europeanDateFormatter.format(LocalDateTime.now()) + ".txt"));
+            this.output_file_eop = "./data/output/EOP/ut1utc.dat " + europeanDateFormatter.format(LocalDateTime.now()) + ".txt";
+            rb = new BufferedWriter(new FileWriter(this.output_file_eop));
+
             for (int i = 0; i<osa.size(); i++) {
             /* CAREFUL with the whitespaces, due to the positive/negative numbers, that CAN NOT BE REMOVED */
                 rb.write("      " + osa.get(i).MJD_utc + "      " + osa.get(i).flags + "         " + osa.get(i).PM_x + "      " + osa.get(i).PM_y + "       " + osa.get(i).ut1_utc);
                 rb.newLine();
                 rb.flush();
+
             }
-                rb.close();
+
+            rb.close();
 
         } catch (IOException e) {
             System.out.println("Issue writing the information into the file.");
             e.printStackTrace();
         }
+
+
     }
+
 }

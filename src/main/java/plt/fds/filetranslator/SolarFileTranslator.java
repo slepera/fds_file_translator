@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.regex.Pattern;
 
 public class SolarFileTranslator {
+
+    public  String output_file_solar_flux;
     private String Lines =  "// this data is taken from Mean Nominal Long term Schatten predicts\r\n"
             + "\r\n" // = new line
             + "// data is given as F10.7 flux and Ap\r\n"
@@ -81,7 +83,8 @@ public class SolarFileTranslator {
 
             String europeanDatePattern = "dd.MM.yyyy  HH-mm-ss";
             DateTimeFormatter europeanDateFormatter = DateTimeFormatter.ofPattern(europeanDatePattern);
-            rb = new BufferedWriter(new FileWriter("./data/output/solar flux/" + europeanDateFormatter.format(LocalDateTime.now()) + ".txt"));
+            this.output_file_solar_flux = "./data/output/solar flux/" + europeanDateFormatter.format(LocalDateTime.now()) + ".txt";
+            rb = new BufferedWriter(new FileWriter(this.output_file_solar_flux));
             rb.write(Lines);
             for (int i = 0; i<osa.size(); i++) {
                 String month,year,day;
