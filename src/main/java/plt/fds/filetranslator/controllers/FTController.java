@@ -1,7 +1,6 @@
 package plt.fds.filetranslator.controllers;
 
 
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import plt.fds.filetranslator.EOPTranslator;
 import plt.fds.filetranslator.SolarFileTranslator;

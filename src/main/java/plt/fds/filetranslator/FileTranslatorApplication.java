@@ -9,6 +9,7 @@ FileTranslatorApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(FileTranslatorApplication.class, args);
+		BulletinATranslator bullA = new BulletinATranslator("./data/input/Bulletin A/bulletina.txt");
 	}
 
 }
