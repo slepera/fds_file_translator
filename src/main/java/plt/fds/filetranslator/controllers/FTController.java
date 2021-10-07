@@ -2,6 +2,7 @@ package plt.fds.filetranslator.controllers;
 
 
 import org.springframework.web.bind.annotation.*;
+import plt.fds.filetranslator.BulletinATranslator;
 import plt.fds.filetranslator.EOPTranslator;
 import plt.fds.filetranslator.SolarFileTranslator;
 
@@ -25,24 +26,12 @@ public class FTController {
         return "Solar Flux Translator Executed " + sft.output_file_solar_flux;
     }
 
-    @PostMapping("/ciao")
-    public String ciaoPostTranslator() {
-//        System.out.println("solar_flux rest");
-//        SolarFileTranslator sft = new SolarFileTranslator("./data/input/solar flux/AP,KPNOAA.txt");
-        return "Ciao post";
+    @GetMapping(path = "/bulletin_a/data/input/{category}/{file_name}")
+    public String BulletinATranslator(@PathVariable String category, @PathVariable String file_name) throws IOException {
+        String input_file = "./data/input/" + category +"/"+ file_name;
+        BulletinATranslator bat = new BulletinATranslator(input_file);
+        return "Bulletin A Translator Executed ";
     }
 
-    @GetMapping("/ciao")
-    public String ciaoGetTranslator() {
-//        System.out.println("solar_flux rest");
-//        SolarFileTranslator sft = new SolarFileTranslator("./data/input/solar flux/AP,KPNOAA.txt");
-        return "Ciao get";
-    }
 
-    @DeleteMapping("/ciao")
-    public String ciaoDeleteTranslator() {
-//        System.out.println("solar_flux rest");
-//        SolarFileTranslator sft = new SolarFileTranslator("./data/input/solar flux/AP,KPNOAA.txt");
-        return "Ciao delete";
-    }
 }
