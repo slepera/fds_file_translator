@@ -25,9 +25,11 @@ public class SolarFileTranslator {
         String Flux;
     }
 
+    ArrayList <OutputStructure> osa = new ArrayList<OutputStructure>();
+
     public SolarFileTranslator(String string) {
 
-        ArrayList <OutputStructure> osa = new ArrayList<OutputStructure>();
+        //ArrayList <OutputStructure> osa = new ArrayList<OutputStructure>();
 
         try {
 
@@ -105,4 +107,5 @@ public class SolarFileTranslator {
             e.printStackTrace();
         }
     }
+
 }
