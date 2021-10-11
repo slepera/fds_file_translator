@@ -18,7 +18,6 @@ FileTranslatorApplication {
 		PassPlan passPlan = DBSimulator.getPassPlan();
 		PassPlanXMLGenerator.GeneratePassPlanXML(passPlan);
 
-
 	}
 
 }
