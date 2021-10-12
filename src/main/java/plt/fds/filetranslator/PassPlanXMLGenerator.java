@@ -19,7 +19,6 @@ public class PassPlanXMLGenerator {
 
         Document doc = new Document();
         doc.setRootElement(new Element("PASS_PLAN"));
-
         Element header = new Element("Signal_Header_Type");
         header.addContent(new Element("signalID").setText(passPlan.signalHeaderType.signalID));
         header.addContent(new Element("recipientID").setText(passPlan.signalHeaderType.recipientID));
