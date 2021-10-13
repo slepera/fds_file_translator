@@ -16,9 +16,8 @@ public class PassPlan {
         {
             this.visibilityTypes[i] = new VisibilityType();
         }
+
     }
-
-
 
 
     public class VisibilityType {

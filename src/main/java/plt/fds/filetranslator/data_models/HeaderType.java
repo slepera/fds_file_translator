@@ -1,6 +1,8 @@
 package plt.fds.filetranslator.data_models;
 
 public class HeaderType {
+
+    //public EnumMissionID missionID;
     public String missionID;
     //public EnumSatID satelliteID;
     public String satelliteID;
@@ -13,4 +15,5 @@ public class HeaderType {
     public String spare;
     //public EnumSignalAim signalAim;
     public String signalAim;
+
 }

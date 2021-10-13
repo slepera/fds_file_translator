@@ -1,5 +1,6 @@
 package plt.fds.filetranslator.stubs;
 
+import plt.fds.filetranslator.data_models.AttitudeFile;
 import plt.fds.filetranslator.data_models.PassPlan;
 
 public class DBSimulator {
@@ -9,7 +10,7 @@ public class DBSimulator {
 
         passPlan.signalHeaderType.signalID = "000";
         passPlan.signalHeaderType.recipientID = "111";
-        passPlan.signalHeaderType.validitytimeWindow = "hi";
+        passPlan.signalHeaderType.validityTimeWindow = "hi";
         passPlan.signalHeaderType.missionID = "010101";
         passPlan.signalHeaderType.satelliteID = "2222";
         passPlan.signalHeaderType.originatorID = "8888";
@@ -51,4 +52,52 @@ public class DBSimulator {
 
         return passPlan;
     }
+
+    public static AttitudeFile getAttitudeFile() {
+
+        AttitudeFile attitudeFile = new AttitudeFile();
+
+        attitudeFile.attitudeFileHeader.nbAttitudelegs = 234;
+        attitudeFile.attitudeFileHeader.referenceFrame = "de acuerdo";
+        attitudeFile.attitudeFileHeader.principalPlane = "desacuerdo";
+        attitudeFile.attitudeFileHeader.columnLabelsAndUnits = "imparcial";
+        attitudeFile.attitudeFileHeader.signalID = "333";
+        attitudeFile.attitudeFileHeader.recipientID = "222";
+        attitudeFile.attitudeFileHeader.validityTimeWindow = "bye";
+        attitudeFile.attitudeFileHeader.missionID = "090909";
+        attitudeFile.attitudeFileHeader.satelliteID = "777";
+        attitudeFile.attitudeFileHeader.originatorID = "abc";
+        attitudeFile.attitudeFileHeader.originatorRole = "xyz";
+        attitudeFile.attitudeFileHeader.creationTime = "12:20";
+        attitudeFile.attitudeFileHeader.subjectType = "actor";
+        attitudeFile.attitudeFileHeader.spare = "meat";
+        attitudeFile.attitudeFileHeader.signalAim = "bad";
+
+        attitudeFile.attitudeLegs[0].legStartTime = "12:30";
+        attitudeFile.attitudeLegs[0].legStopTime = "12:45";
+        attitudeFile.attitudeLegs[0].legAttitudeType = "high";
+        attitudeFile.attitudeLegs[0].legNBAttitudeDataPoints[0] = 321;
+        attitudeFile.attitudeLegs[0].legNBAttitudeDataPoints[1] = 876;
+        attitudeFile.attitudeLegs[0].attitudeFileRecords[0].epoch = "idea";
+        attitudeFile.attitudeLegs[0].attitudeFileRecords[0].quaternion = "derecha";
+        attitudeFile.attitudeLegs[0].attitudeFileRecords[0].angularVelocity = "positive";
+        attitudeFile.attitudeLegs[0].attitudeFileRecords[1].epoch = "magari";
+        attitudeFile.attitudeLegs[0].attitudeFileRecords[1].quaternion = "izquierda";
+        attitudeFile.attitudeLegs[0].attitudeFileRecords[1].angularVelocity = "negative";
+
+        attitudeFile.attitudeLegs[1].legStartTime = "15:28";
+        attitudeFile.attitudeLegs[1].legStopTime = "18:00";
+        attitudeFile.attitudeLegs[1].legAttitudeType = "low";
+        attitudeFile.attitudeLegs[1].legNBAttitudeDataPoints[0] = 817;
+        attitudeFile.attitudeLegs[1].legNBAttitudeDataPoints[1] = 290;
+        attitudeFile.attitudeLegs[1].attitudeFileRecords[0].epoch = "summer";
+        attitudeFile.attitudeLegs[1].attitudeFileRecords[0].quaternion = "down";
+        attitudeFile.attitudeLegs[1].attitudeFileRecords[0].angularVelocity = "gym";
+        attitudeFile.attitudeLegs[1].attitudeFileRecords[1].epoch = "oppure";
+        attitudeFile.attitudeLegs[1].attitudeFileRecords[1].quaternion = "dritto";
+        attitudeFile.attitudeLegs[1].attitudeFileRecords[1].angularVelocity = "citofono";
+
+        return attitudeFile;
+    }
+
 }

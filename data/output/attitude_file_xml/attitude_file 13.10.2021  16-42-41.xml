@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Attitude_File>
+  <Attitude_File_Header>
+    <nbAttitudeLegs>234</nbAttitudeLegs>
+    <referenceFrame>de acuerdo</referenceFrame>
+    <principalPlane>desacuerdo</principalPlane>
+    <columnLabelsAndUnits>imparcial</columnLabelsAndUnits>
+    <signalID>333</signalID>
+    <recipientID>222</recipientID>
+    <validitytimeWindow>bye</validitytimeWindow>
+    <missionID>090909</missionID>
+    <satelliteID>777</satelliteID>
+    <originatorID>abc</originatorID>
+    <originatorRole>xyz</originatorRole>
+    <creationTime>12:20</creationTime>
+    <subjectType>actor</subjectType>
+    <spare>meat</spare>
+    <signalAim>bad</signalAim>
+  </Attitude_File_Header>
+  <AttitudeLeg>
+    <legStartTime>12:30</legStartTime>
+    <legStopTime>12:45</legStopTime>
+    <legAttitudeType>high</legAttitudeType>
+    <legNBAttitudeDataPoints>321</legNBAttitudeDataPoints>
+    <legNBAttitudeDataPoints>876</legNBAttitudeDataPoints>
+    <attitudeFileRecords_epoch>idea</attitudeFileRecords_epoch>
+    <attitudeFileRecords_quaternion>derecha</attitudeFileRecords_quaternion>
+    <attitudeFileRecords_angularVelocity>positive</attitudeFileRecords_angularVelocity>
+    <attitudeFileRecords_epoch>magari</attitudeFileRecords_epoch>
+    <attitudeFileRecords_quaternion>izquierda</attitudeFileRecords_quaternion>
+    <attitudeFileRecords_angularVelocity>negative</attitudeFileRecords_angularVelocity>
+    <legStartTime>15:28</legStartTime>
+    <legStopTime>18:00</legStopTime>
+    <legAttitudeType>low</legAttitudeType>
+    <legNBAttitudeDataPoints>817</legNBAttitudeDataPoints>
+    <legNBAttitudeDataPoints>290</legNBAttitudeDataPoints>
+    <attitudeFileRecords_epoch>summer</attitudeFileRecords_epoch>
+    <attitudeFileRecords_quaternion>down</attitudeFileRecords_quaternion>
+    <attitudeFileRecords_angularVelocity>gym</attitudeFileRecords_angularVelocity>
+    <attitudeFileRecords_epoch>oppure</attitudeFileRecords_epoch>
+    <attitudeFileRecords_quaternion>dritto</attitudeFileRecords_quaternion>
+    <attitudeFileRecords_angularVelocity>citofono</attitudeFileRecords_angularVelocity>
+  </AttitudeLeg>
+</Attitude_File>

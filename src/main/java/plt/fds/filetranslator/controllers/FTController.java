@@ -27,7 +27,6 @@ public class FTController {
         return "Solar Flux Translator Executed " + sft.output_file_solar_flux;
     }
 
-
     @GetMapping(path = "/bulletin_a/data/input/{category}/{file_name}")
     public BulletinAOutputModel BulletinATranslator(@PathVariable String category, @PathVariable String file_name) throws IOException {
         String input_file = "./data/input/" + category +"/"+ file_name;
