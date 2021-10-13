@@ -3,6 +3,7 @@ package plt.fds.filetranslator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import plt.fds.filetranslator.data_models.AttitudeFile;
+import plt.fds.filetranslator.data_models.OrbitalEvents;
 import plt.fds.filetranslator.data_models.PassPlan;
 import plt.fds.filetranslator.stubs.DBSimulator;
 
@@ -18,8 +19,11 @@ FileTranslatorApplication {
 		//PassPlan passPlan = DBSimulator.getPassPlan();
 		//PassPlanXMLGenerator.GeneratePassPlanXML(passPlan);
 
-		AttitudeFile attitudeFile = DBSimulator.getAttitudeFile();
-		AttitudeFileXMLGenerator.GenerateAttitudeFileXML(attitudeFile);
+		//AttitudeFile attitudeFile = DBSimulator.getAttitudeFile();
+		//AttitudeFileXMLGenerator.GenerateAttitudeFileXML(attitudeFile);
+
+		OrbitalEvents orbitalEvents = DBSimulator.getOrbitalEvents();
+		OrbitalEventsXMLGenerator.GenerateOrbitalEventsXML(orbitalEvents);
 
 	}
 

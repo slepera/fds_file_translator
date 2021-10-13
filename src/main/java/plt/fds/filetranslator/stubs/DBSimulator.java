@@ -1,9 +1,11 @@
 package plt.fds.filetranslator.stubs;
 
 import plt.fds.filetranslator.data_models.AttitudeFile;
+import plt.fds.filetranslator.data_models.OrbitalEvents;
 import plt.fds.filetranslator.data_models.PassPlan;
 
 public class DBSimulator {
+
     public static PassPlan getPassPlan()
     {
         PassPlan passPlan = new PassPlan();
@@ -99,5 +101,43 @@ public class DBSimulator {
 
         return attitudeFile;
     }
+
+    public static OrbitalEvents getOrbitalEvents()
+    {
+        OrbitalEvents orbitalEvents = new OrbitalEvents();
+
+        orbitalEvents.signalHeaderType.signalID = "555";
+        orbitalEvents.signalHeaderType.recipientID = "008";
+        orbitalEvents.signalHeaderType.validityTimeWindow = "hello";
+        orbitalEvents.signalHeaderType.missionID = "2876";
+        orbitalEvents.signalHeaderType.satelliteID = "9154";
+        orbitalEvents.signalHeaderType.originatorID = "94444";
+        orbitalEvents.signalHeaderType.originatorRole = "hi";
+        orbitalEvents.signalHeaderType.creationTime = "17:16";
+        orbitalEvents.signalHeaderType.subjectType = "end";
+        orbitalEvents.signalHeaderType.spare = "comida";
+        orbitalEvents.signalHeaderType.signalAim = "bad";
+
+        orbitalEvents.orbitalEventsData[0].missionRefID = "wjgt";
+        orbitalEvents.orbitalEventsData[0].spacecraftRefID = "ajhjf";
+        orbitalEvents.orbitalEventsData[0].orbitalEventType = "lcmfhg";
+        orbitalEvents.orbitalEventsData[0].eventName = "lakdget";
+        orbitalEvents.orbitalEventsData[0].eventID = "qqqq";
+        orbitalEvents.orbitalEventsData[0].startEpoch = "17:32";
+        orbitalEvents.orbitalEventsData[0].stopEpoch = "18:00";
+        orbitalEvents.orbitalEventsData[0].remarks = "out";
+
+        orbitalEvents.orbitalEventsData[1].missionRefID = "hola";
+        orbitalEvents.orbitalEventsData[1].spacecraftRefID = "adios";
+        orbitalEvents.orbitalEventsData[1].orbitalEventType = "buenas";
+        orbitalEvents.orbitalEventsData[1].eventName = "malas";
+        orbitalEvents.orbitalEventsData[1].eventID = "interesante";
+        orbitalEvents.orbitalEventsData[1].startEpoch = "17:";
+        orbitalEvents.orbitalEventsData[1].stopEpoch = "18:32";
+        orbitalEvents.orbitalEventsData[1].remarks = "in";
+
+        return orbitalEvents;
+    }
+
 
 }
