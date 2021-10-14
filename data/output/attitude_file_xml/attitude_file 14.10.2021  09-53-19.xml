@@ -25,10 +25,10 @@
     <legNBAttitudeDataPoints>876</legNBAttitudeDataPoints>
     <attitudeFileRecords>
       <epoch>idea</epoch>
-      <quaternion>idea</quaternion>
+      <quaternion>derecha</quaternion>
       <angularVelocity>positive</angularVelocity>
       <epoch>magari</epoch>
-      <quaternion>magari</quaternion>
+      <quaternion>izquierda</quaternion>
       <angularVelocity>negative</angularVelocity>
     </attitudeFileRecords>
     <legStartTime>15:28</legStartTime>
@@ -38,10 +38,10 @@
     <legNBAttitudeDataPoints>290</legNBAttitudeDataPoints>
     <attitudeFileRecords>
       <epoch>summer</epoch>
-      <quaternion>summer</quaternion>
+      <quaternion>down</quaternion>
       <angularVelocity>gym</angularVelocity>
       <epoch>oppure</epoch>
-      <quaternion>oppure</quaternion>
+      <quaternion>dritto</quaternion>
       <angularVelocity>citofono</angularVelocity>
     </attitudeFileRecords>
   </AttitudeLeg>

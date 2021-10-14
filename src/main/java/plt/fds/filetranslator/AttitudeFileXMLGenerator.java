@@ -48,7 +48,7 @@ public class AttitudeFileXMLGenerator {
             Element attitudeFileRecords =new Element("attitudeFileRecords");
             for (int k = 0; k < attitudeFile.attitudeLegs[i].attitudeFileRecords.length; k++) {
                 attitudeFileRecords.addContent(new Element ("epoch").setText(attitudeFile.attitudeLegs[i].attitudeFileRecords[k].epoch));
-                attitudeFileRecords.addContent(new Element("quaternion").setText(attitudeFile.attitudeLegs[i].attitudeFileRecords[k].epoch));
+                attitudeFileRecords.addContent(new Element("quaternion").setText(attitudeFile.attitudeLegs[i].attitudeFileRecords[k].quaternion));
                 attitudeFileRecords.addContent(new Element("angularVelocity").setText(attitudeFile.attitudeLegs[i].attitudeFileRecords[k].angularVelocity));
                 //attitudeFileXML.addContent(new Element("attitudeFileRecords_epoch").setText(attitudeFile.attitudeLegs[i].attitudeFileRecords[k].epoch));
                 //attitudeFileXML.addContent(new Element("attitudeFileRecords_quaternion").setText(attitudeFile.attitudeLegs[i].attitudeFileRecords[k].quaternion));
