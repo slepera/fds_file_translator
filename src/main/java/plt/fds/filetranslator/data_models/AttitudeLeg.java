@@ -1,6 +1,6 @@
 package plt.fds.filetranslator.data_models;
 
-public class AttitudeLeg extends AttitudeFileRecords {
+public class AttitudeLeg {
     //public DateTimeType legStartTime;
     public String legStartTime;
     //public DateTimeType legStopTime;
