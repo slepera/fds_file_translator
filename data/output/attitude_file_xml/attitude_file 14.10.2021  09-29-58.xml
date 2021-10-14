@@ -23,22 +23,26 @@
     <legAttitudeType>high</legAttitudeType>
     <legNBAttitudeDataPoints>321</legNBAttitudeDataPoints>
     <legNBAttitudeDataPoints>876</legNBAttitudeDataPoints>
-    <attitudeFileRecords_epoch>idea</attitudeFileRecords_epoch>
-    <attitudeFileRecords_quaternion>derecha</attitudeFileRecords_quaternion>
-    <attitudeFileRecords_angularVelocity>positive</attitudeFileRecords_angularVelocity>
-    <attitudeFileRecords_epoch>magari</attitudeFileRecords_epoch>
-    <attitudeFileRecords_quaternion>izquierda</attitudeFileRecords_quaternion>
-    <attitudeFileRecords_angularVelocity>negative</attitudeFileRecords_angularVelocity>
+    <attitudeFileRecords>
+      <epoch>idea</epoch>
+      <quaternion>idea</quaternion>
+      <angularVelocity>positive</angularVelocity>
+      <epoch>magari</epoch>
+      <quaternion>magari</quaternion>
+      <angularVelocity>negative</angularVelocity>
+    </attitudeFileRecords>
     <legStartTime>15:28</legStartTime>
     <legStopTime>18:00</legStopTime>
     <legAttitudeType>low</legAttitudeType>
     <legNBAttitudeDataPoints>817</legNBAttitudeDataPoints>
     <legNBAttitudeDataPoints>290</legNBAttitudeDataPoints>
-    <attitudeFileRecords_epoch>summer</attitudeFileRecords_epoch>
-    <attitudeFileRecords_quaternion>down</attitudeFileRecords_quaternion>
-    <attitudeFileRecords_angularVelocity>gym</attitudeFileRecords_angularVelocity>
-    <attitudeFileRecords_epoch>oppure</attitudeFileRecords_epoch>
-    <attitudeFileRecords_quaternion>dritto</attitudeFileRecords_quaternion>
-    <attitudeFileRecords_angularVelocity>citofono</attitudeFileRecords_angularVelocity>
+    <attitudeFileRecords>
+      <epoch>summer</epoch>
+      <quaternion>summer</quaternion>
+      <angularVelocity>gym</angularVelocity>
+      <epoch>oppure</epoch>
+      <quaternion>oppure</quaternion>
+      <angularVelocity>citofono</angularVelocity>
+    </attitudeFileRecords>
   </AttitudeLeg>
 </Attitude_File>

@@ -45,11 +45,16 @@ public class AttitudeFileXMLGenerator {
                 attitudeFileXML.addContent(new Element("legNBAttitudeDataPoints").setText(String.valueOf(attitudeFile.attitudeLegs[i].legNBAttitudeDataPoints[j])));
             }
 
+            Element attitudeFileRecords =new Element("attitudeFileRecords");
             for (int k = 0; k < attitudeFile.attitudeLegs[i].attitudeFileRecords.length; k++) {
-                attitudeFileXML.addContent(new Element("attitudeFileRecords_epoch").setText(attitudeFile.attitudeLegs[i].attitudeFileRecords[k].epoch));
-                attitudeFileXML.addContent(new Element("attitudeFileRecords_quaternion").setText(attitudeFile.attitudeLegs[i].attitudeFileRecords[k].quaternion));
-                attitudeFileXML.addContent(new Element("attitudeFileRecords_angularVelocity").setText(attitudeFile.attitudeLegs[i].attitudeFileRecords[k].angularVelocity));
+                attitudeFileRecords.addContent(new Element ("epoch").setText(attitudeFile.attitudeLegs[i].attitudeFileRecords[k].epoch));
+                attitudeFileRecords.addContent(new Element("quaternion").setText(attitudeFile.attitudeLegs[i].attitudeFileRecords[k].epoch));
+                attitudeFileRecords.addContent(new Element("angularVelocity").setText(attitudeFile.attitudeLegs[i].attitudeFileRecords[k].angularVelocity));
+                //attitudeFileXML.addContent(new Element("attitudeFileRecords_epoch").setText(attitudeFile.attitudeLegs[i].attitudeFileRecords[k].epoch));
+                //attitudeFileXML.addContent(new Element("attitudeFileRecords_quaternion").setText(attitudeFile.attitudeLegs[i].attitudeFileRecords[k].quaternion));
+                //attitudeFileXML.addContent(new Element("attitudeFileRecords_angularVelocity").setText(attitudeFile.attitudeLegs[i].attitudeFileRecords[k].angularVelocity));
             }
+            attitudeFileXML.addContent(attitudeFileRecords);
         }
 
         doc.getRootElement().addContent(header);

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Orbital_Events>
+  <Signal_Header_Type>
+    <signalID>555</signalID>
+    <recipientID>008</recipientID>
+    <validitytimeWindow>hello</validitytimeWindow>
+    <missionID>2876</missionID>
+    <satelliteID>9154</satelliteID>
+    <originatorID>94444</originatorID>
+    <originatorRole>hi</originatorRole>
+    <creationTime>17:16</creationTime>
+    <subjectType>end</subjectType>
+    <spare>comida</spare>
+    <signalAim>bad</signalAim>
+  </Signal_Header_Type>
+  <Orbital_Event>
+    <missionrefID>wjgt</missionrefID>
+    <spacecraftrefID>ajhjf</spacecraftrefID>
+    <orbitaleventType>lcmfhg</orbitaleventType>
+    <eventName>lakdget</eventName>
+    <eventID>qqqq</eventID>
+    <startEpoch>17:32</startEpoch>
+    <stopEpoch>18:00</stopEpoch>
+    <remarks>out</remarks>
+    <missionrefID>hola</missionrefID>
+    <spacecraftrefID>adios</spacecraftrefID>
+    <orbitaleventType>buenas</orbitaleventType>
+    <eventName>malas</eventName>
+    <eventID>interesante</eventID>
+    <startEpoch>17:</startEpoch>
+    <stopEpoch>18:32</stopEpoch>
+    <remarks>in</remarks>
+  </Orbital_Event>
+</Orbital_Events>

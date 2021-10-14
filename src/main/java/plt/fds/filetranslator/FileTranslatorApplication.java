@@ -19,11 +19,11 @@ FileTranslatorApplication {
 		//PassPlan passPlan = DBSimulator.getPassPlan();
 		//PassPlanXMLGenerator.GeneratePassPlanXML(passPlan);
 
-		//AttitudeFile attitudeFile = DBSimulator.getAttitudeFile();
-		//AttitudeFileXMLGenerator.GenerateAttitudeFileXML(attitudeFile);
+		AttitudeFile attitudeFile = DBSimulator.getAttitudeFile();
+		AttitudeFileXMLGenerator.GenerateAttitudeFileXML(attitudeFile);
 
-		OrbitalEvents orbitalEvents = DBSimulator.getOrbitalEvents();
-		OrbitalEventsXMLGenerator.GenerateOrbitalEventsXML(orbitalEvents);
+		//OrbitalEvents orbitalEvents = DBSimulator.getOrbitalEvents();
+		//OrbitalEventsXMLGenerator.GenerateOrbitalEventsXML(orbitalEvents);
 
 	}
 
