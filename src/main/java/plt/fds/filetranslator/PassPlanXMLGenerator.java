@@ -32,8 +32,9 @@ public class PassPlanXMLGenerator {
         header.addContent(new Element("spare").setText(passPlan.signalHeaderType.spare));
         header.addContent(new Element("signalAim").setText(passPlan.signalHeaderType.signalAim));
 
-        Element visibility = new Element("Visibility");
+        Element visibilities = new Element("Visibilities");
         for(int i = 0; i < passPlan.visibilityTypes.length; i++) {
+            Element visibility = new Element("Visibility");
             visibility.addContent(new Element("contactID").setText(passPlan.visibilityTypes[i].contactID));
             visibility.addContent(new Element("missionrefID").setText(passPlan.visibilityTypes[i].missionrefID));
             visibility.addContent(new Element("spacecraftrefID").setText(passPlan.visibilityTypes[i].spacecraftrefID));
@@ -43,10 +44,11 @@ public class PassPlanXMLGenerator {
             visibility.addContent(new Element("visibilitymaskID").setText(passPlan.visibilityTypes[i].visibilitymaskID));
             visibility.addContent(new Element("looksideGeometry").setText(passPlan.visibilityTypes[i].looksideGeometry));
             visibility.addContent(new Element("remarks").setText(passPlan.visibilityTypes[i].remarks));
+            visibilities.addContent(visibility);
         }
 
         doc.getRootElement().addContent(header);
-        doc.getRootElement().addContent(visibility);
+        doc.getRootElement().addContent(visibilities);
 
 
         XMLOutputter xmlOutputter = new XMLOutputter();

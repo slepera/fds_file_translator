@@ -18,7 +18,7 @@ public class OrbitalEventsXMLGenerator {
     public static void GenerateOrbitalEventsXML(OrbitalEvents orbitalEvents) throws IOException {
 
         Document doc = new Document();
-        doc.setRootElement(new Element("Orbital_Events"));
+        doc.setRootElement(new Element("Orbital_Events_File"));
         Element header = new Element("Signal_Header_Type");
         header.addContent(new Element("signalID").setText(orbitalEvents.signalHeaderType.signalID));
         header.addContent(new Element("recipientID").setText(orbitalEvents.signalHeaderType.recipientID));
@@ -32,8 +32,9 @@ public class OrbitalEventsXMLGenerator {
         header.addContent(new Element("spare").setText(orbitalEvents.signalHeaderType.spare));
         header.addContent(new Element("signalAim").setText(orbitalEvents.signalHeaderType.signalAim));
 
-        Element orbital = new Element("Orbital_Event");
+        Element information = new Element("Orbital_Events");
         for(int i = 0; i < orbitalEvents.orbitalEventsData.length; i++) {
+            Element orbital = new Element("Orbital_Event");
             orbital.addContent(new Element("missionrefID").setText(orbitalEvents.orbitalEventsData[i].missionRefID));
             orbital.addContent(new Element("spacecraftrefID").setText(orbitalEvents.orbitalEventsData[i].spacecraftRefID));
             orbital.addContent(new Element("orbitaleventType").setText(orbitalEvents.orbitalEventsData[i].orbitalEventType));
@@ -42,11 +43,11 @@ public class OrbitalEventsXMLGenerator {
             orbital.addContent(new Element("startEpoch").setText(orbitalEvents.orbitalEventsData[i].startEpoch));
             orbital.addContent(new Element("stopEpoch").setText(orbitalEvents.orbitalEventsData[i].stopEpoch));
             orbital.addContent(new Element("remarks").setText(orbitalEvents.orbitalEventsData[i].remarks));
-
+            information.addContent(orbital);
         }
 
         doc.getRootElement().addContent(header);
-        doc.getRootElement().addContent(orbital);
+        doc.getRootElement().addContent(information);
 
 
         XMLOutputter xmlOutputter = new XMLOutputter();
