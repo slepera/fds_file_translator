@@ -7,9 +7,10 @@ public class CustomParameters {
 
     public CustomParameters() {
 
+        int nbWayPoints = this.nbWayPoints;
         //this.nbWayPoints = new Integer();
         this.customWayPoint = new CustomWayPoint[3];
-        for (int i = 0; i < customWayPoint.length; i++) {
+        for (int i = 0; i < this.customWayPoint.length; i++) {
             this.customWayPoint[i] = new CustomWayPoint();
         }
 

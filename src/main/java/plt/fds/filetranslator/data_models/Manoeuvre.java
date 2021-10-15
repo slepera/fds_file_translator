@@ -13,7 +13,20 @@ public class Manoeuvre {
     public String finalAttitude;
     //public EnumManType manType;
     public String manType;
+    public TPF[] tpf;
 
+    public Manoeuvre() {
+        this.manID = new String();
+        this.execStartTime = new String();
+        this.execStopTime = new String();
+        this.initialAttitude = new String();
+        this.finalAttitude = new String();
+        this.manType = new String();
+        this.tpf = new TPF[4];
+        for (int i = 0; i < this.tpf.length; i++) {
+            this.tpf[i] = new TPF();
+        }
+    }
 
 
 }

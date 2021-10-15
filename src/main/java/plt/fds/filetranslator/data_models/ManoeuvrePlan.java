@@ -9,7 +9,7 @@ public class ManoeuvrePlan {
     {
         this.manPlanHeader = new ManPlanHeader();
         this.manLeg = new ManLeg[3];
-        for (int i = 0; i < manLeg.length; i++) {
+        for (int i = 0; i < this.manLeg.length; i++) {
             this.manLeg[i] = new ManLeg();
         }
 

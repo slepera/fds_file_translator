@@ -10,7 +10,7 @@ public class OrbitalEvents {
         this.signalHeaderType = new SignalHeaderType();
         this.orbitalEventsData = new OrbitalEvent[2];
 
-        for (int i = 0; i < orbitalEventsData.length; i++)
+        for (int i = 0; i < this.orbitalEventsData.length; i++)
         {
             this.orbitalEventsData[i] = new OrbitalEvent();
         }

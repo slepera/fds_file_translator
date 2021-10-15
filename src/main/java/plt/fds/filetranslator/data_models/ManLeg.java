@@ -22,15 +22,16 @@ public class ManLeg {
         this.legStartTime = new String();
         this.legStopTime = new String();
         this.blockingFlag = new String();
+        int legNBMan = this.legNBMan;
         //this.legNBMan = new Integer();
         this.remarks = new String();
         this.attitudeManoeuvre = new AttitudeManoeuvre[2];
-        for (int i = 0; i < attitudeManoeuvre.length; i++) {
+        for (int i = 0; i < this.attitudeManoeuvre.length; i++) {
             this.attitudeManoeuvre[i] = new AttitudeManoeuvre();
         }
 
         this.orbitalManoeuvre = new OrbitalManoeuvre[1];
-        for (int j = 0; j < orbitalManoeuvre.length; j++) {
+        for (int j = 0; j < this.orbitalManoeuvre.length; j++) {
             this.orbitalManoeuvre[j] = new OrbitalManoeuvre();
         }
 

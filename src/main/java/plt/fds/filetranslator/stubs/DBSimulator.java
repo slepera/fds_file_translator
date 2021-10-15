@@ -1,6 +1,7 @@
 package plt.fds.filetranslator.stubs;
 
 import plt.fds.filetranslator.data_models.AttitudeFile;
+import plt.fds.filetranslator.data_models.ManoeuvrePlan;
 import plt.fds.filetranslator.data_models.OrbitalEvents;
 import plt.fds.filetranslator.data_models.PassPlan;
 
@@ -139,5 +140,24 @@ public class DBSimulator {
         return orbitalEvents;
     }
 
+    public static ManoeuvrePlan getManoeuvrePlan() {
+        ManoeuvrePlan manoeuvrePlan = new ManoeuvrePlan();
+
+        manoeuvrePlan.manPlanHeader.nbManLeg = 123;
+        manoeuvrePlan.manPlanHeader.signalID = "324";
+        manoeuvrePlan.manPlanHeader.recipientID = "1298";
+        manoeuvrePlan.manPlanHeader.validityTimeWindow = "hi";
+        manoeuvrePlan.manPlanHeader.missionID = "010101";
+        manoeuvrePlan.manPlanHeader.satelliteID = "2222";
+        manoeuvrePlan.manPlanHeader.originatorID = "8888";
+        manoeuvrePlan.manPlanHeader.originatorRole = "bye";
+        manoeuvrePlan.manPlanHeader.creationTime = "12:02";
+        manoeuvrePlan.manPlanHeader.subjectType = "role";
+        manoeuvrePlan.manPlanHeader.spare = "food";
+        manoeuvrePlan.manPlanHeader.signalAim = "good";
+
+        return manoeuvrePlan;
+
+    }
 
 }

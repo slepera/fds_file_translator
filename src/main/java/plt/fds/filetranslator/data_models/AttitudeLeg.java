@@ -15,13 +15,13 @@ public class AttitudeLeg {
         this.legStopTime = new String();
         this.legAttitudeType = new String();
         this.legNBAttitudeDataPoints = new int[2];
-        for (int i = 0; i < legNBAttitudeDataPoints.length; i++)
+        for (int i = 0; i < this.legNBAttitudeDataPoints.length; i++)
         {
             int legNBAttitudeDataPoint = this.legNBAttitudeDataPoints[i];
         }
 
         this.attitudeFileRecords = new AttitudeFileRecords[2];
-        for (int j = 0; j < attitudeFileRecords.length; j++)
+        for (int j = 0; j < this.attitudeFileRecords.length; j++)
         {
             this.attitudeFileRecords[j] = new AttitudeFileRecords();
         }

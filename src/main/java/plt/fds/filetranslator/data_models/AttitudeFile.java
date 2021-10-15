@@ -9,7 +9,7 @@ public class AttitudeFile {
     {
         this.attitudeFileHeader = new AttitudeFileHeader();
         this.attitudeLegs = new AttitudeLeg[2];
-        for (int i = 0; i < attitudeLegs.length; i++)
+        for (int i = 0; i < this.attitudeLegs.length; i++)
         {
             this.attitudeLegs[i] = new AttitudeLeg();
 

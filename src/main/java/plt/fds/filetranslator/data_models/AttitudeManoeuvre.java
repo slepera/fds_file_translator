@@ -13,8 +13,8 @@ public class AttitudeManoeuvre extends Manoeuvre {
 
         this.targetReferenceMode = new String();
         this.attManParams = new double[2];
-        for (int i = 0; i < attManParams.length; i++) {
-            //this.attManParams[i] = new Double();
+        for (int i = 0; i < this.attManParams.length; i++) {
+            double attManParams = this.attManParams[i];
         }
 
         this.downlinkParameter = new DownlinkParameters();
