@@ -55,7 +55,6 @@ public class AttitudeFileXMLGenerator {
                 attitudeFileRecord.addContent(new Element("angularVelocity").setText(attitudeFile.attitudeLegs[i].attitudeFileRecords[k].angularVelocity));
                 attitudeFileRecords.addContent(attitudeFileRecord);
             }
-            //attitudeLeg.addContent(legNBAttitudeDataPoints);
             attitudeLeg.addContent(attitudeFileRecords);
             attitudeFileXML.addContent(attitudeLeg);
         }
