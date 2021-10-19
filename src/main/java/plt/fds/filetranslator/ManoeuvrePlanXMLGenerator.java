@@ -74,7 +74,7 @@ public class ManoeuvrePlanXMLGenerator {
                 }
                 attitudeManoeuvre.addContent(customParameter);
 
-                if (manoeuvrePlan.manLeg[i].attitudeManoeuvre[j].manType == "ATTITUDE") {
+                //if (manoeuvrePlan.manLeg[i].attitudeManoeuvre[j].manType == "ATTITUDE") {
                     Element manoeuvre_attitude = new Element("Manoeuvre");
                     manoeuvre_attitude.addContent(new Element("manID").setText(manoeuvrePlan.manLeg[i].attitudeManoeuvre[j].manID));
                     manoeuvre_attitude.addContent(new Element("execStartTime").setText(manoeuvrePlan.manLeg[i].attitudeManoeuvre[j].execStartTime));
@@ -133,7 +133,7 @@ public class ManoeuvrePlanXMLGenerator {
 
                         attitudeManoeuvre.addContent(TPF_attitude);
                     }
-                }
+               // }
 
                 attitudeManoeuvres.addContent(attitudeManoeuvre);
             }

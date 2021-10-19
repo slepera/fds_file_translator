@@ -6,6 +6,7 @@ public class OrbitalManoeuvre extends Manoeuvre {
 
     public OrbitalManoeuvre() {
 
+        this.manType = "ORBITAL";
         this.orbMansParams = new double[2];
         for (int i = 0; i < this.orbMansParams.length; i++) {
             double orbMansParams = this.orbMansParams[i];
