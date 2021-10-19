@@ -1,5 +1,7 @@
 package plt.fds.filetranslator.data_models;
 
+import java.util.ArrayList;
+
 public class Manoeuvre {
 
     public String manID;
@@ -13,8 +15,8 @@ public class Manoeuvre {
     public String finalAttitude;
     //public EnumManType manType;
     public String manType;
-    public TPF[] tpf_attitude;
-    public TPF[] tpf_orbital;
+    public ArrayList<TPF> tpf;
+
 
     public Manoeuvre() {
         this.manID = new String();
@@ -23,14 +25,12 @@ public class Manoeuvre {
         this.initialAttitude = new String();
         this.finalAttitude = new String();
         this.manType = new String();
-        this.tpf_attitude = new TPF[1];
-        for (int i = 0; i < this.tpf_attitude.length; i++) {
-            this.tpf_attitude[i] = new TPF();
-        }
-        this.tpf_orbital = new TPF[2];
-        for (int i = 0; i < this.tpf_orbital.length; i++) {
-            this.tpf_orbital[i] = new TPF();
-        }
+        this.tpf = new ArrayList<TPF>();
+    }
+
+    public void addTPF(TPF tpf)
+    {
+        this.tpf.add(tpf);
     }
 
 
