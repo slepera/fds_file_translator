@@ -25,12 +25,12 @@ public class ManLeg {
         int legNBMan = this.legNBMan;
         //this.legNBMan = new Integer();
         this.remarks = new String();
-        this.attitudeManoeuvre = new AttitudeManoeuvre[2];
+        this.attitudeManoeuvre = new AttitudeManoeuvre[1];
         for (int i = 0; i < this.attitudeManoeuvre.length; i++) {
             this.attitudeManoeuvre[i] = new AttitudeManoeuvre();
         }
 
-        this.orbitalManoeuvre = new OrbitalManoeuvre[1];
+        this.orbitalManoeuvre = new OrbitalManoeuvre[2];
         for (int j = 0; j < this.orbitalManoeuvre.length; j++) {
             this.orbitalManoeuvre[j] = new OrbitalManoeuvre();
         }

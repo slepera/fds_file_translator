@@ -22,7 +22,7 @@ public class Manoeuvre {
         this.initialAttitude = new String();
         this.finalAttitude = new String();
         this.manType = new String();
-        this.tpf = new TPF[4];
+        this.tpf = new TPF[1];
         for (int i = 0; i < this.tpf.length; i++) {
             this.tpf[i] = new TPF();
         }

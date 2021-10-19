@@ -20,6 +20,10 @@ public class AttitudeManoeuvre extends Manoeuvre {
         this.downlinkParameter = new DownlinkParameters();
         this.localOrbitalParameters = new LocalOrbitalParameters();
         this.customParameters = new CustomParameters();
+
     }
+
+
+
 
 }
