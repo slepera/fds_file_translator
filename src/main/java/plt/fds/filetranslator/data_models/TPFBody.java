@@ -6,7 +6,7 @@ public class TPFBody {
 
     public TPFBody()
     {
-        this.tpfRecord = new TPFRecords[1];
+        this.tpfRecord = new TPFRecords[2];
         for (int i = 0; i < this.tpfRecord.length; i++) {
             this.tpfRecord[i] = new TPFRecords();
         }
