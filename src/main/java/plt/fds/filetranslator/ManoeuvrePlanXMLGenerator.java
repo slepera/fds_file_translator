@@ -178,7 +178,6 @@ public class ManoeuvrePlanXMLGenerator {
         orbitalManoeuvre.addContent(manoeuvre_orbital);
         for (int p = 0; p < manoeuvrePlan.manLeg[i].orbitalManoeuvre[j].tpf.size(); p++)
         {
-            System.out.println("value of p: " + p);
             Element TPF_orbital = new Element("orbital_TPF");
             Element TPF_signalheader = new Element("TPF_Signal_Header");
             TPF_signalheader.addContent(new Element("signalID").setText(manoeuvrePlan.manLeg[i].orbitalManoeuvre[j].tpf.get(p).signalHeaderType.signalID));
