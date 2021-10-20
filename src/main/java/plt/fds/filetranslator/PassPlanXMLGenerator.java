@@ -33,17 +33,17 @@ public class PassPlanXMLGenerator {
         header.addContent(new Element("signalAim").setText(passPlan.signalHeaderType.signalAim));
 
         Element visibilities = new Element("Visibilities");
-        for(int i = 0; i < passPlan.visibilityTypes.length; i++) {
+        for(int i = 0; i < passPlan.visibilityType.size(); i++) {
             Element visibility = new Element("Visibility");
-            visibility.addContent(new Element("contactID").setText(passPlan.visibilityTypes[i].contactID));
-            visibility.addContent(new Element("missionrefID").setText(passPlan.visibilityTypes[i].missionrefID));
-            visibility.addContent(new Element("spacecraftrefID").setText(passPlan.visibilityTypes[i].spacecraftrefID));
-            visibility.addContent(new Element("groundstationrefID").setText(passPlan.visibilityTypes[i].groundstationrefID));
-            visibility.addContent(new Element("startEpoch").setText(passPlan.visibilityTypes[i].startEpoch));
-            visibility.addContent(new Element("stopEpoch").setText(passPlan.visibilityTypes[i].stopEpoch));
-            visibility.addContent(new Element("visibilitymaskID").setText(passPlan.visibilityTypes[i].visibilitymaskID));
-            visibility.addContent(new Element("looksideGeometry").setText(passPlan.visibilityTypes[i].looksideGeometry));
-            visibility.addContent(new Element("remarks").setText(passPlan.visibilityTypes[i].remarks));
+            visibility.addContent(new Element("contactID").setText(passPlan.visibilityType.get(i).contactID));
+            visibility.addContent(new Element("missionrefID").setText(passPlan.visibilityType.get(i).missionrefID));
+            visibility.addContent(new Element("spacecraftrefID").setText(passPlan.visibilityType.get(i).spacecraftrefID));
+            visibility.addContent(new Element("groundstationrefID").setText(passPlan.visibilityType.get(i).groundstationrefID));
+            visibility.addContent(new Element("startEpoch").setText(passPlan.visibilityType.get(i).startEpoch));
+            visibility.addContent(new Element("stopEpoch").setText(passPlan.visibilityType.get(i).stopEpoch));
+            visibility.addContent(new Element("visibilitymaskID").setText(passPlan.visibilityType.get(i).visibilitymaskID));
+            visibility.addContent(new Element("looksideGeometry").setText(passPlan.visibilityType.get(i).looksideGeometry));
+            visibility.addContent(new Element("remarks").setText(passPlan.visibilityType.get(i).remarks));
             visibilities.addContent(visibility);
         }
 

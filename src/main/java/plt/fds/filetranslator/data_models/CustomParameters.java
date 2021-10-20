@@ -1,19 +1,23 @@
 package plt.fds.filetranslator.data_models;
 
+import java.util.ArrayList;
+
 public class CustomParameters {
 
-    public int nbWayPoints;
-    public CustomWayPoint[] customWayPoint;
+    public Integer nbWayPoints;
+    public ArrayList<CustomWayPoint> customWayPoint;
 
     public CustomParameters() {
 
-        int nbWayPoints = this.nbWayPoints;
+        Integer nbWayPoints = this.nbWayPoints;
         //this.nbWayPoints = new Integer();
-        this.customWayPoint = new CustomWayPoint[3];
-        for (int i = 0; i < this.customWayPoint.length; i++) {
-            this.customWayPoint[i] = new CustomWayPoint();
-        }
+        this.customWayPoint = new ArrayList<CustomWayPoint>();
 
+    }
+
+    public void addCustomWayPoint(CustomWayPoint customWayPoint)
+    {
+        this.customWayPoint.add(customWayPoint);
     }
 
 }

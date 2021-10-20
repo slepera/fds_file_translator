@@ -1,19 +1,22 @@
 package plt.fds.filetranslator.data_models;
 
+import java.util.ArrayList;
+
 public class AttitudeFile {
 
     public AttitudeFileHeader attitudeFileHeader;
-    public AttitudeLeg[] attitudeLegs;
+    public ArrayList<AttitudeLeg> attitudeLegs;
 
     public  AttitudeFile ()
     {
         this.attitudeFileHeader = new AttitudeFileHeader();
-        this.attitudeLegs = new AttitudeLeg[2];
-        for (int i = 0; i < this.attitudeLegs.length; i++)
-        {
-            this.attitudeLegs[i] = new AttitudeLeg();
+        this.attitudeLegs = new ArrayList<AttitudeLeg>();
 
-        }
+    }
+
+    public void addAttitudeLeg (AttitudeLeg attitudeLegs)
+    {
+     this.attitudeLegs.add(attitudeLegs);
     }
 
 }

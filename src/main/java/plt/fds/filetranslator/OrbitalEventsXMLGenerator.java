@@ -33,16 +33,16 @@ public class OrbitalEventsXMLGenerator {
         header.addContent(new Element("signalAim").setText(orbitalEvents.signalHeaderType.signalAim));
 
         Element information = new Element("Orbital_Events");
-        for(int i = 0; i < orbitalEvents.orbitalEventsData.length; i++) {
+        for(int i = 0; i < orbitalEvents.orbitalEventsData.size(); i++) {
             Element orbital = new Element("Orbital_Event");
-            orbital.addContent(new Element("missionrefID").setText(orbitalEvents.orbitalEventsData[i].missionRefID));
-            orbital.addContent(new Element("spacecraftrefID").setText(orbitalEvents.orbitalEventsData[i].spacecraftRefID));
-            orbital.addContent(new Element("orbitaleventType").setText(orbitalEvents.orbitalEventsData[i].orbitalEventType));
-            orbital.addContent(new Element("eventName").setText(orbitalEvents.orbitalEventsData[i].eventName));
-            orbital.addContent(new Element("eventID").setText(orbitalEvents.orbitalEventsData[i].eventID));
-            orbital.addContent(new Element("startEpoch").setText(orbitalEvents.orbitalEventsData[i].startEpoch));
-            orbital.addContent(new Element("stopEpoch").setText(orbitalEvents.orbitalEventsData[i].stopEpoch));
-            orbital.addContent(new Element("remarks").setText(orbitalEvents.orbitalEventsData[i].remarks));
+            orbital.addContent(new Element("missionrefID").setText(orbitalEvents.orbitalEventsData.get(i).missionRefID));
+            orbital.addContent(new Element("spacecraftrefID").setText(orbitalEvents.orbitalEventsData.get(i).spacecraftRefID));
+            orbital.addContent(new Element("orbitaleventType").setText(orbitalEvents.orbitalEventsData.get(i).orbitalEventType));
+            orbital.addContent(new Element("eventName").setText(orbitalEvents.orbitalEventsData.get(i).eventName));
+            orbital.addContent(new Element("eventID").setText(orbitalEvents.orbitalEventsData.get(i).eventID));
+            orbital.addContent(new Element("startEpoch").setText(orbitalEvents.orbitalEventsData.get(i).startEpoch));
+            orbital.addContent(new Element("stopEpoch").setText(orbitalEvents.orbitalEventsData.get(i).stopEpoch));
+            orbital.addContent(new Element("remarks").setText(orbitalEvents.orbitalEventsData.get(i).remarks));
             information.addContent(orbital);
         }
 

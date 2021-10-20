@@ -7,4 +7,11 @@ public class SignalHeaderType extends HeaderType{
     //public TimeWindowType validityTimeWindow;
     public String validityTimeWindow;
 
+    public SignalHeaderType()
+    {
+        this.signalID = new String();
+        this.recipientID = new String();
+        this.validityTimeWindow = new String();
+    }
+
 }

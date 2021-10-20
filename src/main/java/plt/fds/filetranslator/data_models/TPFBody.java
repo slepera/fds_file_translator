@@ -1,15 +1,21 @@
 package plt.fds.filetranslator.data_models;
 
+import java.util.ArrayList;
+
 public class TPFBody {
 
-    public  TPFRecords[] tpfRecord;
+    public ArrayList<TPFRecords> tpfRecord;
 
     public TPFBody()
     {
-        this.tpfRecord = new TPFRecords[2];
-        for (int i = 0; i < this.tpfRecord.length; i++) {
-            this.tpfRecord[i] = new TPFRecords();
-        }
+        this.tpfRecord = new ArrayList<TPFRecords>();
     }
+
+    public void addTPFRecords (TPFRecords tpfRecord)
+    {
+        this.tpfRecord.add(tpfRecord);
+    }
+
+
 
 }

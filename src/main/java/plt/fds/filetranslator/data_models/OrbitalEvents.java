@@ -1,36 +1,39 @@
 package plt.fds.filetranslator.data_models;
 
+import java.util.ArrayList;
+
 public class OrbitalEvents {
 
     public SignalHeaderType signalHeaderType;
-    public OrbitalEvent[] orbitalEventsData;
+    public ArrayList<OrbitalEvent> orbitalEventsData;
 
     public  OrbitalEvents() {
 
         this.signalHeaderType = new SignalHeaderType();
-        this.orbitalEventsData = new OrbitalEvent[2];
+        this.orbitalEventsData = new ArrayList<OrbitalEvent>();
 
-        for (int i = 0; i < this.orbitalEventsData.length; i++)
-        {
-            this.orbitalEventsData[i] = new OrbitalEvent();
-        }
     }
 
-    public class OrbitalEvent {
+    public static class OrbitalEvent {
         //public EnumMissionID missionRefID;
-        public String missionRefID;
+        public String missionRefID = new String();
         //public EnumSatID spacecraftRefID;
-        public String spacecraftRefID;
+        public String spacecraftRefID = new String();
         //public enumOrbitalEventTypes orbitalEventType;
-        public String orbitalEventType;
-        public String eventName;
-        public String eventID;
+        public String orbitalEventType = new String();
+        public String eventName = new String();
+        public String eventID = new String();
         //public DateTimeType startEpoch;
-        public String startEpoch;
+        public String startEpoch = new String();
         //public DateTimeType stopEpoch;
-        public String stopEpoch;
-        public String remarks;
+        public String stopEpoch = new String();
+        public String remarks = new String();
 
+    }
+
+    public void addOrbitalEvent (OrbitalEvent orbitalEventsData)
+    {
+        this.orbitalEventsData.add(orbitalEventsData);
     }
 
 }

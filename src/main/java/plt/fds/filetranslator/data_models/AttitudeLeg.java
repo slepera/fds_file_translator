@@ -1,5 +1,7 @@
 package plt.fds.filetranslator.data_models;
 
+import java.util.ArrayList;
+
 public class AttitudeLeg {
     //public DateTimeType legStartTime;
     public String legStartTime;
@@ -7,25 +9,26 @@ public class AttitudeLeg {
     public String legStopTime;
     //public EnumLegAttitudeType legAttitudeType;
     public String legAttitudeType;
-    public int[] legNBAttitudeDataPoints;
-    public AttitudeFileRecords[] attitudeFileRecords;
+    public ArrayList<Integer> legNBAttitudeDataPoints;
+    public ArrayList<AttitudeFileRecords> attitudeFileRecords;
 
     public AttitudeLeg() {
         this.legStartTime = new String();
         this.legStopTime = new String();
         this.legAttitudeType = new String();
-        this.legNBAttitudeDataPoints = new int[2];
-        for (int i = 0; i < this.legNBAttitudeDataPoints.length; i++)
-        {
-            int legNBAttitudeDataPoint = this.legNBAttitudeDataPoints[i];
-        }
-
-        this.attitudeFileRecords = new AttitudeFileRecords[2];
-        for (int j = 0; j < this.attitudeFileRecords.length; j++)
-        {
-            this.attitudeFileRecords[j] = new AttitudeFileRecords();
-        }
-
-
+        this.legNBAttitudeDataPoints = new ArrayList<Integer>();
+        this.attitudeFileRecords = new ArrayList<AttitudeFileRecords>();
     }
+
+    public  void addLegNBAttitudeDataPoints(Integer legNBAttitudeDataPoints)
+    {
+        this.legNBAttitudeDataPoints.add(legNBAttitudeDataPoints);
+    }
+
+
+    public void addAttitudeFileRecords(AttitudeFileRecords attitudeFileRecords)
+    {
+        this.attitudeFileRecords.add(attitudeFileRecords);
+    }
+
 }
