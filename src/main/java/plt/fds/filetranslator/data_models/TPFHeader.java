@@ -10,7 +10,7 @@ public class TPFHeader {
     //public EnumTpfDestination destination;
     public String destination;
     public String source;
-    public int nbRecords;
+    public Integer nbRecords;
     //public DateTimeType releaseTime;
     public String releaseTime;
     //public DateTimeType earliestReleaseTime;
@@ -19,8 +19,26 @@ public class TPFHeader {
     public String latestReleaseTime;
     //public DateTimeType executionTime;
     public String executionTime;
-    public int subScheduleID;
+    public Integer subScheduleID;
     public String tpfRemarks;
 
+    public TPFHeader()
+    {
+        this.taskName = new String();
+        this.taskType = new String();
+        this.parameterSetName = new String();
+        this.parameterValueSetName = new String();
+        this.destination = new String();
+        this.source = new String();
+        Integer nbRecords = this.nbRecords;
+        this.releaseTime = new String();
+        this.earliestReleaseTime = new String();
+        this.latestReleaseTime = new String();
+        this.executionTime = new String();
+        Integer subScheduleID = this.subScheduleID;
+        this.tpfRemarks = new String();
+
+
+    }
 }
 

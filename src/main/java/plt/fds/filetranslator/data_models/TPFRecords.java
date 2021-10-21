@@ -10,4 +10,14 @@ public class TPFRecords {
     public String paramValueRadix;
     public String paramRemarks;
 
+    public TPFRecords()
+    {
+        this.paramName = new String();
+        this.paramValueType = new String();
+        this.paramValue = new String();
+        this.paramValueUnit = new String();
+        this.paramValueRadix = new String();
+        this.paramRemarks = new String();
+    }
+
 }

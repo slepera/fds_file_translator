@@ -7,8 +7,8 @@ public class TPF {
     public SignalHeaderType signalHeaderType;
 
     public TPF() {
-        tpfHeader = new TPFHeader();
-        tpfBody = new TPFBody();
-        signalHeaderType = new SignalHeaderType();
+        this.tpfHeader = new TPFHeader();
+        this.tpfBody = new TPFBody();
+        this.signalHeaderType = new SignalHeaderType();
     }
 }

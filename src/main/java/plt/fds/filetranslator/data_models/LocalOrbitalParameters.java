@@ -5,4 +5,9 @@ public class LocalOrbitalParameters {
     //public QuaternionsType q_ORB2BRF;
     public String q_ORB2BRF;
 
+    public LocalOrbitalParameters()
+    {
+        this.q_ORB2BRF = new String();
+    }
+
 }

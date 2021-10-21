@@ -1,26 +1,20 @@
 package plt.fds.filetranslator.data_models;
 
+import java.util.ArrayList;
+
 public class PassPlan {
-    /*
-    signalHeaderType + HeaderType = 11 variables
-    visibility = 9 variables for each block
-     */
+
     public SignalHeaderType signalHeaderType;
-    public VisibilityType[] visibilityTypes;
+    public ArrayList<VisibilityType> visibilityType;
 
     public PassPlan()
     {
         this.signalHeaderType = new SignalHeaderType();
-        this.visibilityTypes = new VisibilityType[3];
-        for(int i = 0; i < visibilityTypes.length; i++)
-        {
-            this.visibilityTypes[i] = new VisibilityType();
-        }
+        this.visibilityType = new ArrayList<VisibilityType>();
 
     }
 
-
-    public class VisibilityType {
+    public static class VisibilityType {
          public String contactID;
          //public EnumMissionID missionrefID;
          public String missionrefID;
@@ -36,5 +30,10 @@ public class PassPlan {
          //public EnumContactLookingGeometry looksideGeometry;
          public String looksideGeometry;
          public String remarks;
+    }
+
+    public void addVisibilityType (VisibilityType visibilityType)
+    {
+        this.visibilityType.add(visibilityType);
     }
 }

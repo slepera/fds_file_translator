@@ -16,4 +16,16 @@ public class HeaderType {
     //public EnumSignalAim signalAim;
     public String signalAim;
 
+    public HeaderType()
+    {
+        this.missionID = new String();
+        this.satelliteID = new String();
+        this.originatorID = new String();
+        this.originatorRole = new String();
+        this.creationTime = new String();
+        this.subjectType = new String();
+        this.spare = new String();
+        this.signalAim = new String();
+    }
+
 }

@@ -7,4 +7,10 @@ public class DownlinkParameters {
     //public Vector3DType stationPos;
     public String stationPos;
 
+    public DownlinkParameters()
+    {
+        this.antennaVers = new String();
+        this.stationPos = new String();
+    }
+
 }

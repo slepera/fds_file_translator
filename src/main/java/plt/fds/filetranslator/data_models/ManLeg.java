@@ -1,5 +1,7 @@
 package plt.fds.filetranslator.data_models;
 
+import java.util.ArrayList;
+
 public class ManLeg {
 
     public String legID;
@@ -10,10 +12,10 @@ public class ManLeg {
     public String legStopTime;
     //public EnumBlockingFlag blockingFlag;
     public String blockingFlag;
-    public int legNBMan;
+    public Integer legNBMan;
     public String remarks;
-    public AttitudeManoeuvre[] attitudeManoeuvre;
-    public OrbitalManoeuvre [] orbitalManoeuvre;
+    public ArrayList<AttitudeManoeuvre> attitudeManoeuvre;
+    public ArrayList<OrbitalManoeuvre> orbitalManoeuvre;
 
     public ManLeg()
     {
@@ -22,22 +24,22 @@ public class ManLeg {
         this.legStartTime = new String();
         this.legStopTime = new String();
         this.blockingFlag = new String();
-        int legNBMan = this.legNBMan;
+        Integer legNBMan = this.legNBMan;
         //this.legNBMan = new Integer();
         this.remarks = new String();
-        this.attitudeManoeuvre = new AttitudeManoeuvre[1];
-        for (int i = 0; i < this.attitudeManoeuvre.length; i++) {
-            this.attitudeManoeuvre[i] = new AttitudeManoeuvre();
-        }
+        this.attitudeManoeuvre = new ArrayList<AttitudeManoeuvre>();
+        this.orbitalManoeuvre = new ArrayList<OrbitalManoeuvre>();
 
-        this.orbitalManoeuvre = new OrbitalManoeuvre[2];
-        for (int j = 0; j < this.orbitalManoeuvre.length; j++) {
-            this.orbitalManoeuvre[j] = new OrbitalManoeuvre();
-        }
+    }
 
+    public void addAttitudeManoeuvre (AttitudeManoeuvre attitudeManoeuvre)
+    {
+        this.attitudeManoeuvre.add(attitudeManoeuvre);
+    }
 
-
-
+    public void addOrbitalManoeuvre (OrbitalManoeuvre orbitalManoeuvre)
+    {
+        this.orbitalManoeuvre.add(orbitalManoeuvre);
     }
 
 }

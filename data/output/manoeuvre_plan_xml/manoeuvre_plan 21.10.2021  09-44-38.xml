@@ -15,7 +15,7 @@
     <signalAim>good</signalAim>
   </Man_Plan_Header>
   <ManLegs>
-    <manLeg>
+    <ManLeg>
       <legID>209</legID>
       <legManType>man</legManType>
       <legStartTime>14:30</legStartTime>
@@ -23,9 +23,9 @@
       <blockingFlag>woman</blockingFlag>
       <legNBMan>763</legNBMan>
       <remarks>adiós</remarks>
-    </manLeg>
+    </ManLeg>
     <Attitude_Manoeuvres>
-      <attitude_Manoeuvre>
+      <Attitude_Manoeuvre>
         <targetReferenceMode>Adele</targetReferenceMode>
         <attManParams>23.9</attManParams>
         <attManParams>32.8</attManParams>
@@ -118,12 +118,13 @@
             </TPF_Records>
           </TPF_Body>
         </Attitude_TPF>
-      </attitude_Manoeuvre>
+      </Attitude_Manoeuvre>
     </Attitude_Manoeuvres>
     <Orbital_Manoeuvres>
       <Orbital_Manoeuvre>
         <orbManParams>2.1</orbManParams>
-        <orbManParams>3.9</orbManParams>
+        <orbManParams>32.4</orbManParams>
+        <orbManParams>18.33</orbManParams>
         <Manoeuvre>
           <manID>sunny</manID>
           <execStartTime>09:26</execStartTime>
@@ -132,7 +133,65 @@
           <finalAttitude>18765</finalAttitude>
           <manType>ORBITAL</manType>
         </Manoeuvre>
-        <orbital_TPF>
+        <Orbital_TPF>
+          <TPF_Signal_Header>
+            <signalID>aaa</signalID>
+            <recipientID>bbb</recipientID>
+            <validityTimeWindow>ccc</validityTimeWindow>
+            <missionID>ddd</missionID>
+            <satelliteID>eee</satelliteID>
+            <originatorID>fff</originatorID>
+            <originatorRole>ggg</originatorRole>
+            <creationTime>hhh</creationTime>
+            <subjectType>jjj</subjectType>
+            <spare>kkk</spare>
+            <signalAim>lll</signalAim>
+          </TPF_Signal_Header>
+          <TPF_Header>
+            <taskName>mmm</taskName>
+            <taskType>nnn</taskType>
+            <parameterSetName>ñññ</parameterSetName>
+            <parameterValueSetName>ooo</parameterValueSetName>
+            <destination>ppp</destination>
+            <source>qqq</source>
+            <nbRecords>987</nbRecords>
+            <releaseTime>rrr</releaseTime>
+            <earliestReleaseTime>sss</earliestReleaseTime>
+            <latestReleaseTime>ttt</latestReleaseTime>
+            <executionTime>uuu</executionTime>
+            <subScheduleID>22222</subScheduleID>
+            <tpfRemarks>vvv</tpfRemarks>
+          </TPF_Header>
+          <TPF_Body>
+            <TPF_Records>
+              <TPF_Record>
+                <paramName>www</paramName>
+                <paramValueType>www2</paramValueType>
+                <paramValue>xxx</paramValue>
+                <paramValueUnit>yyy</paramValueUnit>
+                <paramValueRadix>zzz</paramValueRadix>
+                <paramRemarks>z2z</paramRemarks>
+              </TPF_Record>
+              <TPF_Record>
+                <paramName>www34</paramName>
+                <paramValueType>1www2</paramValueType>
+                <paramValue>xxx67</paramValue>
+                <paramValueUnit>y32yy</paramValueUnit>
+                <paramValueRadix>zz42z</paramValueRadix>
+                <paramRemarks>z2z98</paramRemarks>
+              </TPF_Record>
+              <TPF_Record>
+                <paramName>prueba</paramName>
+                <paramValueType>prueba</paramValueType>
+                <paramValue>prueba</paramValue>
+                <paramValueUnit>prueba</paramValueUnit>
+                <paramValueRadix>prueba</paramValueRadix>
+                <paramRemarks>prueba</paramRemarks>
+              </TPF_Record>
+            </TPF_Records>
+          </TPF_Body>
+        </Orbital_TPF>
+        <Orbital_TPF>
           <TPF_Signal_Header>
             <signalID>aaa</signalID>
             <recipientID>bbb</recipientID>
@@ -181,57 +240,7 @@
               </TPF_Record>
             </TPF_Records>
           </TPF_Body>
-        </orbital_TPF>
-        <orbital_TPF>
-          <TPF_Signal_Header>
-            <signalID>aaa</signalID>
-            <recipientID>bbb</recipientID>
-            <validityTimeWindow>ccc</validityTimeWindow>
-            <missionID>ddd</missionID>
-            <satelliteID>eee</satelliteID>
-            <originatorID>fff</originatorID>
-            <originatorRole>ggg</originatorRole>
-            <creationTime>hhh</creationTime>
-            <subjectType>jjj</subjectType>
-            <spare>kkk</spare>
-            <signalAim>lll</signalAim>
-          </TPF_Signal_Header>
-          <TPF_Header>
-            <taskName>mmm</taskName>
-            <taskType>nnn</taskType>
-            <parameterSetName>ñññ</parameterSetName>
-            <parameterValueSetName>ooo</parameterValueSetName>
-            <destination>ppp</destination>
-            <source>qqq</source>
-            <nbRecords>987</nbRecords>
-            <releaseTime>rrr</releaseTime>
-            <earliestReleaseTime>sss</earliestReleaseTime>
-            <latestReleaseTime>ttt</latestReleaseTime>
-            <executionTime>uuu</executionTime>
-            <subScheduleID>22222</subScheduleID>
-            <tpfRemarks>vvv</tpfRemarks>
-          </TPF_Header>
-          <TPF_Body>
-            <TPF_Records>
-              <TPF_Record>
-                <paramName>www</paramName>
-                <paramValueType>www2</paramValueType>
-                <paramValue>xxx</paramValue>
-                <paramValueUnit>yyy</paramValueUnit>
-                <paramValueRadix>zzz</paramValueRadix>
-                <paramRemarks>z2z</paramRemarks>
-              </TPF_Record>
-              <TPF_Record>
-                <paramName>www34</paramName>
-                <paramValueType>1www2</paramValueType>
-                <paramValue>xxx67</paramValue>
-                <paramValueUnit>y32yy</paramValueUnit>
-                <paramValueRadix>zz42z</paramValueRadix>
-                <paramRemarks>z2z98</paramRemarks>
-              </TPF_Record>
-            </TPF_Records>
-          </TPF_Body>
-        </orbital_TPF>
+        </Orbital_TPF>
       </Orbital_Manoeuvre>
       <Orbital_Manoeuvre>
         <orbManParams>7.8</orbManParams>
@@ -244,7 +253,7 @@
           <finalAttitude>18765</finalAttitude>
           <manType>ORBITAL</manType>
         </Manoeuvre>
-        <orbital_TPF>
+        <Orbital_TPF>
           <TPF_Signal_Header>
             <signalID>aaa</signalID>
             <recipientID>bbb</recipientID>
@@ -293,8 +302,8 @@
               </TPF_Record>
             </TPF_Records>
           </TPF_Body>
-        </orbital_TPF>
-        <orbital_TPF>
+        </Orbital_TPF>
+        <Orbital_TPF>
           <TPF_Signal_Header>
             <signalID>aaa</signalID>
             <recipientID>bbb</recipientID>
@@ -343,7 +352,7 @@
               </TPF_Record>
             </TPF_Records>
           </TPF_Body>
-        </orbital_TPF>
+        </Orbital_TPF>
       </Orbital_Manoeuvre>
     </Orbital_Manoeuvres>
   </ManLegs>
