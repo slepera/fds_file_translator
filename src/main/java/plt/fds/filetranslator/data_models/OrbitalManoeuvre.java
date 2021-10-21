@@ -13,9 +13,9 @@ public class OrbitalManoeuvre extends Manoeuvre {
 
     }
 
-    public void addOrbMansParams (Double orbMansParams)
+    public void addOrbMansParams (int i, Double orbMansParams)
     {
-        this.orbMansParams.add(orbMansParams);
+        this.orbMansParams.add(i, orbMansParams);
     }
 
 }

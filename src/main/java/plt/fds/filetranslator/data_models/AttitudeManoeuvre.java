@@ -22,10 +22,10 @@ public class AttitudeManoeuvre extends Manoeuvre {
 
     }
 
-    public void addAttManParams (Double attManParams)
+    public void addAttManParams (int i, Double attManParams)
     {
 
-        this.attManParams.add( attManParams);
+        this.attManParams.add(i, attManParams);
     }
 
 }

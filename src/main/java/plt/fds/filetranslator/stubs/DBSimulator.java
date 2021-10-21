@@ -74,13 +74,12 @@ public class DBSimulator {
         attitudeFile.attitudeFileHeader.spare = "meat";
         attitudeFile.attitudeFileHeader.signalAim = "bad";
 
+        attitudeFile.addAttitudeLeg(new AttitudeLeg());
         attitudeFile.attitudeLegs.get(0).legStartTime = "12:30";
         attitudeFile.attitudeLegs.get(0).legStopTime = "12:45";
         attitudeFile.attitudeLegs.get(0).legAttitudeType = "high";
-        //attitudeFile.attitudeLegs.get(0).addLegNBAttitudeDataPoints(new Integer());
-        attitudeFile.attitudeLegs.get(0).legNBAttitudeDataPoints.add(0, 321);
-        //attitudeFile.attitudeLegs.get(0).addLegNBAttitudeDataPoints(new Integer());
-        attitudeFile.attitudeLegs.get(0).legNBAttitudeDataPoints.add(1,876);
+        attitudeFile.attitudeLegs.get(0).addLegNBAttitudeDataPoints(0,320);
+        attitudeFile.attitudeLegs.get(0).addLegNBAttitudeDataPoints(1, 876);
         attitudeFile.attitudeLegs.get(0).addAttitudeFileRecords(new AttitudeFileRecords());
         attitudeFile.attitudeLegs.get(0).attitudeFileRecords.get(0).epoch = "idea";
         attitudeFile.attitudeLegs.get(0).attitudeFileRecords.get(0).quaternion = "derecha";
@@ -90,6 +89,7 @@ public class DBSimulator {
         attitudeFile.attitudeLegs.get(0).attitudeFileRecords.get(1).quaternion = "izquierda";
         attitudeFile.attitudeLegs.get(0).attitudeFileRecords.get(1).angularVelocity = "negative";
 
+        attitudeFile.addAttitudeLeg(new AttitudeLeg());
         attitudeFile.attitudeLegs.get(1).legStartTime = "15:28";
         attitudeFile.attitudeLegs.get(1).legStopTime = "18:00";
         attitudeFile.attitudeLegs.get(1).legAttitudeType = "low";
@@ -104,6 +104,22 @@ public class DBSimulator {
         attitudeFile.attitudeLegs.get(1).attitudeFileRecords.get(1).epoch = "oppure";
         attitudeFile.attitudeLegs.get(1).attitudeFileRecords.get(1).quaternion = "dritto";
         attitudeFile.attitudeLegs.get(1).attitudeFileRecords.get(1).angularVelocity = "citofono";
+
+        attitudeFile.addAttitudeLeg(new AttitudeLeg());
+        attitudeFile.attitudeLegs.get(2).legStartTime = "09:15";
+        attitudeFile.attitudeLegs.get(2).legStopTime = "10:00";
+        attitudeFile.attitudeLegs.get(2).legAttitudeType = "high";
+        attitudeFile.attitudeLegs.get(2).legNBAttitudeDataPoints.add(0,123);
+        attitudeFile.attitudeLegs.get(2).legNBAttitudeDataPoints.add(1, 456);
+        attitudeFile.attitudeLegs.get(2).legNBAttitudeDataPoints.add(2, 789);
+        attitudeFile.attitudeLegs.get(2).addAttitudeFileRecords(new AttitudeFileRecords());
+        attitudeFile.attitudeLegs.get(2).attitudeFileRecords.get(0).epoch = "winter";
+        attitudeFile.attitudeLegs.get(2).attitudeFileRecords.get(0).quaternion = "down";
+        attitudeFile.attitudeLegs.get(2).attitudeFileRecords.get(0).angularVelocity = "gym";
+        attitudeFile.attitudeLegs.get(2).addAttitudeFileRecords(new AttitudeFileRecords());
+        attitudeFile.attitudeLegs.get(2).attitudeFileRecords.get(1).epoch = "oppure";
+        attitudeFile.attitudeLegs.get(2).attitudeFileRecords.get(1).quaternion = "dritto";
+        attitudeFile.attitudeLegs.get(2).attitudeFileRecords.get(1).angularVelocity = "citofono";
 
         return attitudeFile;
     }
@@ -175,29 +191,24 @@ public class DBSimulator {
         manoeuvrePlan.manLeg.get(0).addAttitudeManoeuvre(new AttitudeManoeuvre());
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).targetReferenceMode = "Adele";
 
-        //manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).addAttManParams(new Double());
-        //manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).attManParams.get(0) = 23.9;
-        //manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).addAttManParams(new Double());
-        //manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).attManParams.get(1) = 32.8;
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).addAttManParams(0, 23.9);
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).addAttManParams(1, 32.8);
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).downlinkParameter.antennaVers = "easy";
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).downlinkParameter.stationPos = "on me";
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).localOrbitalParameters.q_ORB2BRF = "peaches";
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.nbWayPoints = 964;
-
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.addCustomWayPoint(new CustomWayPoint());
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(0).wayPointID = 2534;
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(0).epoch = "light";
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(0).q_ECI2BRF = "dark";
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(0).w_BRF = "dawn";
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(0).w_dot_BRF = "night";
-
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.addCustomWayPoint(new CustomWayPoint());
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(1).wayPointID = 98754;
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(1).epoch = "today";
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(1).q_ECI2BRF = "tomorrow";
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(1).w_BRF = "day";
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(1).w_dot_BRF = "afternoon";
-
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.addCustomWayPoint(new CustomWayPoint());
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(2).wayPointID = 21133;
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(2).epoch = "tomorrow";
@@ -254,10 +265,9 @@ public class DBSimulator {
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).tpf.get(0).tpfBody.tpfRecord.get(1).paramRemarks = "z2z98r";
 
         manoeuvrePlan.manLeg.get(0).addOrbitalManoeuvre(new OrbitalManoeuvre());
-       // manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).addOrbMansParams(new Double());
-       // manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).orbMansParams[0] = 2.1;
-       // manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).addOrbMansParams(new Double());
-       // manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).orbMansParams[1] = 3.9;
+        manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).addOrbMansParams(0, 2.1);
+        manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).addOrbMansParams(1,32.4);
+        manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).addOrbMansParams(2,18.33);
 
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).manID = "sunny";
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).execStartTime = "09:26";
@@ -356,10 +366,8 @@ public class DBSimulator {
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).tpf.get(1).tpfBody.tpfRecord.get(1).paramRemarks = "z2z98";
 
         manoeuvrePlan.manLeg.get(0).addOrbitalManoeuvre(new OrbitalManoeuvre());
-        //manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).addOrbMansParams(new Double());
-        //manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).orbMansParams[0] = 7.8;
-        //manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).addOrbMansParams(new Double());
-        //manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).orbMansParams[1] = 0.9;
+        manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).addOrbMansParams(0, 7.8);
+        manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).addOrbMansParams(1, 0.9);
 
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).manID = "cloudy";
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).execStartTime = "09:26";

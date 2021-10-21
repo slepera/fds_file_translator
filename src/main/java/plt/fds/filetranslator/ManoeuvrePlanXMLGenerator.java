@@ -36,7 +36,7 @@ public class ManoeuvrePlanXMLGenerator {
 
         Element manoeuvreFileXML = new Element("ManLegs");
         for (int i = 0; i < manoeuvrePlan.manLeg.size(); i++) {
-            Element manLeg = new Element("manLeg");
+            Element manLeg = new Element("ManLeg");
             manLeg.addContent(new Element("legID").setText(manoeuvrePlan.manLeg.get(i).legID));
             manLeg.addContent(new Element("legManType").setText(manoeuvrePlan.manLeg.get(i).legManType));
             manLeg.addContent(new Element("legStartTime").setText(manoeuvrePlan.manLeg.get(i).legStartTime));
@@ -48,7 +48,7 @@ public class ManoeuvrePlanXMLGenerator {
 
             Element attitudeManoeuvres = new Element("Attitude_Manoeuvres");
             for (int j = 0; j < manoeuvrePlan.manLeg.get(i).attitudeManoeuvre.size(); j++) {
-                Element attitudeManoeuvre = new Element("attitude_Manoeuvre");
+                Element attitudeManoeuvre = new Element("Attitude_Manoeuvre");
                 CreateAttitudeManoeuvre(attitudeManoeuvre, i, j);
                 attitudeManoeuvres.addContent(attitudeManoeuvre);
             }
@@ -178,7 +178,7 @@ public class ManoeuvrePlanXMLGenerator {
         orbitalManoeuvre.addContent(manoeuvre_orbital);
         for (int p = 0; p < manoeuvrePlan.manLeg.get(i).orbitalManoeuvre.get(j).tpf.size(); p++)
         {
-            Element TPF_orbital = new Element("orbital_TPF");
+            Element TPF_orbital = new Element("Orbital_TPF");
             Element TPF_signalheader = new Element("TPF_Signal_Header");
             TPF_signalheader.addContent(new Element("signalID").setText(manoeuvrePlan.manLeg.get(i).orbitalManoeuvre.get(j).tpf.get(p).signalHeaderType.signalID));
             TPF_signalheader.addContent(new Element("recipientID").setText(manoeuvrePlan.manLeg.get(i).orbitalManoeuvre.get(j).tpf.get(p).signalHeaderType.recipientID));
