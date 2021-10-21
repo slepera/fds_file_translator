@@ -20,9 +20,9 @@ public class AttitudeLeg {
         this.attitudeFileRecords = new ArrayList<AttitudeFileRecords>();
     }
 
-    public  void addLegNBAttitudeDataPoints(int i, Integer legNBAttitudeDataPoints)
+    public  void addLegNBAttitudeDataPoints(Integer legNBAttitudeDataPoints)
     {
-        this.legNBAttitudeDataPoints.add(i, legNBAttitudeDataPoints);
+        this.legNBAttitudeDataPoints.add(legNBAttitudeDataPoints);
     }
 
 
