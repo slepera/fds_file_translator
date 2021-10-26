@@ -2,10 +2,7 @@ package plt.fds.filetranslator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import plt.fds.filetranslator.data_models.AttitudeFile;
-import plt.fds.filetranslator.data_models.ManoeuvrePlan;
-import plt.fds.filetranslator.data_models.OrbitalEvents;
-import plt.fds.filetranslator.data_models.PassPlan;
+import plt.fds.filetranslator.data_models.*;
 import plt.fds.filetranslator.stubs.DBSimulator;
 
 import java.io.IOException;
@@ -26,8 +23,11 @@ FileTranslatorApplication {
 		//OrbitalEvents orbitalEvents = DBSimulator.getOrbitalEvents();
 		//OrbitalEventsXMLGenerator.GenerateOrbitalEventsXML(orbitalEvents);
 
-		ManoeuvrePlan manoeuvrePlan = DBSimulator.getManoeuvrePlan();
-		ManoeuvrePlanXMLGenerator.GenerateManoeuvreFileXML(manoeuvrePlan);
+		//ManoeuvrePlan manoeuvrePlan = DBSimulator.getManoeuvrePlan();
+		//ManoeuvrePlanXMLGenerator.GenerateManoeuvreFileXML(manoeuvrePlan);
+
+		TPF tpf = DBSimulator.getTPF();
+		TPFFileGenerator.CreateTPFTextFile(tpf);
 
 	}
 

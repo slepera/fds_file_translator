@@ -462,4 +462,39 @@ public class DBSimulator {
 
     }
 
+    public static TPF getTPF(){
+
+        TPF tpf = new TPF();
+
+        tpf.tpfHeader.taskName = "01234567";
+        tpf.tpfHeader.taskType = "9";
+        tpf.tpfHeader.parameterSetName = "11-15-18";
+        tpf.tpfHeader.parameterValueSetName = "20-25-27";
+        tpf.tpfHeader.destination = "1";
+        tpf.tpfHeader.source = "3";
+        tpf.tpfHeader.nbRecords = 157;
+        tpf.tpfHeader.releaseTime = "01234567890123456789";
+        tpf.tpfHeader.earliestReleaseTime = "98765432109876543210";
+        tpf.tpfHeader.latestReleaseTime = "01234567890123456789";
+        tpf.tpfHeader.executionTime = "01234567890123456789";
+        tpf.tpfHeader.subScheduleID = 21225;
+        tpf.tpfHeader.tpfRemarks = "vvv";
+        tpf.tpfBody.addTPFRecords(new TPFRecords());
+        tpf.tpfBody.tpfRecord.get(0).paramName = "01234567";
+        tpf.tpfBody.tpfRecord.get(0).paramValueType = "9";
+        tpf.tpfBody.tpfRecord.get(0).paramValue = "01234567890123456789";
+        tpf.tpfBody.tpfRecord.get(0).paramValueUnit = "3235";
+        tpf.tpfBody.tpfRecord.get(0).paramValueRadix = "7";
+        tpf.tpfBody.tpfRecord.get(0).paramRemarks = "z2z";
+        tpf.tpfBody.addTPFRecords(new TPFRecords());
+        tpf.tpfBody.tpfRecord.get(1).paramName = "www34po";
+        tpf.tpfBody.tpfRecord.get(1).paramValueType = "1";
+        tpf.tpfBody.tpfRecord.get(1).paramValue = "abcdefghijklmñnopqrt";
+        tpf.tpfBody.tpfRecord.get(1).paramValueUnit = "y32y";
+        tpf.tpfBody.tpfRecord.get(1).paramValueRadix = "z";
+        tpf.tpfBody.tpfRecord.get(1).paramRemarks = "z2z98";
+
+        return tpf;
+    }
+
 }

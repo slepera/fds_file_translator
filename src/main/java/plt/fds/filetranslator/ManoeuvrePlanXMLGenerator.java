@@ -115,7 +115,7 @@ public class ManoeuvrePlanXMLGenerator {
         attitudeManoeuvre.addContent(manoeuvre_attitude);
 
         for (int p = 0; p < aManoeuvre.tpf.size(); p++) {
-            Element tpf = CreateTPFText(aManoeuvre.tpf.get(p));
+            Element tpf = TPFFileGenerator.CreateTPFText(aManoeuvre.tpf.get(p));
             attitudeManoeuvre.addContent(tpf);
         }
         return attitudeManoeuvre;
@@ -137,7 +137,7 @@ public class ManoeuvrePlanXMLGenerator {
         orbitalManoeuvre.addContent(manoeuvre_orbital);
         for (int p = 0; p < oManoeuvre.tpf.size(); p++)
         {
-            Element tpf = CreateTPFText(oManoeuvre.tpf.get(p));
+            Element tpf = TPFFileGenerator.CreateTPFText(oManoeuvre.tpf.get(p));
             orbitalManoeuvre.addContent(tpf);
         }
         return orbitalManoeuvre;
@@ -196,14 +196,14 @@ public class ManoeuvrePlanXMLGenerator {
         return TPF;
 
     }
-
+/*
     private static void CreateTPFTextFile(TPF tpf) throws IOException {
-        Element element = CreateTPFText(tpf);
-        FileOutputStream fileOutputStream = new FileOutputStream("TPF_Text_file");
+        Element element = TPFFileGenerator.CreateTPFText(tpf);
+        FileOutputStream fileOutputStream = new FileOutputStream("TPF_file");
         fileOutputStream.write(element.getText().getBytes(StandardCharsets.UTF_8));
         fileOutputStream.close();
     }
-
+/*
     private static Element CreateTPFText(TPF tpf) {
         Element TPF = new Element("TPF");
         String h1, h2, h3, h4, h5;
@@ -239,6 +239,8 @@ public class ManoeuvrePlanXMLGenerator {
 
         return TPF;
     }
+
+ */
 
 
 }
