@@ -6,12 +6,41 @@ import plt.fds.filetranslator.data_models.TPF;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+class TPF_Structure
+{
+    String row;
+    String column;
+    TPF_Structure(String row, String column)
+    {
+        this.row = row;
+        this.column = column;
+    }
+}
+
+
 
 public class TPFFileGenerator {
 
+    public static String LeftJustify(String s, int n)
+    {
+        return String.format("%-" + n + "s", s);
+    }
+
     public static Element CreateTPFText(TPF tpf) {
+
+        HashMap<TPF_Structure, Integer> tpf_structure = new HashMap<>();
+        tpf_structure.put(new TPF_Structure("h1", "task_name"),8);
+
+
         Element TPF = new Element("TPF");
         String h1, h2, h3, h4, h5;
+
+        h1 = LeftJustify(tpf.tpfHeader.taskName, tpf_structure.get(new TPF_Structure("h1", "task_name")));
+        h1.concat(LeftJustify(tpf.tpfHeader.taskType, tpf_structure.get(new TPF_Structure("h1", "task_name"))));
 
         h1 = tpf.tpfHeader.taskName + " " + tpf.tpfHeader.taskType + " "
                 + tpf.tpfHeader.parameterSetName +" " + tpf.tpfHeader.parameterValueSetName;
