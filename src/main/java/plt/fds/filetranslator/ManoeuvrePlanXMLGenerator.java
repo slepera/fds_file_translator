@@ -4,12 +4,14 @@ import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.output.Format;
 import org.jdom2.output.XMLOutputter;
+import org.jdom2.transform.JDOMResult;
+import org.jdom2.transform.JDOMSource;
 import plt.fds.filetranslator.data_models.*;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import javax.xml.transform.*;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -19,9 +21,16 @@ public class ManoeuvrePlanXMLGenerator {
 
 
 
-    public static void GenerateManoeuvreFileXML(ManoeuvrePlan mp) throws IOException {
+    public static void GenerateManoeuvreFileXML(ManoeuvrePlan mp) throws IOException, TransformerException {
 
         Document doc = new Document();
+        /*
+        Transformer t = TransformerFactory.newInstance().newTransformer();
+        t.setOutputProperty(OutputKeys.INDENT, "yes");
+        t.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "5");
+
+         */
+
         doc.setRootElement(new Element("Manoeuvre_Plan"));
         Element header = new Element("Man_Plan_Header");
         header.addContent(new Element("nbManLeg").setText(String.valueOf(mp.manPlanHeader.nbManLeg)));
@@ -71,6 +80,16 @@ public class ManoeuvrePlanXMLGenerator {
         DateTimeFormatter europeanDateFormatter = DateTimeFormatter.ofPattern(europeanDatePattern);
         File file = new File("./data/output/manoeuvre_plan_xml/manoeuvre_plan " + europeanDateFormatter.format(LocalDateTime.now()) + ".xml");
         FileOutputStream fos = new FileOutputStream(file);
+        /*
+        JDOMSource in = new JDOMSource(doc);
+        JDOMResult out = new JDOMResult();
+        ByteArrayOutputStream s = new ByteArrayOutputStream();
+        //t.transform(new DOMSource(doc),new StreamResult(s)) ;
+        t.transform(in, out);
+
+        xmlOutputter.output(out.getDocument(), fos);
+
+         */
         xmlOutputter.output(doc, fos);
         fos.close();
     }
@@ -115,7 +134,7 @@ public class ManoeuvrePlanXMLGenerator {
         attitudeManoeuvre.addContent(manoeuvre_attitude);
 
         for (int p = 0; p < aManoeuvre.tpf.size(); p++) {
-            Element tpf = TPFFileGenerator.CreateTPFText(aManoeuvre.tpf.get(p));
+            Element tpf = TPFFileGenerator.CreateTPFText(aManoeuvre.tpf.get(p), TPFFileType.TP2);
             attitudeManoeuvre.addContent(tpf);
         }
         return attitudeManoeuvre;
@@ -137,13 +156,11 @@ public class ManoeuvrePlanXMLGenerator {
         orbitalManoeuvre.addContent(manoeuvre_orbital);
         for (int p = 0; p < oManoeuvre.tpf.size(); p++)
         {
-            Element tpf = TPFFileGenerator.CreateTPFText(oManoeuvre.tpf.get(p));
+            Element tpf = TPFFileGenerator.CreateTPFText(oManoeuvre.tpf.get(p), TPFFileType.TP2);
             orbitalManoeuvre.addContent(tpf);
         }
         return orbitalManoeuvre;
     }
-
-
 
 
 
@@ -196,51 +213,5 @@ public class ManoeuvrePlanXMLGenerator {
         return TPF;
 
     }
-/*
-    private static void CreateTPFTextFile(TPF tpf) throws IOException {
-        Element element = TPFFileGenerator.CreateTPFText(tpf);
-        FileOutputStream fileOutputStream = new FileOutputStream("TPF_file");
-        fileOutputStream.write(element.getText().getBytes(StandardCharsets.UTF_8));
-        fileOutputStream.close();
-    }
-/*
-    private static Element CreateTPFText(TPF tpf) {
-        Element TPF = new Element("TPF");
-        String h1, h2, h3, h4, h5;
-
-        h1 = tpf.tpfHeader.taskName + " " + tpf.tpfHeader.taskType + " "
-                + tpf.tpfHeader.parameterSetName +" " + tpf.tpfHeader.parameterValueSetName;
-
-        h2 = "           " + tpf.tpfHeader.destination + " " + tpf.tpfHeader.source + " "
-                + tpf.tpfHeader.nbRecords;
-
-        h3 = tpf.tpfHeader.releaseTime + " " + tpf.tpfHeader.earliestReleaseTime + " "
-                + tpf.tpfHeader.latestReleaseTime;
-
-        h4 = tpf.tpfHeader.executionTime + " " + tpf.tpfHeader.subScheduleID;
-
-        h5 = tpf.tpfHeader.tpfRemarks;
-
-        String tpf_Header = h1 + "\n" + h2 + "\n" + h3 + "\n" + h4 + "\n" + h5 + "\n";
-        TPF.setText(tpf_Header);
-
-        String tpf_Body;
-        for (int g = 0; g <tpf.tpfBody.tpfRecord.size(); g++) {
-            String paramName = tpf.tpfBody.tpfRecord.get(g).paramName + " ";
-            String paramValueType = tpf.tpfBody.tpfRecord.get(g).paramValueType + " ";
-            String paramValue = tpf.tpfBody.tpfRecord.get(g).paramValue + " ";
-            String paramValueUnit = tpf.tpfBody.tpfRecord.get(g).paramValueUnit + " ";
-            String paramValueRadix = tpf.tpfBody.tpfRecord.get(g).paramValueRadix + " ";
-            String paramRemarks = tpf.tpfBody.tpfRecord.get(g).paramRemarks + "\n";
-
-            tpf_Body = paramName + paramValueType + paramValue + paramValueUnit + paramValueRadix + paramRemarks;
-            TPF.addContent(tpf_Body);
-        }
-
-        return TPF;
-    }
-
- */
-
 
 }

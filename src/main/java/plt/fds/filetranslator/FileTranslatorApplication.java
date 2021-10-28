@@ -5,13 +5,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import plt.fds.filetranslator.data_models.*;
 import plt.fds.filetranslator.stubs.DBSimulator;
 
+import javax.xml.transform.TransformerException;
 import java.io.IOException;
 
 @SpringBootApplication
 public class
 FileTranslatorApplication {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, TransformerException {
 		SpringApplication.run(FileTranslatorApplication.class, args);
 
 		//PassPlan passPlan = DBSimulator.getPassPlan();
@@ -23,11 +24,11 @@ FileTranslatorApplication {
 		//OrbitalEvents orbitalEvents = DBSimulator.getOrbitalEvents();
 		//OrbitalEventsXMLGenerator.GenerateOrbitalEventsXML(orbitalEvents);
 
-		//ManoeuvrePlan manoeuvrePlan = DBSimulator.getManoeuvrePlan();
-		//ManoeuvrePlanXMLGenerator.GenerateManoeuvreFileXML(manoeuvrePlan);
+		ManoeuvrePlan manoeuvrePlan = DBSimulator.getManoeuvrePlan();
+		ManoeuvrePlanXMLGenerator.GenerateManoeuvreFileXML(manoeuvrePlan);
 
-		TPF tpf = DBSimulator.getTPF();
-		TPFFileGenerator.CreateTPFTextFile(tpf);
+		//TPF tpf = DBSimulator.getTPF();
+		//TPFFileGenerator.CreateTPFTextFile(tpf);
 
 	}
 
