@@ -1,6 +1,13 @@
 package plt.fds.filetranslator.data_models;
 
 public class HeaderType {
+    public String getMissionID() {
+        return missionID;
+    }
+
+    public void setMissionID(String missionID) {
+        this.missionID = missionID;
+    }
 
     //public EnumMissionID missionID;
     public String missionID;

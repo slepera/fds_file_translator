@@ -1,21 +1,16 @@
-package plt.fds.filetranslator;
+package plt.fds.filetranslator.format_manager;
 
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.output.Format;
 import org.jdom2.output.XMLOutputter;
-import org.jdom2.transform.JDOMResult;
-import org.jdom2.transform.JDOMSource;
+import plt.fds.filetranslator.data_models.TPFFileType;
 import plt.fds.filetranslator.data_models.*;
 
 import javax.xml.transform.*;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 
 public class ManoeuvrePlanXMLGenerator {
 

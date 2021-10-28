@@ -1,4 +1,4 @@
-package plt.fds.filetranslator;
+package plt.fds.filetranslator.format_manager;
 
 import org.jdom2.Document;
 import org.jdom2.Element;

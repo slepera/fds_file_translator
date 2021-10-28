@@ -1,10 +1,11 @@
-package plt.fds.filetranslator;
+package plt.fds.filetranslator.format_manager;
 
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.output.Format;
 import org.jdom2.output.XMLOutputter;
 import plt.fds.filetranslator.data_models.AttitudeFile;
+import plt.fds.filetranslator.data_models.FDSFileHeader;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -15,7 +16,6 @@ import java.time.format.DateTimeFormatter;
 public class AttitudeFileXMLGenerator {
 
     public static void GenerateAttitudeFileXML(AttitudeFile attitudeFile) throws IOException {
-
         Document doc = new Document();
         doc.setRootElement(new Element("Attitude_File"));
         Element header = new Element("Attitude_File_Header");

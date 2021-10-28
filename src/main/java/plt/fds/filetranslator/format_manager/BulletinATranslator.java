@@ -1,4 +1,4 @@
-package plt.fds.filetranslator;
+package plt.fds.filetranslator.format_manager;
 
 import plt.fds.filetranslator.data_models.BulletinAOutputModel;
 

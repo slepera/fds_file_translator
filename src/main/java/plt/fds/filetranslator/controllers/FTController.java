@@ -2,9 +2,9 @@ package plt.fds.filetranslator.controllers;
 
 
 import org.springframework.web.bind.annotation.*;
-import plt.fds.filetranslator.BulletinATranslator;
-import plt.fds.filetranslator.EOPTranslator;
-import plt.fds.filetranslator.SolarFileTranslator;
+import plt.fds.filetranslator.format_manager.BulletinATranslator;
+import plt.fds.filetranslator.format_manager.EOPTranslator;
+import plt.fds.filetranslator.format_manager.SolarFileTranslator;
 import plt.fds.filetranslator.data_models.BulletinAOutputModel;
 
 import java.io.IOException;

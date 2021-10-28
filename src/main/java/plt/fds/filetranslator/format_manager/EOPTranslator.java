@@ -1,4 +1,4 @@
-package plt.fds.filetranslator;
+package plt.fds.filetranslator.format_manager;
 
 import java.io.*;
 import java.time.LocalDateTime;
