@@ -1,0 +1,8 @@
+!TPF
+taskname 9 setname0 valueset
+           d s 157
+releasetime012345678?????9 earliestreleasetime9????87 latestreleasetime012???345
+executiontime0123456????78 21225
+vvv000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000                                                                                                                                               
+paramnam 9 paramValue0123456789 unit 7 z2z                                       
+www34poa 1 paramValueabcdefghij y32y z z2z98                                     

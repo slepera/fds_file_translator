@@ -27,8 +27,8 @@ public class ManLeg {
         Integer legNBMan = this.legNBMan;
         //this.legNBMan = new Integer();
         this.remarks = new String();
-        this.attitudeManoeuvre = new ArrayList<AttitudeManoeuvre>();
-        this.orbitalManoeuvre = new ArrayList<OrbitalManoeuvre>();
+        this.attitudeManoeuvre = new ArrayList<>();
+        this.orbitalManoeuvre = new ArrayList<>();
 
     }
 

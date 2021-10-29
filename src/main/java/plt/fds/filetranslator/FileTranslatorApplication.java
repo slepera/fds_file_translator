@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import plt.fds.filetranslator.data_models.*;
 import plt.fds.filetranslator.format_manager.AttitudeFileXMLGenerator;
 import plt.fds.filetranslator.format_manager.ManoeuvrePlanXMLGenerator;
+import plt.fds.filetranslator.format_manager.ODSTP_ODNOM_Processed_Orbits_FileGenerator;
+import plt.fds.filetranslator.format_manager.TPFFileGenerator;
 import plt.fds.filetranslator.stubs.DBSimulator;
 
 import javax.xml.transform.TransformerException;
@@ -20,8 +22,8 @@ FileTranslatorApplication {
 		//PassPlan passPlan = DBSimulator.getPassPlan();
 		//PassPlanXMLGenerator.GeneratePassPlanXML(passPlan);
 
-		AttitudeFile attitudeFile = DBSimulator.getAttitudeFile();
-		AttitudeFileXMLGenerator.GenerateAttitudeFileXML(attitudeFile);
+		//AttitudeFile attitudeFile = DBSimulator.getAttitudeFile();
+		//AttitudeFileXMLGenerator.GenerateAttitudeFileXML(attitudeFile);
 
 		//OrbitalEvents orbitalEvents = DBSimulator.getOrbitalEvents();
 		//OrbitalEventsXMLGenerator.GenerateOrbitalEventsXML(orbitalEvents);
@@ -29,9 +31,11 @@ FileTranslatorApplication {
 		//ManoeuvrePlan manoeuvrePlan = DBSimulator.getManoeuvrePlan();
 		//ManoeuvrePlanXMLGenerator.GenerateManoeuvreFileXML(manoeuvrePlan);
 
-		//TPF tpf = DBSimulator.getTPF();
-		//TPFFileGenerator.CreateTPFTextFile(tpf);
+		 //TPF tpf = DBSimulator.getTPF();
+		 //TPFFileGenerator.CreateTPFTextFile(tpf);
 
+		//ODSTP odstp = DBSimulator.get();
+		//ODSTP_ODNOM_Processed_Orbits_FileGenerator.CreateODSTPFile(odstp);
 	}
 
 }

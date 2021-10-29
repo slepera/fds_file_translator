@@ -2,6 +2,8 @@ package plt.fds.filetranslator.data_models;
 
 public class Vector3DType {
     double x;
+    double y;
+    double z;
 
     public double getX() {
         return x;
@@ -26,7 +28,4 @@ public class Vector3DType {
     public void setZ(double z) {
         this.z = z;
     }
-
-    double y;
-    double z;
 }

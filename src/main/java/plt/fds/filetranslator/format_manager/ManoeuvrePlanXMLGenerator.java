@@ -129,7 +129,7 @@ public class ManoeuvrePlanXMLGenerator {
         attitudeManoeuvre.addContent(manoeuvre_attitude);
 
         for (int p = 0; p < aManoeuvre.tpf.size(); p++) {
-            Element tpf = TPFFileGenerator.CreateTPFText(aManoeuvre.tpf.get(p), TPFFileType.TP2);
+            Element tpf = TPFFileGenerator.CreateTPFText(aManoeuvre.tpf.get(p), TPFFileType.TPF);
             attitudeManoeuvre.addContent(tpf);
         }
         return attitudeManoeuvre;
@@ -151,7 +151,7 @@ public class ManoeuvrePlanXMLGenerator {
         orbitalManoeuvre.addContent(manoeuvre_orbital);
         for (int p = 0; p < oManoeuvre.tpf.size(); p++)
         {
-            Element tpf = TPFFileGenerator.CreateTPFText(oManoeuvre.tpf.get(p), TPFFileType.TP2);
+            Element tpf = TPFFileGenerator.CreateTPFText(oManoeuvre.tpf.get(p), TPFFileType.TPF);
             orbitalManoeuvre.addContent(tpf);
         }
         return orbitalManoeuvre;

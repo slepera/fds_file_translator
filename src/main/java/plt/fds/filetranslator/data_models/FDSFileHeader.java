@@ -1,13 +1,6 @@
 package plt.fds.filetranslator.data_models;
 
 public class FDSFileHeader extends SignalHeaderType{
-    public String getReferenceFrame() {
-        return referenceFrame;
-    }
-
-    public void setReferenceFrame(String referenceFrame) {
-        this.referenceFrame = referenceFrame;
-    }
 
     public String referenceFrame;
     public String principalPlane;
@@ -18,6 +11,14 @@ public class FDSFileHeader extends SignalHeaderType{
         this.referenceFrame = new String();
         this.principalPlane = new String();
         this.columnLabelsAndUnits = new String();
+    }
+
+    public String getReferenceFrame() {
+        return referenceFrame;
+    }
+
+    public void setReferenceFrame(String referenceFrame) {
+        this.referenceFrame = referenceFrame;
     }
 
     public String getPrincipalPlane() {
@@ -35,4 +36,5 @@ public class FDSFileHeader extends SignalHeaderType{
     public void setColumnLabelsAndUnits(String columnLabelsAndUnits) {
         this.columnLabelsAndUnits = columnLabelsAndUnits;
     }
+
 }

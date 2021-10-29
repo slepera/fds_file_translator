@@ -10,7 +10,7 @@ public class ManoeuvrePlan {
     public ManoeuvrePlan()
     {
         this.manPlanHeader = new ManPlanHeader();
-        this.manLeg = new ArrayList<ManLeg>();
+        this.manLeg = new ArrayList<>();
 
     }
 

@@ -49,7 +49,7 @@ public class ODSTP_ODNOM_Processed_Orbits_FileGenerator {
     }
 
     public static void CreateODSTPFile(ODSTP odstp) {
-        String header = BuildHeader(odstp.fdsFileHeader);
+        //String header = BuildHeader(odstp.fdsFileHeader);
 
     }
 

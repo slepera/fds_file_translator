@@ -49,16 +49,15 @@ public class TPFFileGenerator {
 
 
     /*
-    To know which type of TPF is when the file is printed
+    To know which type of TPF is when the file is printed TO BE REMOVED once is known the type of TPF
      */
-    public static String TypeOfFile (TPFFileType tpfFileType) {
+    public static String TypeOfTPF (TPFFileType tpfFileType) {
         return tpfFileType.name();
     }
 
     public static Element CreateTPFText(TPF tpf, TPFFileType tpfFileType) {
 
         Element TPF = new Element("TPF");
-
 
         String opth1 = "";
         switch (tpfFileType) {
@@ -130,7 +129,7 @@ public class TPFFileGenerator {
 
         String europeanDatePattern = "dd.MM.yyyy  HH-mm-ss";
         DateTimeFormatter europeanDateFormatter = DateTimeFormatter.ofPattern(europeanDatePattern);
-        FileOutputStream fileOutputStream = new FileOutputStream("./data/output/tpf_file/tpf_" + TypeOfFile(TPFFileType.TPF) + " "+ europeanDateFormatter.format(LocalDateTime.now()) + ".txt");
+        FileOutputStream fileOutputStream = new FileOutputStream("./data/output/tpf_file/tpf_" + TypeOfTPF(TPFFileType.TPF) + " "+ europeanDateFormatter.format(LocalDateTime.now()) + ".txt");
 
         fileOutputStream.write(element.getText().getBytes(StandardCharsets.UTF_8));
         fileOutputStream.close();

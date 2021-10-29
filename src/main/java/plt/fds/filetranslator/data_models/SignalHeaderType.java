@@ -1,21 +1,6 @@
 package plt.fds.filetranslator.data_models;
 
 public class SignalHeaderType extends HeaderType{
-    public String getRecipientID() {
-        return recipientID;
-    }
-
-    public void setRecipientID(String recipientID) {
-        this.recipientID = recipientID;
-    }
-
-    public String getValidityTimeWindow() {
-        return validityTimeWindow;
-    }
-
-    public void setValidityTimeWindow(String validityTimeWindow) {
-        this.validityTimeWindow = validityTimeWindow;
-    }
 
     public String signalID;
     public String recipientID;
@@ -36,4 +21,21 @@ public class SignalHeaderType extends HeaderType{
     public void setSignalID(String signalID) {
         this.signalID = signalID;
     }
+
+    public String getRecipientID() {
+        return recipientID;
+    }
+
+    public void setRecipientID(String recipientID) {
+        this.recipientID = recipientID;
+    }
+
+    public String getValidityTimeWindow() {
+        return validityTimeWindow;
+    }
+
+    public void setValidityTimeWindow(String validityTimeWindow) {
+        this.validityTimeWindow = validityTimeWindow;
+    }
+
 }
