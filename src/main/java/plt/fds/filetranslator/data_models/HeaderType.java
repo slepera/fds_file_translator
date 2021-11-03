@@ -5,7 +5,7 @@ public class HeaderType {
     //public EnumMissionID missionID;
     public String missionID;
     //public EnumSatID satelliteID;
-    public String satelliteID;
+    public EnumSatID satelliteID;
     public String originatorID;
     public String originatorRole;
     //public DateTimeType creationTime;
@@ -19,7 +19,6 @@ public class HeaderType {
     public HeaderType()
     {
         this.missionID = new String();
-        this.satelliteID = new String();
         this.originatorID = new String();
         this.originatorRole = new String();
         this.creationTime = new String();
@@ -36,11 +35,11 @@ public class HeaderType {
         this.missionID = missionID;
     }
 
-    public String getSatelliteID() {
+    public EnumSatID getSatelliteID() {
         return satelliteID;
     }
 
-    public void setSatelliteID(String satelliteID) {
+    public void setSatelliteID(EnumSatID satelliteID) {
         this.satelliteID = satelliteID;
     }
 

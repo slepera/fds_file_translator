@@ -24,7 +24,7 @@ public class OrbitalEventsXMLGenerator {
         header.addContent(new Element("recipientID").setText(orbitalEvents.signalHeaderType.recipientID));
         header.addContent(new Element("validitytimeWindow").setText(orbitalEvents.signalHeaderType.validityTimeWindow));
         header.addContent(new Element("missionID").setText(orbitalEvents.signalHeaderType.missionID));
-        header.addContent(new Element("satelliteID").setText(orbitalEvents.signalHeaderType.satelliteID));
+        header.addContent(new Element("satelliteID").setText(orbitalEvents.signalHeaderType.satelliteID.name()));
         header.addContent(new Element("originatorID").setText(orbitalEvents.signalHeaderType.originatorID));
         header.addContent(new Element("originatorRole").setText(orbitalEvents.signalHeaderType.originatorRole));
         header.addContent(new Element("creationTime").setText(orbitalEvents.signalHeaderType.creationTime));

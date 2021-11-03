@@ -53,7 +53,7 @@ public class ODSTP_ODNOM_Processed_Orbits_FileGenerator {
         pretty printing option
          */
         //Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        String jsonObj = gson.toJson(fdsFileHeader, fdsFileHeader.getClass());
+        String jsonObj = gson.toJson(fdsFileHeader);
         return jsonObj;
     }
 

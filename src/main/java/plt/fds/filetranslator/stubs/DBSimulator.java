@@ -12,7 +12,7 @@ public class DBSimulator {
         passPlan.signalHeaderType.recipientID = "111";
         passPlan.signalHeaderType.validityTimeWindow = "hi";
         passPlan.signalHeaderType.missionID = "010101";
-        passPlan.signalHeaderType.satelliteID = "2222";
+        passPlan.signalHeaderType.satelliteID = EnumSatID.S01;
         passPlan.signalHeaderType.originatorID = "8888";
         passPlan.signalHeaderType.originatorRole = "bye";
         passPlan.signalHeaderType.creationTime = "12:02";
@@ -66,7 +66,7 @@ public class DBSimulator {
         attitudeFile.attitudeFileHeader.recipientID = "222";
         attitudeFile.attitudeFileHeader.validityTimeWindow = "bye";
         attitudeFile.attitudeFileHeader.missionID = "090909";
-        attitudeFile.attitudeFileHeader.satelliteID = "777";
+        attitudeFile.attitudeFileHeader.satelliteID = EnumSatID.S01;
         attitudeFile.attitudeFileHeader.originatorID = "abc";
         attitudeFile.attitudeFileHeader.originatorRole = "xyz";
         attitudeFile.attitudeFileHeader.creationTime = "12:20";
@@ -138,7 +138,7 @@ public class DBSimulator {
         orbitalEvents.signalHeaderType.recipientID = "008";
         orbitalEvents.signalHeaderType.validityTimeWindow = "hello";
         orbitalEvents.signalHeaderType.missionID = "2876";
-        orbitalEvents.signalHeaderType.satelliteID = "9154";
+        orbitalEvents.signalHeaderType.satelliteID = EnumSatID.S01;
         orbitalEvents.signalHeaderType.originatorID = "94444";
         orbitalEvents.signalHeaderType.originatorRole = "hi";
         orbitalEvents.signalHeaderType.creationTime = "17:16";
@@ -177,7 +177,7 @@ public class DBSimulator {
         manoeuvrePlan.manPlanHeader.recipientID = "1298";
         manoeuvrePlan.manPlanHeader.validityTimeWindow = "hi";
         manoeuvrePlan.manPlanHeader.missionID = "010101";
-        manoeuvrePlan.manPlanHeader.satelliteID = "2222";
+        manoeuvrePlan.manPlanHeader.satelliteID = EnumSatID.S01;
         manoeuvrePlan.manPlanHeader.originatorID = "8888";
         manoeuvrePlan.manPlanHeader.originatorRole = "bye";
         manoeuvrePlan.manPlanHeader.creationTime = "12:02";
@@ -249,7 +249,7 @@ public class DBSimulator {
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).tpf.get(0).signalHeaderType.recipientID = "btbb";
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).tpf.get(0).signalHeaderType.validityTimeWindow = "cwcc";
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).tpf.get(0).signalHeaderType.missionID = "dddw";
-        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).tpf.get(0).signalHeaderType.satelliteID = "eewe";
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).tpf.get(0).signalHeaderType.satelliteID = EnumSatID.S01;
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).tpf.get(0).signalHeaderType.originatorID = "ffwf";
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).tpf.get(0).signalHeaderType.originatorRole = "gwgg";
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).tpf.get(0).signalHeaderType.creationTime = "hhwh";
@@ -303,7 +303,7 @@ public class DBSimulator {
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).tpf.get(0).signalHeaderType.recipientID = "bbb";
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).tpf.get(0).signalHeaderType.validityTimeWindow = "ccc";
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).tpf.get(0).signalHeaderType.missionID = "ddd";
-        manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).tpf.get(0).signalHeaderType.satelliteID = "eee";
+        manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).tpf.get(0).signalHeaderType.satelliteID = EnumSatID.S01;
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).tpf.get(0).signalHeaderType.originatorID = "fff";
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).tpf.get(0).signalHeaderType.originatorRole = "ggg";
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).tpf.get(0).signalHeaderType.creationTime = "hhh";
@@ -351,7 +351,7 @@ public class DBSimulator {
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).tpf.get(1).signalHeaderType.recipientID = "bbb";
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).tpf.get(1).signalHeaderType.validityTimeWindow = "ccc";
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).tpf.get(1).signalHeaderType.missionID = "ddd";
-        manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).tpf.get(1).signalHeaderType.satelliteID = "eee";
+        manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).tpf.get(1).signalHeaderType.satelliteID = EnumSatID.S01;
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).tpf.get(1).signalHeaderType.originatorID = "fff";
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).tpf.get(1).signalHeaderType.originatorRole = "ggg";
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(0).tpf.get(1).signalHeaderType.creationTime = "hhh";
@@ -403,7 +403,7 @@ public class DBSimulator {
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).tpf.get(0).signalHeaderType.recipientID = "bbb";
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).tpf.get(0).signalHeaderType.validityTimeWindow = "ccc";
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).tpf.get(0).signalHeaderType.missionID = "ddd";
-        manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).tpf.get(0).signalHeaderType.satelliteID = "eee";
+        manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).tpf.get(0).signalHeaderType.satelliteID = EnumSatID.S01;
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).tpf.get(0).signalHeaderType.originatorID = "fff";
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).tpf.get(0).signalHeaderType.originatorRole = "ggg";
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).tpf.get(0).signalHeaderType.creationTime = "hhh";
@@ -444,7 +444,7 @@ public class DBSimulator {
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).tpf.get(1).signalHeaderType.recipientID = "bbb";
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).tpf.get(1).signalHeaderType.validityTimeWindow = "ccc";
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).tpf.get(1).signalHeaderType.missionID = "ddd";
-        manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).tpf.get(1).signalHeaderType.satelliteID = "eee";
+        manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).tpf.get(1).signalHeaderType.satelliteID = EnumSatID.S01;
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).tpf.get(1).signalHeaderType.originatorID = "fff";
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).tpf.get(1).signalHeaderType.originatorRole = "ggg";
         manoeuvrePlan.manLeg.get(0).orbitalManoeuvre.get(1).tpf.get(1).signalHeaderType.creationTime = "hhh";
@@ -530,7 +530,7 @@ public class DBSimulator {
         odstp.fdsFileHeader.recipientID = "recipientID";
         odstp.fdsFileHeader.validityTimeWindow = "timewindow";
         odstp.fdsFileHeader.missionID = "missionID";
-        odstp.fdsFileHeader.satelliteID = "satelliteID";
+        odstp.fdsFileHeader.satelliteID = EnumSatID.S01;
         odstp.fdsFileHeader.originatorID = "originatorID";
         odstp.fdsFileHeader.originatorRole = "originatorRole";
         odstp.fdsFileHeader.creationTime = "creationtime";
@@ -594,7 +594,7 @@ public class DBSimulator {
         odnom.fdsFileHeader.recipientID = "recipientID";
         odnom.fdsFileHeader.validityTimeWindow = "timewindow";
         odnom.fdsFileHeader.missionID = "missionID";
-        odnom.fdsFileHeader.satelliteID = "satelliteID";
+        odnom.fdsFileHeader.satelliteID = EnumSatID.S01;
         odnom.fdsFileHeader.originatorID = "originatorID";
         odnom.fdsFileHeader.originatorRole = "originatorRole";
         odnom.fdsFileHeader.creationTime = "creationtime";
@@ -656,7 +656,7 @@ public class DBSimulator {
         processedOrbits.fdsFileHeader.recipientID = "recipientID";
         processedOrbits.fdsFileHeader.validityTimeWindow = "timewindow";
         processedOrbits.fdsFileHeader.missionID = "missionID";
-        processedOrbits.fdsFileHeader.satelliteID = "satelliteID";
+        processedOrbits.fdsFileHeader.satelliteID = EnumSatID.S01;
         processedOrbits.fdsFileHeader.originatorID = "originatorID";
         processedOrbits.fdsFileHeader.originatorRole = "originatorRole";
         processedOrbits.fdsFileHeader.creationTime = "creationtime";

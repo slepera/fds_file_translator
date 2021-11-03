@@ -24,7 +24,7 @@ public class PassPlanXMLGenerator {
         header.addContent(new Element("recipientID").setText(passPlan.signalHeaderType.recipientID));
         header.addContent(new Element("validitytimeWindow").setText(passPlan.signalHeaderType.validityTimeWindow));
         header.addContent(new Element("missionID").setText(passPlan.signalHeaderType.missionID));
-        header.addContent(new Element("satelliteID").setText(passPlan.signalHeaderType.satelliteID));
+        header.addContent(new Element("satelliteID").setText(passPlan.signalHeaderType.satelliteID.name()));
         header.addContent(new Element("originatorID").setText(passPlan.signalHeaderType.originatorID));
         header.addContent(new Element("originatorRole").setText(passPlan.signalHeaderType.originatorRole));
         header.addContent(new Element("creationTime").setText(passPlan.signalHeaderType.creationTime));

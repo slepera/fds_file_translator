@@ -33,7 +33,7 @@ public class ManoeuvrePlanXMLGenerator {
         header.addContent(new Element("recipientID").setText(mp.manPlanHeader.recipientID));
         header.addContent(new Element("validityTimeWindow").setText(mp.manPlanHeader.validityTimeWindow));
         header.addContent(new Element("missionID").setText(mp.manPlanHeader.missionID));
-        header.addContent(new Element("satelliteID").setText(mp.manPlanHeader.satelliteID));
+        header.addContent(new Element("satelliteID").setText(mp.manPlanHeader.satelliteID.name()));
         header.addContent(new Element("originatorID").setText(mp.manPlanHeader.originatorID));
         header.addContent(new Element("originatorRole").setText(mp.manPlanHeader.originatorRole));
         header.addContent(new Element("subjectType").setText(mp.manPlanHeader.subjectType));
@@ -182,7 +182,7 @@ public class ManoeuvrePlanXMLGenerator {
         TPF_signalheader.addContent(new Element("recipientID").setText(tpf.signalHeaderType.recipientID));
         TPF_signalheader.addContent(new Element("validityTimeWindow").setText(tpf.signalHeaderType.validityTimeWindow));
         TPF_signalheader.addContent(new Element("missionID").setText(tpf.signalHeaderType.missionID));
-        TPF_signalheader.addContent(new Element("satelliteID").setText(tpf.signalHeaderType.satelliteID));
+        TPF_signalheader.addContent(new Element("satelliteID").setText(tpf.signalHeaderType.satelliteID.name()));
         TPF_signalheader.addContent(new Element("originatorID").setText(tpf.signalHeaderType.originatorID));
         TPF_signalheader.addContent(new Element("originatorRole").setText(tpf.signalHeaderType.originatorRole));
         TPF_signalheader.addContent(new Element("creationTime").setText(tpf.signalHeaderType.creationTime));

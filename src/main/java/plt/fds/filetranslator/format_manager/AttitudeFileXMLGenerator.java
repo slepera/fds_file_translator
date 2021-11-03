@@ -27,7 +27,7 @@ public class AttitudeFileXMLGenerator {
         header.addContent(new Element("recipientID").setText(attitudeFile.attitudeFileHeader.recipientID));
         header.addContent(new Element("validitytimeWindow").setText(attitudeFile.attitudeFileHeader.validityTimeWindow));
         header.addContent(new Element("missionID").setText(attitudeFile.attitudeFileHeader.missionID));
-        header.addContent(new Element("satelliteID").setText(attitudeFile.attitudeFileHeader.satelliteID));
+        header.addContent(new Element("satelliteID").setText(attitudeFile.attitudeFileHeader.satelliteID.name()));
         header.addContent(new Element("originatorID").setText(attitudeFile.attitudeFileHeader.originatorID));
         header.addContent(new Element("originatorRole").setText(attitudeFile.attitudeFileHeader.originatorRole));
         header.addContent(new Element("creationTime").setText(attitudeFile.attitudeFileHeader.creationTime));
