@@ -6,13 +6,12 @@ public class AttitudeFileRecords {
     public String epoch;
     //public QuaternionsType quaternion;
     public String quaternion;
-    //public Vector3DType angularVelocity;
-    public String angularVelocity;
+    public Vector3DType angularVelocity;
 
     public AttitudeFileRecords()
     {
         this.epoch = new String();
         this.quaternion = new String();
-        this.angularVelocity = new String();
+        this.angularVelocity = new Vector3DType();
     }
 }

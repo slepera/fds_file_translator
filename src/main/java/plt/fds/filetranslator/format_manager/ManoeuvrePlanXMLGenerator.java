@@ -98,8 +98,16 @@ public class ManoeuvrePlanXMLGenerator {
             attitudeManoeuvre.addContent(new Element("attManParams").setText(String.valueOf(aManoeuvre.attManParams.get(k))));
         }
         Element downlinkParameter = new Element("downlink_Parameter");
-        downlinkParameter.addContent(new Element("antennaVers").setText(aManoeuvre.downlinkParameter.antennaVers));
-        downlinkParameter.addContent(new Element("stationPos").setText(aManoeuvre.downlinkParameter.stationPos));
+        Element antennaVers = new Element("antennaVers");
+        antennaVers.addContent(new Element("X_antennaVers").setText(String.valueOf(aManoeuvre.downlinkParameter.antennaVers.getX())));
+        antennaVers.addContent(new Element("Y_antennaVers").setText(String.valueOf(aManoeuvre.downlinkParameter.antennaVers.getY())));
+        antennaVers.addContent(new Element("Z_antennaVers").setText(String.valueOf(aManoeuvre.downlinkParameter.antennaVers.getZ())));
+        downlinkParameter.addContent(antennaVers);
+        Element stationPos = new Element("stationPos");
+        stationPos.addContent(new Element("X_stationPos").setText(String.valueOf(aManoeuvre.downlinkParameter.stationPos.getX())));
+        stationPos.addContent(new Element("Y_stationPos").setText(String.valueOf(aManoeuvre.downlinkParameter.stationPos.getY())));
+        stationPos.addContent(new Element("Z_stationPos").setText(String.valueOf(aManoeuvre.downlinkParameter.stationPos.getZ())));
+        downlinkParameter.addContent(stationPos);
         attitudeManoeuvre.addContent(downlinkParameter);
 
         Element localOrbitalParameter = new Element("local_Orbital_Parameters");
@@ -113,8 +121,16 @@ public class ManoeuvrePlanXMLGenerator {
             customWayPoint.addContent(new Element("wayPointID").setText(String.valueOf(aManoeuvre.customParameters.customWayPoint.get(q).wayPointID)));
             customWayPoint.addContent(new Element("epoch").setText(aManoeuvre.customParameters.customWayPoint.get(q).epoch));
             customWayPoint.addContent(new Element("q_ECI2BRF").setText(aManoeuvre.customParameters.customWayPoint.get(q).q_ECI2BRF));
-            customWayPoint.addContent(new Element("w_BRF").setText(aManoeuvre.customParameters.customWayPoint.get(q).w_BRF));
-            customWayPoint.addContent(new Element("w_dot_BRF").setText(aManoeuvre.customParameters.customWayPoint.get(q).w_dot_BRF));
+            Element w_BRF = new Element("w_BRF");
+            w_BRF.addContent(new Element("X_w_BRF").setText(String.valueOf(aManoeuvre.customParameters.customWayPoint.get(q).w_BRF.getX())));
+            w_BRF.addContent(new Element("Y_w_BRF").setText(String.valueOf(aManoeuvre.customParameters.customWayPoint.get(q).w_BRF.getY())));
+            w_BRF.addContent(new Element("Z_w_BRF").setText(String.valueOf(aManoeuvre.customParameters.customWayPoint.get(q).w_BRF.getZ())));
+            customWayPoint.addContent(w_BRF);
+            Element w_dot_BRF = new Element("w_dot_BRF");
+            w_dot_BRF.addContent(new Element("X_w_dot_BRF").setText(String.valueOf(aManoeuvre.customParameters.customWayPoint.get(q).w_dot_BRF.getX())));
+            w_dot_BRF.addContent(new Element("Y_w_dot_BRF").setText(String.valueOf(aManoeuvre.customParameters.customWayPoint.get(q).w_dot_BRF.getY())));
+            w_dot_BRF.addContent(new Element("Z_w_dot_BRF").setText(String.valueOf(aManoeuvre.customParameters.customWayPoint.get(q).w_dot_BRF.getZ())));
+            customWayPoint.addContent(w_dot_BRF);
             customParameter.addContent(customWayPoint);
         }
         attitudeManoeuvre.addContent(customParameter);

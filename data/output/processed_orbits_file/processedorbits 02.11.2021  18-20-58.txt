@@ -1,0 +1,7 @@
+{"referenceFrame":"referenceframe","principalPlane":"principalframe","columnLabelsAndUnits":"columnlabels","signalID":"signalID","recipientID":"recipientID","validityTimeWindow":"timewindow","missionID":"missionID","satelliteID":"satelliteID","originatorID":"originatorID","originatorRole":"originatorRole","creationTime":"creationtime","subjectType":"subjecttype","spare":"spare","signalAim":"signalaim"}
+
+
+54.985342854324 7.6596867498 1.3462734978 43.238575641 6.5576454763 6453.1       5.2387654983
+56.353          7.6596867498 1.3462734978 43.238575641 6.5576454763 6453.1       5.2387654983
+75646.97465     7.6596867498 734630.978   43.238575641 2313354.9    6453.1745364 5.2387654983
+2397.4549787    7.6596867498 846353.9     43.238575641 243783.9     6453.125344  5.2387654983

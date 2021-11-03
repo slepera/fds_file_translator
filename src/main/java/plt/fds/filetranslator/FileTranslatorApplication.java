@@ -34,8 +34,15 @@ FileTranslatorApplication {
 		 //TPF tpf = DBSimulator.getTPF();
 		 //TPFFileGenerator.CreateTPFTextFile(tpf);
 
-		//ODSTP odstp = DBSimulator.get();
-		//ODSTP_ODNOM_Processed_Orbits_FileGenerator.CreateODSTPFile(odstp);
+		ODSTP odstp = DBSimulator.getODSTP();
+		ODSTP_ODNOM_Processed_Orbits_FileGenerator.CreateODSTPFile(odstp);
+
+		//ODNOM odnom = DBSimulator.getODNOM();
+		//ODSTP_ODNOM_Processed_Orbits_FileGenerator.CreateODNOMFile(odnom);
+
+		//ProcessedOrbits processedOrbits = DBSimulator.getProcessedOrbits();
+		//ODSTP_ODNOM_Processed_Orbits_FileGenerator.CreateProcessedOrbitsFile(processedOrbits);
+
 	}
 
 }

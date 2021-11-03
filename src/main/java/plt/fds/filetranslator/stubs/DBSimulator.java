@@ -83,11 +83,15 @@ public class DBSimulator {
         attitudeFile.attitudeLegs.get(0).addAttitudeFileRecords(new AttitudeFileRecords());
         attitudeFile.attitudeLegs.get(0).attitudeFileRecords.get(0).epoch = "idea";
         attitudeFile.attitudeLegs.get(0).attitudeFileRecords.get(0).quaternion = "derecha";
-        attitudeFile.attitudeLegs.get(0).attitudeFileRecords.get(0).angularVelocity = "positive";
+        attitudeFile.attitudeLegs.get(0).attitudeFileRecords.get(0).angularVelocity.setX(744635);
+        attitudeFile.attitudeLegs.get(0).attitudeFileRecords.get(0).angularVelocity.setY(46374);
+        attitudeFile.attitudeLegs.get(0).attitudeFileRecords.get(0).angularVelocity.setZ(5767685);
         attitudeFile.attitudeLegs.get(0).addAttitudeFileRecords(new AttitudeFileRecords());
         attitudeFile.attitudeLegs.get(0).attitudeFileRecords.get(1).epoch = "magari";
         attitudeFile.attitudeLegs.get(0).attitudeFileRecords.get(1).quaternion = "izquierda";
-        attitudeFile.attitudeLegs.get(0).attitudeFileRecords.get(1).angularVelocity = "negative";
+        attitudeFile.attitudeLegs.get(0).attitudeFileRecords.get(1).angularVelocity.setX(744635);
+        attitudeFile.attitudeLegs.get(0).attitudeFileRecords.get(1).angularVelocity.setY(46374);
+        attitudeFile.attitudeLegs.get(0).attitudeFileRecords.get(1).angularVelocity.setZ(5767685);
 
         attitudeFile.addAttitudeLeg(new AttitudeLeg());
         attitudeFile.attitudeLegs.get(1).legStartTime = "15:28";
@@ -99,11 +103,15 @@ public class DBSimulator {
         attitudeFile.attitudeLegs.get(1).addAttitudeFileRecords(new AttitudeFileRecords());
         attitudeFile.attitudeLegs.get(1).attitudeFileRecords.get(0).epoch = "summer";
         attitudeFile.attitudeLegs.get(1).attitudeFileRecords.get(0).quaternion = "down";
-        attitudeFile.attitudeLegs.get(1).attitudeFileRecords.get(0).angularVelocity = "gym";
+        attitudeFile.attitudeLegs.get(1).attitudeFileRecords.get(0).angularVelocity.setX(744635);
+        attitudeFile.attitudeLegs.get(1).attitudeFileRecords.get(0).angularVelocity.setY(46374);
+        attitudeFile.attitudeLegs.get(1).attitudeFileRecords.get(0).angularVelocity.setZ(5767685);
         attitudeFile.attitudeLegs.get(1).addAttitudeFileRecords(new AttitudeFileRecords());
         attitudeFile.attitudeLegs.get(1).attitudeFileRecords.get(1).epoch = "oppure";
         attitudeFile.attitudeLegs.get(1).attitudeFileRecords.get(1).quaternion = "dritto";
-        attitudeFile.attitudeLegs.get(1).attitudeFileRecords.get(1).angularVelocity = "citofono";
+        attitudeFile.attitudeLegs.get(1).attitudeFileRecords.get(1).angularVelocity.setX(744635);
+        attitudeFile.attitudeLegs.get(1).attitudeFileRecords.get(1).angularVelocity.setY(46374);
+        attitudeFile.attitudeLegs.get(1).attitudeFileRecords.get(1).angularVelocity.setZ(5767685);
 
         attitudeFile.addAttitudeLeg(new AttitudeLeg());
         attitudeFile.attitudeLegs.get(2).legStartTime = "09:15";
@@ -115,11 +123,9 @@ public class DBSimulator {
         attitudeFile.attitudeLegs.get(2).addAttitudeFileRecords(new AttitudeFileRecords());
         attitudeFile.attitudeLegs.get(2).attitudeFileRecords.get(0).epoch = "winter";
         attitudeFile.attitudeLegs.get(2).attitudeFileRecords.get(0).quaternion = "down";
-        attitudeFile.attitudeLegs.get(2).attitudeFileRecords.get(0).angularVelocity = "gym";
-        attitudeFile.attitudeLegs.get(2).addAttitudeFileRecords(new AttitudeFileRecords());
-        attitudeFile.attitudeLegs.get(2).attitudeFileRecords.get(1).epoch = "oppure";
-        attitudeFile.attitudeLegs.get(2).attitudeFileRecords.get(1).quaternion = "dritto";
-        attitudeFile.attitudeLegs.get(2).attitudeFileRecords.get(1).angularVelocity = "citofono";
+        attitudeFile.attitudeLegs.get(2).attitudeFileRecords.get(0).angularVelocity.setX(744635);
+        attitudeFile.attitudeLegs.get(2).attitudeFileRecords.get(0).angularVelocity.setY(46374);
+        attitudeFile.attitudeLegs.get(2).attitudeFileRecords.get(0).angularVelocity.setZ(5767685);
 
         return attitudeFile;
     }
@@ -193,28 +199,44 @@ public class DBSimulator {
 
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).addAttManParams(23.9);
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).addAttManParams(32.8);
-        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).downlinkParameter.antennaVers = "easy";
-        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).downlinkParameter.stationPos = "on me";
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).downlinkParameter.antennaVers.setX(756445);
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).downlinkParameter.antennaVers.setY(756445);
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).downlinkParameter.antennaVers.setZ(756445);
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).downlinkParameter.stationPos.setX(243547);
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).downlinkParameter.stationPos.setY(66343);
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).downlinkParameter.stationPos.setZ(37454);
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).localOrbitalParameters.q_ORB2BRF = "peaches";
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.nbWayPoints = 964;
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.addCustomWayPoint(new CustomWayPoint());
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(0).wayPointID = 2534;
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(0).epoch = "light";
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(0).q_ECI2BRF = "dark";
-        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(0).w_BRF = "dawn";
-        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(0).w_dot_BRF = "night";
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(0).w_BRF.setX(436595);
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(0).w_BRF.setY(436595);
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(0).w_BRF.setZ(436595);
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(0).w_dot_BRF.setX(845343);
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(0).w_dot_BRF.setY(845343);
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(0).w_dot_BRF.setZ(845343);
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.addCustomWayPoint(new CustomWayPoint());
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(1).wayPointID = 98754;
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(1).epoch = "today";
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(1).q_ECI2BRF = "tomorrow";
-        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(1).w_BRF = "day";
-        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(1).w_dot_BRF = "afternoon";
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(1).w_BRF.setX(435262);
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(1).w_BRF.setY(435262);
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(1).w_BRF.setZ(435262);
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(1).w_dot_BRF.setX(87675);
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(1).w_dot_BRF.setY(87675);
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(1).w_dot_BRF.setZ(87675);
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.addCustomWayPoint(new CustomWayPoint());
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(2).wayPointID = 21133;
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(2).epoch = "tomorrow";
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(2).q_ECI2BRF = "evening";
-        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(2).w_BRF = "night";
-        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(2).w_dot_BRF = "foodie";
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(2).w_BRF.setX(2437859);
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(2).w_BRF.setY(2437859);
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(2).w_BRF.setZ(2437859);
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(2).w_dot_BRF.setX(9635343);
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(2).w_dot_BRF.setY(9635343);
+        manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).customParameters.customWayPoint.get(2).w_dot_BRF.setZ(9635343);
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).manID = "no room";
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).execStartTime = "16:07";
         manoeuvrePlan.manLeg.get(0).attitudeManoeuvre.get(0).execStopTime = "16:35";
@@ -496,5 +518,188 @@ public class DBSimulator {
 
         return tpf;
     }
+
+    public static ODSTP getODSTP(){
+
+        ODSTP odstp = new ODSTP();
+
+        odstp.fdsFileHeader.referenceFrame = "referenceframe";
+        odstp.fdsFileHeader.principalPlane = "principalframe";
+        odstp.fdsFileHeader.columnLabelsAndUnits = "columnlabels";
+        odstp.fdsFileHeader.signalID = "signalID";
+        odstp.fdsFileHeader.recipientID = "recipientID";
+        odstp.fdsFileHeader.validityTimeWindow = "timewindow";
+        odstp.fdsFileHeader.missionID = "missionID";
+        odstp.fdsFileHeader.satelliteID = "satelliteID";
+        odstp.fdsFileHeader.originatorID = "originatorID";
+        odstp.fdsFileHeader.originatorRole = "originatorRole";
+        odstp.fdsFileHeader.creationTime = "creationtime";
+        odstp.fdsFileHeader.subjectType = "subjecttype";
+        odstp.fdsFileHeader.spare = "spare";
+        odstp.fdsFileHeader.signalAim = "signalaim";
+
+        odstp.addODSTPRecord(new ODSTPRecord());
+        odstp.odstpRecord.get(0).delta_T_Cod_Pod = 23.7651400000;
+        odstp.odstpRecord.get(0).sunDirection.setX(1252396.78330000);
+        odstp.odstpRecord.get(0).sunDirection.setY(12.873);
+        odstp.odstpRecord.get(0).sunDirection.setZ(857464651.0900);
+        odstp.odstpRecord.get(0).eclipseFlag = 200;
+        odstp.odstpRecord.get(0).keplerianElements.setSemiMajorAxis(0.856444);
+        odstp.odstpRecord.get(0).keplerianElements.setEccentricity(985.2283);
+        odstp.odstpRecord.get(0).keplerianElements.setInclination(234.856);
+        odstp.odstpRecord.get(0).keplerianElements.setRaan(00.03243);
+        odstp.odstpRecord.get(0).keplerianElements.setArgOfPerigee(1234.37);
+        odstp.odstpRecord.get(0).keplerianElements.setTrueAnomaly(0.85554);
+        odstp.odstpRecord.get(0).orbitNumber = "orbitnumber";
+        odstp.odstpRecord.get(0).mjdEpoch = 12345678910111.;
+        odstp.odstpRecord.get(0).position.setX(765968674.9800);
+        odstp.odstpRecord.get(0).position.setY(13462734.97800);
+        odstp.odstpRecord.get(0).position.setZ(43.238575641000);
+        odstp.odstpRecord.get(0).velocity.setX(65576454.763000);
+        odstp.odstpRecord.get(0).velocity.setY(6453.1);
+        odstp.odstpRecord.get(0).velocity.setZ(52387654.983000);
+        odstp.addODSTPRecord(new ODSTPRecord());
+        odstp.odstpRecord.get(1).delta_T_Cod_Pod = 574645353.53;
+        odstp.odstpRecord.get(1).sunDirection.setX(4635535);
+        odstp.odstpRecord.get(1).sunDirection.setY(635232);
+        odstp.odstpRecord.get(1).sunDirection.setZ(867565);
+        odstp.odstpRecord.get(1).eclipseFlag = 100;
+        odstp.odstpRecord.get(1).keplerianElements.setSemiMajorAxis(6463535.55);
+        odstp.odstpRecord.get(1).keplerianElements.setEccentricity(9345.);
+        odstp.odstpRecord.get(1).keplerianElements.setInclination(43346.6);
+        odstp.odstpRecord.get(1).keplerianElements.setRaan(00.03243);
+        odstp.odstpRecord.get(1).keplerianElements.setArgOfPerigee(1234.3);
+        odstp.odstpRecord.get(1).keplerianElements.setTrueAnomaly(0.855564);
+        odstp.odstpRecord.get(1).orbitNumber = "orbitnumber";
+        odstp.odstpRecord.get(1).mjdEpoch = 56.353;
+        odstp.odstpRecord.get(1).position.setX(765968674.9800);
+        odstp.odstpRecord.get(1).position.setY(13462734.97800);
+        odstp.odstpRecord.get(1).position.setZ(43.238575641000);
+        odstp.odstpRecord.get(1).velocity.setX(65576454.763000);
+        odstp.odstpRecord.get(1).velocity.setY(6453.1);
+        odstp.odstpRecord.get(1).velocity.setZ(52387654.983000);
+
+        return odstp;
+
+    }
+
+    public static ODNOM getODNOM(){
+
+        ODNOM odnom = new ODNOM();
+
+        odnom.fdsFileHeader.referenceFrame = "referenceframe";
+        odnom.fdsFileHeader.principalPlane = "principalframe";
+        odnom.fdsFileHeader.columnLabelsAndUnits = "columnlabels";
+        odnom.fdsFileHeader.signalID = "signalID";
+        odnom.fdsFileHeader.recipientID = "recipientID";
+        odnom.fdsFileHeader.validityTimeWindow = "timewindow";
+        odnom.fdsFileHeader.missionID = "missionID";
+        odnom.fdsFileHeader.satelliteID = "satelliteID";
+        odnom.fdsFileHeader.originatorID = "originatorID";
+        odnom.fdsFileHeader.originatorRole = "originatorRole";
+        odnom.fdsFileHeader.creationTime = "creationtime";
+        odnom.fdsFileHeader.subjectType = "subjecttype";
+        odnom.fdsFileHeader.spare = "spare";
+        odnom.fdsFileHeader.signalAim = "signalaim";
+
+        odnom.addODNOMRecord(new ODNOMRecord());
+        odnom.odnomRecord.get(0).sunDirection.setX(1252396.78330000);
+        odnom.odnomRecord.get(0).sunDirection.setY(12.873);
+        odnom.odnomRecord.get(0).sunDirection.setZ(857464651.0900);
+        odnom.odnomRecord.get(0).eclipseFlag = 200;
+        odnom.odnomRecord.get(0).keplerianElements.setSemiMajorAxis(0.856444);
+        odnom.odnomRecord.get(0).keplerianElements.setEccentricity(985.2283);
+        odnom.odnomRecord.get(0).keplerianElements.setInclination(234.8506);
+        odnom.odnomRecord.get(0).keplerianElements.setRaan(00.03243);
+        odnom.odnomRecord.get(0).keplerianElements.setArgOfPerigee(1234.3);
+        odnom.odnomRecord.get(0).keplerianElements.setTrueAnomaly(0.855564);
+        odnom.odnomRecord.get(0).orbitNumber = "orbitnumber";
+        odnom.odnomRecord.get(0).mjdEpoch = 54.98;
+        odnom.odnomRecord.get(0).position.setX(765968674.9800);
+        odnom.odnomRecord.get(0).position.setY(13462734.97800);
+        odnom.odnomRecord.get(0).position.setZ(43.238575641000);
+        odnom.odnomRecord.get(0).velocity.setX(65576454.763000);
+        odnom.odnomRecord.get(0).velocity.setY(6453.1);
+        odnom.odnomRecord.get(0).velocity.setZ(52387654.983000);
+        odnom.addODNOMRecord(new ODNOMRecord());
+        odnom.odnomRecord.get(1).sunDirection.setX(4635535);
+        odnom.odnomRecord.get(1).sunDirection.setY(635232);
+        odnom.odnomRecord.get(1).sunDirection.setZ(867565);
+        odnom.odnomRecord.get(1).eclipseFlag = 100;
+        odnom.odnomRecord.get(1).keplerianElements.setSemiMajorAxis(6463535.55);
+        odnom.odnomRecord.get(1).keplerianElements.setEccentricity(9345.);
+        odnom.odnomRecord.get(1).keplerianElements.setInclination(43346.6);
+        odnom.odnomRecord.get(1).keplerianElements.setRaan(00.03243);
+        odnom.odnomRecord.get(1).keplerianElements.setArgOfPerigee(1234.3);
+        odnom.odnomRecord.get(1).keplerianElements.setTrueAnomaly(0.855564);
+        odnom.odnomRecord.get(1).orbitNumber = "orbitnumber";
+        odnom.odnomRecord.get(1).mjdEpoch = 56.353;
+        odnom.odnomRecord.get(1).position.setX(765968674.9800);
+        odnom.odnomRecord.get(1).position.setY(13462734.97800);
+        odnom.odnomRecord.get(1).position.setZ(43.238575641000);
+        odnom.odnomRecord.get(1).velocity.setX(65576454.763000);
+        odnom.odnomRecord.get(1).velocity.setY(6453.1);
+        odnom.odnomRecord.get(1).velocity.setZ(52387654.983000);
+
+        return odnom;
+
+    }
+
+    public static ProcessedOrbits getProcessedOrbits(){
+
+        ProcessedOrbits processedOrbits = new ProcessedOrbits();
+
+        processedOrbits.fdsFileHeader.referenceFrame = "referenceframe";
+        processedOrbits.fdsFileHeader.principalPlane = "principalframe";
+        processedOrbits.fdsFileHeader.columnLabelsAndUnits = "columnlabels";
+        processedOrbits.fdsFileHeader.signalID = "signalID";
+        processedOrbits.fdsFileHeader.recipientID = "recipientID";
+        processedOrbits.fdsFileHeader.validityTimeWindow = "timewindow";
+        processedOrbits.fdsFileHeader.missionID = "missionID";
+        processedOrbits.fdsFileHeader.satelliteID = "satelliteID";
+        processedOrbits.fdsFileHeader.originatorID = "originatorID";
+        processedOrbits.fdsFileHeader.originatorRole = "originatorRole";
+        processedOrbits.fdsFileHeader.creationTime = "creationtime";
+        processedOrbits.fdsFileHeader.subjectType = "subjecttype";
+        processedOrbits.fdsFileHeader.spare = "spare";
+        processedOrbits.fdsFileHeader.signalAim = "signalaim";
+
+        processedOrbits.addEphemeredisRecord(new ODNOMRecord());
+        processedOrbits.ephemerisRecords.get(0).mjdEpoch = 54.985342854324;
+        processedOrbits.ephemerisRecords.get(0).position.setX(765968674.9800);
+        processedOrbits.ephemerisRecords.get(0).position.setY(13462734.97800);
+        processedOrbits.ephemerisRecords.get(0).position.setZ(43.238575641000);
+        processedOrbits.ephemerisRecords.get(0).velocity.setX(65576454.763000);
+        processedOrbits.ephemerisRecords.get(0).velocity.setY(6453.1);
+        processedOrbits.ephemerisRecords.get(0).velocity.setZ(52387654.983000);
+        processedOrbits.addEphemeredisRecord(new ODNOMRecord());
+        processedOrbits.ephemerisRecords.get(1).mjdEpoch = 56.353;
+        processedOrbits.ephemerisRecords.get(1).position.setX(765968674.9800);
+        processedOrbits.ephemerisRecords.get(1).position.setY(13462734.97800);
+        processedOrbits.ephemerisRecords.get(1).position.setZ(43.238575641000);
+        processedOrbits.ephemerisRecords.get(1).velocity.setX(65576454.763000);
+        processedOrbits.ephemerisRecords.get(1).velocity.setY(6453.1);
+        processedOrbits.ephemerisRecords.get(1).velocity.setZ(52387654.983000);
+        processedOrbits.addEphemeredisRecord(new ODNOMRecord());
+        processedOrbits.ephemerisRecords.get(2).mjdEpoch = 75646.97465;
+        processedOrbits.ephemerisRecords.get(2).position.setX(765968674.9800);
+        processedOrbits.ephemerisRecords.get(2).position.setY(734630.978);
+        processedOrbits.ephemerisRecords.get(2).position.setZ(43.238575641000);
+        processedOrbits.ephemerisRecords.get(2).velocity.setX(2313354.9);
+        processedOrbits.ephemerisRecords.get(2).velocity.setY(6453.1745364);
+        processedOrbits.ephemerisRecords.get(2).velocity.setZ(52387654.983000);
+        processedOrbits.addEphemeredisRecord(new ODNOMRecord());
+        processedOrbits.ephemerisRecords.get(3).mjdEpoch = 2397.4549787;
+        processedOrbits.ephemerisRecords.get(3).position.setX(765968674.9800);
+        processedOrbits.ephemerisRecords.get(3).position.setY(846353.9);
+        processedOrbits.ephemerisRecords.get(3).position.setZ(43.238575641000);
+        processedOrbits.ephemerisRecords.get(3).velocity.setX(243783.9);
+        processedOrbits.ephemerisRecords.get(3).velocity.setY(6453.125344);
+        processedOrbits.ephemerisRecords.get(3).velocity.setZ(52387654.983000);
+
+        return processedOrbits;
+
+    }
+
 
 }

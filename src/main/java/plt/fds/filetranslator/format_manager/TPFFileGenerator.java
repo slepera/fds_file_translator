@@ -49,7 +49,7 @@ public class TPFFileGenerator {
 
 
     /*
-    To know which type of TPF is when the file is printed TO BE REMOVED once is known the type of TPF
+    To know which type of TPF is, when the file is printed. TO BE REMOVED once is known the type of TPF
      */
     public static String TypeOfTPF (TPFFileType tpfFileType) {
         return tpfFileType.name();
@@ -67,9 +67,9 @@ public class TPFFileGenerator {
             case TP2: opth1 = "!TP2" + new_line; break;
         }
         /*
-        remove everything (setText) that could be before and adds opth1
+        remove everything (setText) that might be before and adds opth1
          */
-        TPF.addContent(opth1);
+        TPF.setText(opth1);
 
 
         //String fileStructure = LeftJustify(FILE_FORMAT, FILE_TYPE) + " " + LeftJustify(SEQUENCE_COUNTER, COUNTER) + "\n";
@@ -120,7 +120,7 @@ public class TPFFileGenerator {
             //System.out.println("Body: " + tpf_Body);
         }
 
-        System.out.println(TPF.getText());
+        //System.out.println(TPF.getText());
         return TPF;
     }
 

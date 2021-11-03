@@ -4,16 +4,16 @@ import java.util.ArrayList;
 
 public class ODNOM {
 
-    FDSFileHeader fdsFileHeader;
-    ArrayList<ODNOMRecord> odnomRecord;
+    public FDSFileHeader fdsFileHeader;
+    public ArrayList<ODNOMRecord> odnomRecord;
 
     public ODNOM() {
         this.fdsFileHeader = new FDSFileHeader();
         this.odnomRecord = new ArrayList<>();
     }
 
-    public void addODNOMRecord (ODNOMRecord odnomRecords) {
-        this.odnomRecord.add(odnomRecords);
+    public void addODNOMRecord (ODNOMRecord odnomRecord) {
+        this.odnomRecord.add(odnomRecord);
     }
 
     public FDSFileHeader getFdsFileHeader() {

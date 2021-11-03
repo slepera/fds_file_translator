@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Manoeuvre_Plan>
+  <Man_Plan_Header>
+    <nbManLeg>123</nbManLeg>
+    <signalID>324</signalID>
+    <recipientID>1298</recipientID>
+    <validityTimeWindow>hi</validityTimeWindow>
+    <missionID>010101</missionID>
+    <satelliteID>2222</satelliteID>
+    <originatorID>8888</originatorID>
+    <originatorRole>bye</originatorRole>
+    <subjectType>role</subjectType>
+    <creationTime>12:02</creationTime>
+    <spare>food</spare>
+    <signalAim>good</signalAim>
+  </Man_Plan_Header>
+  <ManLegs>
+    <ManLeg>
+      <legID>209</legID>
+      <legManType>man</legManType>
+      <legStartTime>14:30</legStartTime>
+      <legStopTime>15:45</legStopTime>
+      <blockingFlag>woman</blockingFlag>
+      <legNBMan>763</legNBMan>
+      <remarks>adiós</remarks>
+    </ManLeg>
+    <Attitude_Manoeuvres>
+      <Attitude_Manoeuvre>
+        <targetReferenceMode>Adele</targetReferenceMode>
+        <attManParams>23.9</attManParams>
+        <attManParams>32.8</attManParams>
+        <downlink_Parameter>
+          <antennaVers>
+            <X_antennaVers>756445.0</X_antennaVers>
+            <Y_antennaVers>756445.0</Y_antennaVers>
+            <Z_antennaVers>756445.0</Z_antennaVers>
+          </antennaVers>
+          <stationPos>
+            <X_stationPos>243547.0</X_stationPos>
+            <Y_stationPos>66343.0</Y_stationPos>
+            <Z_stationPos>37454.0</Z_stationPos>
+          </stationPos>
+        </downlink_Parameter>
+        <local_Orbital_Parameters>
+          <q_ORB2BRF>peaches</q_ORB2BRF>
+        </local_Orbital_Parameters>
+        <custom_Parameters>
+          <nbWayPoints>964</nbWayPoints>
+          <custom_WayPoint>
+            <wayPointID>2534</wayPointID>
+            <epoch>light</epoch>
+            <q_ECI2BRF>dark</q_ECI2BRF>
+            <w_BRF>
+              <X_w_BRF>436595.0</X_w_BRF>
+              <Y_w_BRF>436595.0</Y_w_BRF>
+              <Z_w_BRF>436595.0</Z_w_BRF>
+            </w_BRF>
+            <w_dot_BRF>
+              <X_w_dot_BRF>845343.0</X_w_dot_BRF>
+              <Y_w_dot_BRF>845343.0</Y_w_dot_BRF>
+              <Z_w_dot_BRF>845343.0</Z_w_dot_BRF>
+            </w_dot_BRF>
+          </custom_WayPoint>
+          <custom_WayPoint>
+            <wayPointID>98754</wayPointID>
+            <epoch>today</epoch>
+            <q_ECI2BRF>tomorrow</q_ECI2BRF>
+            <w_BRF>
+              <X_w_BRF>435262.0</X_w_BRF>
+              <Y_w_BRF>435262.0</Y_w_BRF>
+              <Z_w_BRF>435262.0</Z_w_BRF>
+            </w_BRF>
+            <w_dot_BRF>
+              <X_w_dot_BRF>87675.0</X_w_dot_BRF>
+              <Y_w_dot_BRF>87675.0</Y_w_dot_BRF>
+              <Z_w_dot_BRF>87675.0</Z_w_dot_BRF>
+            </w_dot_BRF>
+          </custom_WayPoint>
+          <custom_WayPoint>
+            <wayPointID>21133</wayPointID>
+            <epoch>tomorrow</epoch>
+            <q_ECI2BRF>evening</q_ECI2BRF>
+            <w_BRF>
+              <X_w_BRF>2437859.0</X_w_BRF>
+              <Y_w_BRF>2437859.0</Y_w_BRF>
+              <Z_w_BRF>2437859.0</Z_w_BRF>
+            </w_BRF>
+            <w_dot_BRF>
+              <X_w_dot_BRF>9635343.0</X_w_dot_BRF>
+              <Y_w_dot_BRF>9635343.0</Y_w_dot_BRF>
+              <Z_w_dot_BRF>9635343.0</Z_w_dot_BRF>
+            </w_dot_BRF>
+          </custom_WayPoint>
+        </custom_Parameters>
+        <Manoeuvre>
+          <manID>no room</manID>
+          <execStartTime>16:07</execStartTime>
+          <execStopTime>16:35</execStopTime>
+          <intialAttitude>Hello</intialAttitude>
+          <finalAttitude>no signal</finalAttitude>
+          <manType>ATTITUDE</manType>
+        </Manoeuvre>
+        <TPF>!TPF
+mmwm     n ñwññ     owoo    
+           p q 958
+rwrr                       ssws                       ttwt                      
+uuwu                       22224
+vvwv                                                                                                                                                                                                                                                          
+twww     w xxxr                 ryyy z z2zr                                      
+www34r   1 xxx67r               y3r2 z z2z98r</TPF>
+      </Attitude_Manoeuvre>
+    </Attitude_Manoeuvres>
+    <Orbital_Manoeuvres>
+      <Orbital_Manoeuvre>
+        <orbManParams>2.1</orbManParams>
+        <orbManParams>32.4</orbManParams>
+        <orbManParams>18.33</orbManParams>
+        <Manoeuvre>
+          <manID>sunny</manID>
+          <execStartTime>09:26</execStartTime>
+          <execStopTime>11:30</execStopTime>
+          <initialAttitude>9875</initialAttitude>
+          <finalAttitude>18765</finalAttitude>
+          <manType>ORBITAL</manType>
+        </Manoeuvre>
+        <TPF>!TPF
+mmm      n ñññ      ooo     
+           p q 987
+rrr                        sss                        ttt                       
+uuu                        22222
+vvv                                                                                                                                                                                                                                                           
+www      w xxx                  yyy  z z2z                                       
+www34    1 xxx67                y32y z z2z98                                     
+prueba   p prueba               prue p prueba</TPF>
+        <TPF>!TPF
+mmm      n ñññ      ooo     
+           p q 987
+rrr                        sss                        ttt                       
+uuu                        22222
+vvv                                                                                                                                                                                                                                                           
+www      w xxx                  yyy  z z2z                                       
+www34    1 xxx67                y32y z z2z98</TPF>
+      </Orbital_Manoeuvre>
+      <Orbital_Manoeuvre>
+        <orbManParams>7.8</orbManParams>
+        <orbManParams>0.9</orbManParams>
+        <Manoeuvre>
+          <manID>cloudy</manID>
+          <execStartTime>09:26</execStartTime>
+          <execStopTime>11:30</execStopTime>
+          <initialAttitude>9875</initialAttitude>
+          <finalAttitude>18765</finalAttitude>
+          <manType>ORBITAL</manType>
+        </Manoeuvre>
+        <TPF>!TPF
+mmm      n ñññ      ooo     
+           p q 987
+rrr                        sss                        ttt                       
+uuu                        22222
+vvv                                                                                                                                                                                                                                                           
+www      w xxx                  yyy  z z2z                                       
+www34    1 xxx67                y32y z z2z98</TPF>
+        <TPF>!TPF
+taskname 9 setname0 valueset
+           d s 987
+releasetime012345678?????9 earliestreleasetime9????87 latestreleasetime012???345
+executiontime0123456????78 22222
+vvv                                                                                                                                                                                                                                                           
+paramnam 9 xxx                  yyy  z z2z                                       
+www34    1 paramValue0123456789 unit 7 z2z98</TPF>
+      </Orbital_Manoeuvre>
+    </Orbital_Manoeuvres>
+  </ManLegs>
+</Manoeuvre_Plan>

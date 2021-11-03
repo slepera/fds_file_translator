@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class ProcessedOrbits {
 
-    FDSFileHeader fdsFileHeader;
-    ArrayList<EphemerisRecord> ephemerisRecords;
+    public FDSFileHeader fdsFileHeader;
+    public ArrayList<EphemerisRecord> ephemerisRecords;
 
     public ProcessedOrbits() {
         this.fdsFileHeader = new FDSFileHeader();
