@@ -8,7 +8,7 @@ public class OrbitalManoeuvre extends Manoeuvre {
 
     public OrbitalManoeuvre() {
 
-        this.manType = "ORBITAL";
+        this.manType = EnumManType.ORBITAL;
         this.orbMansParams = new ArrayList<Double>();
 
     }

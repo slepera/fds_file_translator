@@ -3,12 +3,10 @@ package plt.fds.filetranslator.data_models;
 public class TPFHeader {
 
     public String taskName;
-    //public EnumTpfTaskType taskType;
-    public String taskType;
+    public EnumTpfTaskType taskType;
     public String parameterSetName;
     public String parameterValueSetName;
-    //public EnumTpfDestination destination;
-    public String destination;
+    public EnumTpfDestination destination;
     public String source;
     public Integer nbRecords;
     //public DateTimeType releaseTime;
@@ -25,10 +23,8 @@ public class TPFHeader {
     public TPFHeader()
     {
         this.taskName = new String();
-        this.taskType = new String();
         this.parameterSetName = new String();
         this.parameterValueSetName = new String();
-        this.destination = new String();
         this.source = new String();
         Integer nbRecords = this.nbRecords;
         this.releaseTime = new String();

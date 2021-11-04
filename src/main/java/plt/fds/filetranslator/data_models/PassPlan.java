@@ -18,17 +18,14 @@ public class PassPlan {
          public String contactID;
          //public EnumMissionID missionrefID;
          public String missionrefID;
-         //public EnnumSatID spacecraftrefID;
-         public String spacecraftrefID;
-         //public EnumGroundStationID groundstationrefID;
-         public String groundstationrefID;
+         public EnumSatID spacecraftrefID;
+         public EnumGroundStationID groundstationrefID;
          //public DateTimeType startEpoch;
          public String startEpoch;
          //public DateTimeType stopEpoch;
          public String stopEpoch;
          public String visibilitymaskID;
-         //public EnumContactLookingGeometry looksideGeometry;
-         public String looksideGeometry;
+         public EnumContactLookingGeometry looksideGeometry;
          public String remarks;
     }
 

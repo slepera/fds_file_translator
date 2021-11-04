@@ -4,8 +4,7 @@ import java.util.ArrayList;
 
 public class AttitudeManoeuvre extends Manoeuvre {
 
-    //public EnumTargetReferenceMode targetReferenceMode;
-    public String targetReferenceMode;
+    public EnumTargetReferenceMode targetReferenceMode;
     public ArrayList<Double> attManParams;
     public DownlinkParameters downlinkParameter;
     public LocalOrbitalParameters localOrbitalParameters;
@@ -13,8 +12,7 @@ public class AttitudeManoeuvre extends Manoeuvre {
 
     public AttitudeManoeuvre() {
 
-        this.manType = "ATTITUDE";
-        this.targetReferenceMode = new String();
+        this.manType = EnumManType.ATTITUDE;
         this.attManParams = new ArrayList<Double>();
         this.downlinkParameter = new DownlinkParameters();
         this.localOrbitalParameters = new LocalOrbitalParameters();

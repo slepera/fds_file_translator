@@ -5,7 +5,7 @@ public class ODNOMRecord extends EphemerisRecord{
     public OrbitalParameters keplerianElements;
     public Vector3DType sunDirection;
     public Integer eclipseFlag;
-    //UnsignedLong orbitNumber
+    //public UnsignedLong orbitNumber
     public String orbitNumber;
 
     public ODNOMRecord() {

@@ -77,14 +77,14 @@ public class TPFFileGenerator {
 
         String h1, h2, h3, h4, h5;
 
-        h1 = Utilities.LeftJustify(tpf.tpfHeader.taskName, TASK_NAME) + " " + Utilities.LeftJustify(tpf.tpfHeader.taskType,TASK_TYPE)
+        h1 = Utilities.LeftJustify(tpf.tpfHeader.taskName, TASK_NAME) + " " + Utilities.LeftJustify(tpf.tpfHeader.taskType.name(),TASK_TYPE)
                 + " " + Utilities.LeftJustify(tpf.tpfHeader.parameterSetName, PARAMETER_SET_NAME) + " "
                 + Utilities.LeftJustify(tpf.tpfHeader.parameterValueSetName, PARAMETER_VALUE_SET_NAME) + new_line;
 
         /*
         h2[0]Field not used by SCOS2000 by is inserted anyway as 11 empty spaces
          */
-        h2 = "           " + Utilities.LeftJustify(tpf.tpfHeader.destination, DESTINATION) + " " + Utilities.LeftJustify(tpf.tpfHeader.source,SOURCE)
+        h2 = "           " + Utilities.LeftJustify(tpf.tpfHeader.destination.name(), DESTINATION) + " " + Utilities.LeftJustify(tpf.tpfHeader.source,SOURCE)
                 + " " + Utilities.LeftJustify(String.valueOf(tpf.tpfHeader.nbRecords), NBRECORDS) + new_line;
 
         h3 = Utilities.LeftJustify(tpf.tpfHeader.releaseTime, (tpfFileType == TPFFileType.STANDARD || tpfFileType == TPFFileType.TP1) ? RELEASE_TIME : RELEASE_TIME_EXTENDED) + " "
@@ -106,7 +106,7 @@ public class TPFFileGenerator {
         {
             String tpf_Body = "";
             String parameterName = Utilities.LeftJustify(tpf.tpfBody.tpfRecord.get(g).paramName, PARAMETER_NAME);
-            String parameterValueType = Utilities.LeftJustify(tpf.tpfBody.tpfRecord.get(g).paramValueType, PARAMETER_VALUE_TYPE);
+            String parameterValueType = Utilities.LeftJustify(tpf.tpfBody.tpfRecord.get(g).paramValueType.name(), PARAMETER_VALUE_TYPE);
 
             String parameterValue = Utilities.LeftJustify(tpf.tpfBody.tpfRecord.get(g).paramValue,(tpfFileType == TPFFileType.TPF || tpfFileType == TPFFileType.STANDARD)  ? PARAMETER_VALUE: PARAMETER_VALUE_EXTENDED);
             String parameterValueUnit = Utilities.LeftJustify(tpf.tpfBody.tpfRecord.get(g).paramValueUnit, PARAMETER_VALUE_UNIT);

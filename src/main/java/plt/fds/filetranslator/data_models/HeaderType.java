@@ -4,7 +4,6 @@ public class HeaderType {
 
     //public EnumMissionID missionID;
     public String missionID;
-    //public EnumSatID satelliteID;
     public EnumSatID satelliteID;
     public String originatorID;
     public String originatorRole;

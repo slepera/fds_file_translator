@@ -68,12 +68,12 @@ public class ODSTP_ODNOM_Processed_Orbits_FileGenerator {
 
         for (int i = 0; i < odstp.odstpRecord.size(); i++) {
             String body = Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).mjdEpoch), MJD_EPOCH) + " "
-                    + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).position.getX()), X_POSITION) + " "
-                    + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).position.getY()), Y_POSITION) + " "
-                    + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).position.getZ()), Z_POSITION) + " "
-                    + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).velocity.getX()), X_VELOCITY) + " "
-                    + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).velocity.getY()), Y_VELOCITY) + " "
-                    + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).velocity.getZ()), Z_VELOCITY) + " "
+                    + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).position.x), X_POSITION) + " "
+                    + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).position.y), Y_POSITION) + " "
+                    + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).position.z), Z_POSITION) + " "
+                    + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).velocity.x), X_VELOCITY) + " "
+                    + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).velocity.y), Y_VELOCITY) + " "
+                    + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).velocity.z), Z_VELOCITY) + " "
                     + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).keplerianElements.getSemiMajorAxis()), SEMI_MAJOR_AXIS) + " "
                     + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).keplerianElements.getEccentricity()), ECCENTRICITY) + " "
                     + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).keplerianElements.getInclination()), INCLINATION) + " "
@@ -81,9 +81,9 @@ public class ODSTP_ODNOM_Processed_Orbits_FileGenerator {
                     + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).keplerianElements.getArgOfPerigee()), ARG_OF_PERIGEE) + " "
                     + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).keplerianElements.getTrueAnomaly()), TRUE_ANOMALY) + " "
                     + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).delta_T_Cod_Pod), COD_POD) + " "
-                    + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).sunDirection.getX()), X_SUN_DIRECTION) + " "
-                    + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).sunDirection.getY()), Y_SUN_DIRECTION) + " "
-                    + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).sunDirection.getZ()), Z_SUN_DIRECTION) + " "
+                    + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).sunDirection.x), X_SUN_DIRECTION) + " "
+                    + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).sunDirection.y), Y_SUN_DIRECTION) + " "
+                    + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).sunDirection.z), Z_SUN_DIRECTION) + " "
                     + Utilities.LeftJustify(String.valueOf(odstp.odstpRecord.get(i).eclipseFlag), ECLIPSE_FLAG) + " "
                     + Utilities.LeftJustify(odstp.odstpRecord.get(i).orbitNumber, ORBIT_NUMBER) + new_line;
 
@@ -105,12 +105,12 @@ public class ODSTP_ODNOM_Processed_Orbits_FileGenerator {
 
         for (int i = 0; i < odnom.odnomRecord.size(); i++) {
             String body = Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).mjdEpoch), MJD_EPOCH) + " "
-                    + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).position.getX()), X_POSITION) + " "
-                    + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).position.getY()), Y_POSITION) + " "
-                    + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).position.getZ()), Z_POSITION) + " "
-                    + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).velocity.getX()), X_VELOCITY) + " "
-                    + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).velocity.getY()), Y_VELOCITY) + " "
-                    + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).velocity.getZ()), Z_VELOCITY) + " "
+                    + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).position.x), X_POSITION) + " "
+                    + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).position.y), Y_POSITION) + " "
+                    + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).position.z), Z_POSITION) + " "
+                    + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).velocity.x), X_VELOCITY) + " "
+                    + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).velocity.y), Y_VELOCITY) + " "
+                    + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).velocity.z), Z_VELOCITY) + " "
                     + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).keplerianElements.getSemiMajorAxis()), SEMI_MAJOR_AXIS) + " "
                     + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).keplerianElements.getEccentricity()), ECCENTRICITY) + " "
                     + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).keplerianElements.getInclination()), INCLINATION) + " "
@@ -118,9 +118,9 @@ public class ODSTP_ODNOM_Processed_Orbits_FileGenerator {
                     + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).keplerianElements.getArgOfPerigee()), ARG_OF_PERIGEE) + " "
                     + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).keplerianElements.getTrueAnomaly()), TRUE_ANOMALY) + " "
                     + Utilities.LeftJustify(String.format("%08.0f", VAR_FILLER_COLUMN), FILLER_COLUMN) + " "
-                    + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).sunDirection.getX()), X_SUN_DIRECTION) + " "
-                    + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).sunDirection.getY()), Y_SUN_DIRECTION) + " "
-                    + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).sunDirection.getZ()), Z_SUN_DIRECTION) + " "
+                    + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).sunDirection.x), X_SUN_DIRECTION) + " "
+                    + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).sunDirection.y), Y_SUN_DIRECTION) + " "
+                    + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).sunDirection.z), Z_SUN_DIRECTION) + " "
                     + Utilities.LeftJustify(String.valueOf(odnom.odnomRecord.get(i).eclipseFlag), ECLIPSE_FLAG) + " "
                     + Utilities.LeftJustify(odnom.odnomRecord.get(i).orbitNumber, ORBIT_NUMBER) + new_line;
 
@@ -141,12 +141,12 @@ public class ODSTP_ODNOM_Processed_Orbits_FileGenerator {
 
         for (int i = 0; i < processedOrbits.ephemerisRecords.size(); i++) {
             String body = Utilities.LeftJustify(String.valueOf(processedOrbits.ephemerisRecords.get(i).mjdEpoch), MJD_EPOCH) + " "
-                    + Utilities.LeftJustify(String.valueOf(processedOrbits.ephemerisRecords.get(i).position.getX()), X_POSITION) + " "
-                    + Utilities.LeftJustify(String.valueOf(processedOrbits.ephemerisRecords.get(i).position.getY()), Y_POSITION) + " "
-                    + Utilities.LeftJustify(String.valueOf(processedOrbits.ephemerisRecords.get(i).position.getZ()), Z_POSITION) + " "
-                    + Utilities.LeftJustify(String.valueOf(processedOrbits.ephemerisRecords.get(i).velocity.getX()), X_VELOCITY) + " "
-                    + Utilities.LeftJustify(String.valueOf(processedOrbits.ephemerisRecords.get(i).velocity.getY()), Y_VELOCITY) + " "
-                    + Utilities.LeftJustify(String.valueOf(processedOrbits.ephemerisRecords.get(i).velocity.getZ()), Z_VELOCITY) + new_line;
+                    + Utilities.LeftJustify(String.valueOf(processedOrbits.ephemerisRecords.get(i).position.x), X_POSITION) + " "
+                    + Utilities.LeftJustify(String.valueOf(processedOrbits.ephemerisRecords.get(i).position.y), Y_POSITION) + " "
+                    + Utilities.LeftJustify(String.valueOf(processedOrbits.ephemerisRecords.get(i).position.z), Z_POSITION) + " "
+                    + Utilities.LeftJustify(String.valueOf(processedOrbits.ephemerisRecords.get(i).velocity.x), X_VELOCITY) + " "
+                    + Utilities.LeftJustify(String.valueOf(processedOrbits.ephemerisRecords.get(i).velocity.y), Y_VELOCITY) + " "
+                    + Utilities.LeftJustify(String.valueOf(processedOrbits.ephemerisRecords.get(i).velocity.z), Z_VELOCITY) + new_line;
 
             processedorbits_file.write(body);
         }

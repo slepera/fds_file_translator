@@ -36,8 +36,8 @@ public class OrbitalEventsXMLGenerator {
         for(int i = 0; i < orbitalEvents.orbitalEventsData.size(); i++) {
             Element orbital = new Element("Orbital_Event");
             orbital.addContent(new Element("missionrefID").setText(orbitalEvents.orbitalEventsData.get(i).missionRefID));
-            orbital.addContent(new Element("spacecraftrefID").setText(orbitalEvents.orbitalEventsData.get(i).spacecraftRefID));
-            orbital.addContent(new Element("orbitaleventType").setText(orbitalEvents.orbitalEventsData.get(i).orbitalEventType));
+            orbital.addContent(new Element("spacecraftrefID").setText(orbitalEvents.orbitalEventsData.get(i).spacecraftRefID.name()));
+            orbital.addContent(new Element("orbitaleventType").setText(orbitalEvents.orbitalEventsData.get(i).orbitalEventType.name()));
             orbital.addContent(new Element("eventName").setText(orbitalEvents.orbitalEventsData.get(i).eventName));
             orbital.addContent(new Element("eventID").setText(orbitalEvents.orbitalEventsData.get(i).eventID));
             orbital.addContent(new Element("startEpoch").setText(orbitalEvents.orbitalEventsData.get(i).startEpoch));

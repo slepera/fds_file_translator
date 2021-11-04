@@ -9,12 +9,9 @@ public class Manoeuvre {
     public String execStartTime;
     //public DateTimeType execStopTime;
     public String execStopTime;
-    //public QuaternionsType initialAttitude;
-    public String initialAttitude;
-    //public QuaternionsType finalAttitude;
-    public String finalAttitude;
-    //public EnumManType manType;
-    public String manType;
+    public QuaternionsType initialAttitude;
+    public QuaternionsType finalAttitude;
+    public EnumManType manType;
     public ArrayList<TPF> tpf;
 
 
@@ -22,9 +19,8 @@ public class Manoeuvre {
         this.manID = new String();
         this.execStartTime = new String();
         this.execStopTime = new String();
-        this.initialAttitude = new String();
-        this.finalAttitude = new String();
-        this.manType = new String();
+        this.initialAttitude = new QuaternionsType();
+        this.finalAttitude = new QuaternionsType();
         this.tpf = new ArrayList<TPF>();
     }
 

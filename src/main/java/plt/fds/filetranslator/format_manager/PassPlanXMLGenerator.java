@@ -37,12 +37,12 @@ public class PassPlanXMLGenerator {
             Element visibility = new Element("Visibility");
             visibility.addContent(new Element("contactID").setText(passPlan.visibilityType.get(i).contactID));
             visibility.addContent(new Element("missionrefID").setText(passPlan.visibilityType.get(i).missionrefID));
-            visibility.addContent(new Element("spacecraftrefID").setText(passPlan.visibilityType.get(i).spacecraftrefID));
-            visibility.addContent(new Element("groundstationrefID").setText(passPlan.visibilityType.get(i).groundstationrefID));
+            visibility.addContent(new Element("spacecraftrefID").setText(passPlan.visibilityType.get(i).spacecraftrefID.name()));
+            visibility.addContent(new Element("groundstationrefID").setText(passPlan.visibilityType.get(i).groundstationrefID.name()));
             visibility.addContent(new Element("startEpoch").setText(passPlan.visibilityType.get(i).startEpoch));
             visibility.addContent(new Element("stopEpoch").setText(passPlan.visibilityType.get(i).stopEpoch));
             visibility.addContent(new Element("visibilitymaskID").setText(passPlan.visibilityType.get(i).visibilitymaskID));
-            visibility.addContent(new Element("looksideGeometry").setText(passPlan.visibilityType.get(i).looksideGeometry));
+            visibility.addContent(new Element("looksideGeometry").setText(passPlan.visibilityType.get(i).looksideGeometry.name()));
             visibility.addContent(new Element("remarks").setText(passPlan.visibilityType.get(i).remarks));
             visibilities.addContent(visibility);
         }

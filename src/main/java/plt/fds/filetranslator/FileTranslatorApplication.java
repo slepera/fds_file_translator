@@ -3,10 +3,7 @@ package plt.fds.filetranslator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import plt.fds.filetranslator.data_models.*;
-import plt.fds.filetranslator.format_manager.AttitudeFileXMLGenerator;
-import plt.fds.filetranslator.format_manager.ManoeuvrePlanXMLGenerator;
-import plt.fds.filetranslator.format_manager.ODSTP_ODNOM_Processed_Orbits_FileGenerator;
-import plt.fds.filetranslator.format_manager.TPFFileGenerator;
+import plt.fds.filetranslator.format_manager.*;
 import plt.fds.filetranslator.stubs.DBSimulator;
 
 import javax.xml.transform.TransformerException;

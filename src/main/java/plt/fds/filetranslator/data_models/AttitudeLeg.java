@@ -7,15 +7,13 @@ public class AttitudeLeg {
     public String legStartTime;
     //public DateTimeType legStopTime;
     public String legStopTime;
-    //public EnumLegAttitudeType legAttitudeType;
-    public String legAttitudeType;
+    public EnumLegAttitudeType legAttitudeType;
     public ArrayList<Integer> legNBAttitudeDataPoints;
     public ArrayList<AttitudeFileRecords> attitudeFileRecords;
 
     public AttitudeLeg() {
         this.legStartTime = new String();
         this.legStopTime = new String();
-        this.legAttitudeType = new String();
         this.legNBAttitudeDataPoints = new ArrayList<Integer>();
         this.attitudeFileRecords = new ArrayList<AttitudeFileRecords>();
     }

@@ -40,7 +40,7 @@ public class AttitudeFileXMLGenerator {
             Element attitudeLeg = new Element("attitudeLeg");
             attitudeLeg.addContent(new Element("legStartTime").setText(attitudeFile.attitudeLegs.get(i).legStartTime));
             attitudeLeg.addContent(new Element("legStopTime").setText(attitudeFile.attitudeLegs.get(i).legStopTime));
-            attitudeLeg.addContent(new Element("legAttitudeType").setText(attitudeFile.attitudeLegs.get(i).legAttitudeType));
+            attitudeLeg.addContent(new Element("legAttitudeType").setText(attitudeFile.attitudeLegs.get(i).legAttitudeType.name()));
             Element legNBAttitudeDataPoints = new Element( "legNBAttitudeDataPoints");
             for (int j = 0; j < attitudeFile.attitudeLegs.get(i).legNBAttitudeDataPoints.size(); j++) {
                 legNBAttitudeDataPoints.addContent(String.valueOf(attitudeFile.attitudeLegs.get(i).legNBAttitudeDataPoints.get(j) + ";"));
@@ -51,11 +51,16 @@ public class AttitudeFileXMLGenerator {
             for (int k = 0; k < attitudeFile.attitudeLegs.get(i).attitudeFileRecords.size(); k++) {
                 Element attitudeFileRecord = new Element("attitudeFileRecord");
                 attitudeFileRecord.addContent(new Element ("epoch").setText(attitudeFile.attitudeLegs.get(i).attitudeFileRecords.get(k).epoch));
-                attitudeFileRecord.addContent(new Element("quaternion").setText(attitudeFile.attitudeLegs.get(i).attitudeFileRecords.get(k).quaternion));
+                Element quaternion = new Element("quaternion");
+                quaternion.addContent(new Element("Q1_quaternion").setText(String.valueOf(attitudeFile.attitudeLegs.get(i).attitudeFileRecords.get(k).quaternion.q1)));
+                quaternion.addContent(new Element("Q2_quaternion").setText(String.valueOf(attitudeFile.attitudeLegs.get(i).attitudeFileRecords.get(k).quaternion.q2)));
+                quaternion.addContent(new Element("Q3_quaternion").setText(String.valueOf(attitudeFile.attitudeLegs.get(i).attitudeFileRecords.get(k).quaternion.q3)));
+                quaternion.addContent(new Element("Q4_quaternion").setText(String.valueOf(attitudeFile.attitudeLegs.get(i).attitudeFileRecords.get(k).quaternion.q4)));
+                attitudeFileRecord.addContent(quaternion);
                 Element angularVelocity = new Element("angularVelocity");
-                angularVelocity.addContent(new Element("X_angularVelocity").setText(String.valueOf(attitudeFile.attitudeLegs.get(i).attitudeFileRecords.get(k).angularVelocity.getX())));
-                angularVelocity.addContent(new Element("Y_angularVelocity").setText(String.valueOf(attitudeFile.attitudeLegs.get(i).attitudeFileRecords.get(k).angularVelocity.getY())));
-                angularVelocity.addContent(new Element("Z_angularVelocity").setText(String.valueOf(attitudeFile.attitudeLegs.get(i).attitudeFileRecords.get(k).angularVelocity.getZ())));
+                angularVelocity.addContent(new Element("X_angularVelocity").setText(String.valueOf(attitudeFile.attitudeLegs.get(i).attitudeFileRecords.get(k).angularVelocity.x)));
+                angularVelocity.addContent(new Element("Y_angularVelocity").setText(String.valueOf(attitudeFile.attitudeLegs.get(i).attitudeFileRecords.get(k).angularVelocity.y)));
+                angularVelocity.addContent(new Element("Z_angularVelocity").setText(String.valueOf(attitudeFile.attitudeLegs.get(i).attitudeFileRecords.get(k).angularVelocity.z)));
                 attitudeFileRecord.addContent(angularVelocity);
                 attitudeFileRecords.addContent(attitudeFileRecord);
             }

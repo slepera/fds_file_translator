@@ -17,10 +17,8 @@ public class OrbitalEvents {
     public static class OrbitalEvent {
         //public EnumMissionID missionRefID;
         public String missionRefID = new String();
-        //public EnumSatID spacecraftRefID;
-        public String spacecraftRefID = new String();
-        //public enumOrbitalEventTypes orbitalEventType;
-        public String orbitalEventType = new String();
+        public EnumSatID spacecraftRefID ;
+        public EnumOrbitalEventTypes orbitalEventType;
         public String eventName = new String();
         public String eventID = new String();
         //public DateTimeType startEpoch;
