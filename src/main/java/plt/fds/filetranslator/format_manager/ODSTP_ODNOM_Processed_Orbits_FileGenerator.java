@@ -12,6 +12,7 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 
 public class ODSTP_ODNOM_Processed_Orbits_FileGenerator {
     /*
@@ -57,13 +58,15 @@ public class ODSTP_ODNOM_Processed_Orbits_FileGenerator {
 
     public static void CreateODSTPFile(ODSTP odstp) throws IOException {
 
-        String europeanDatePattern = "dd.MM.yyyy  HH-mm-ss";
-        DateTimeFormatter europeanDateFormatter = DateTimeFormatter.ofPattern(europeanDatePattern);
-        File odstp_file = new File ("./data/output/ODSTP_file/odstp " + europeanDateFormatter.format(LocalDateTime.now()) + ".txt");
-        BufferedWriter odstp_bw = new BufferedWriter(new FileWriter(odstp_file));
+        //String europeanDatePattern = "dd.MM.yyyy  HH-mm-ss";
+        //DateTimeFormatter europeanDateFormatter = DateTimeFormatter.ofPattern(europeanDatePattern);
+        //File odstp_file = new File ("./data/output/ODSTP_file/odstp " + europeanDateFormatter.format(LocalDateTime.now()) + ".txt");
+        //BufferedWriter odstp_bw = new BufferedWriter(new FileWriter(odstp_file));
 
         String header = BuildHeader(odstp.fdsFileHeader) + new_line + new_line + new_line;
-        odstp_bw.write(header);
+        //odstp_bw.write(header);
+
+        ArrayList<String> body_ODSTP = new ArrayList<>();
 
         try {
 
@@ -88,13 +91,25 @@ public class ODSTP_ODNOM_Processed_Orbits_FileGenerator {
                         + Utilities.LeftJustify(odstp.odstpRecord.get(i).eclipseFlag, ECLIPSE_FLAG) + " "
                         + Utilities.LeftJustify(odstp.odstpRecord.get(i).orbitNumber, ORBIT_NUMBER) + new_line;
 
-                odstp_bw.write(body);
+                body_ODSTP.add(body);
+                //odstp_bw.write(body);
             }
+
+            String europeanDatePattern = "dd.MM.yyyy  HH-mm-ss";
+            DateTimeFormatter europeanDateFormatter = DateTimeFormatter.ofPattern(europeanDatePattern);
+            File odstp_file = new File ("./data/output/ODSTP_file/odstp " + europeanDateFormatter.format(LocalDateTime.now()) + ".txt");
+            BufferedWriter odstp_bw = new BufferedWriter(new FileWriter(odstp_file));
+            odstp_bw.write(header);
+
+            for (int i = 0; i < body_ODSTP.size(); i++) {
+                odstp_bw.write(body_ODSTP.get(i));
+            }
+
             odstp_bw.close();
 
         } catch(OutOfRangeException outOfRangeException) {
-            odstp_bw.close();
-            odstp_file.delete();
+            //odstp_bw.close();
+            //odstp_file.delete();
             outOfRangeException.printStackTrace();
             System.out.println( "ODSTP File no created" );
 

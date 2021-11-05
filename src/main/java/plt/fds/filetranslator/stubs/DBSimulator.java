@@ -533,7 +533,7 @@ public class DBSimulator {
 
         TPF tpf = new TPF();
 
-        tpf.tpfHeader.taskName = "taskname00";
+        tpf.tpfHeader.taskName = "taskname";
         tpf.tpfHeader.taskType = EnumTpfTaskType.COMMAND;
         tpf.tpfHeader.parameterSetName = "setname0";
         tpf.tpfHeader.parameterValueSetName = "valueset";
@@ -588,7 +588,7 @@ public class DBSimulator {
         odstp.odstpRecord.get(0).sunDirection.x = 1252396.7833;
         odstp.odstpRecord.get(0).sunDirection.y = 12.873;
         odstp.odstpRecord.get(0).sunDirection.z = 85746.465109;
-        odstp.odstpRecord.get(0).eclipseFlag = 200;
+        odstp.odstpRecord.get(0).eclipseFlag = 2;
         odstp.odstpRecord.get(0).keplerianElements.setSemiMajorAxis(0.856444);
         odstp.odstpRecord.get(0).keplerianElements.setEccentricity(985.2283);
         odstp.odstpRecord.get(0).keplerianElements.setInclination(234.856);
@@ -597,32 +597,32 @@ public class DBSimulator {
         odstp.odstpRecord.get(0).keplerianElements.setTrueAnomaly(0.85554);
         odstp.odstpRecord.get(0).orbitNumber = "orbitnumber";
         odstp.odstpRecord.get(0).mjdEpoch = 123456.7897;
-        odstp.odstpRecord.get(0).position.x = 76596.867;
-        odstp.odstpRecord.get(0).position.y = 13.6098765432;
+        odstp.odstpRecord.get(0).position.x = 76596.8677;
+        odstp.odstpRecord.get(0).position.y = 13.6098;
         odstp.odstpRecord.get(0).position.z = 43.238575641;
         odstp.odstpRecord.get(0).velocity.x = 65576454.763;
         odstp.odstpRecord.get(0).velocity.y = 6453.1;
-        odstp.odstpRecord.get(0).velocity.z = 52387654.983000;
+        odstp.odstpRecord.get(0).velocity.z = 5238765;
         odstp.addODSTPRecord(new ODSTPRecord());
         odstp.odstpRecord.get(1).delta_T_Cod_Pod = 574649.8;
         odstp.odstpRecord.get(1).sunDirection.x = 4635535;
         odstp.odstpRecord.get(1).sunDirection.y = 635232;
         odstp.odstpRecord.get(1).sunDirection.z = 867565;
-        odstp.odstpRecord.get(1).eclipseFlag = 100;
-        odstp.odstpRecord.get(1).keplerianElements.setSemiMajorAxis(6463535.55);
+        odstp.odstpRecord.get(1).eclipseFlag = 1;
+        odstp.odstpRecord.get(1).keplerianElements.setSemiMajorAxis(646353.);
         odstp.odstpRecord.get(1).keplerianElements.setEccentricity(9345.);
         odstp.odstpRecord.get(1).keplerianElements.setInclination(43346.6);
         odstp.odstpRecord.get(1).keplerianElements.setRaan(00.03243);
         odstp.odstpRecord.get(1).keplerianElements.setArgOfPerigee(1234.3);
-        odstp.odstpRecord.get(1).keplerianElements.setTrueAnomaly(0.855564);
+        odstp.odstpRecord.get(1).keplerianElements.setTrueAnomaly(0.85556);
         odstp.odstpRecord.get(1).orbitNumber = "orbitnumber";
         odstp.odstpRecord.get(1).mjdEpoch = 56.353;
-        odstp.odstpRecord.get(1).position.x = 765968674.9800;
-        odstp.odstpRecord.get(1).position.y = 13462734.97800;
-        odstp.odstpRecord.get(1).position.z = 43.238575641000;
-        odstp.odstpRecord.get(1).velocity.x = 65576454.763000;
+        odstp.odstpRecord.get(1).position.x = 765968674.98;
+        odstp.odstpRecord.get(1).position.y = 13462734.978;
+        odstp.odstpRecord.get(1).position.z = 43.23857564;
+        odstp.odstpRecord.get(1).velocity.x = 65576454.763;
         odstp.odstpRecord.get(1).velocity.y = 6453.1;
-        odstp.odstpRecord.get(1).velocity.z = 52387654.983000;
+        odstp.odstpRecord.get(1).velocity.z = 52387654.98;
 
         return odstp;
 

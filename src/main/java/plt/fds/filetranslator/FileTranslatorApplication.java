@@ -28,11 +28,11 @@ FileTranslatorApplication {
 		//ManoeuvrePlan manoeuvrePlan = DBSimulator.getManoeuvrePlan();
 		//ManoeuvrePlanXMLGenerator.GenerateManoeuvreFileXML(manoeuvrePlan);
 
-		TPF tpf = DBSimulator.getTPF();
-		TPFFileGenerator.CreateTPFTextFile(tpf);
+		//TPF tpf = DBSimulator.getTPF();
+		//TPFFileGenerator.CreateTPFTextFile(tpf);
 
-		//ODSTP odstp = DBSimulator.getODSTP();
-		//ODSTP_ODNOM_Processed_Orbits_FileGenerator.CreateODSTPFile(odstp);
+		ODSTP odstp = DBSimulator.getODSTP();
+		ODSTP_ODNOM_Processed_Orbits_FileGenerator.CreateODSTPFile(odstp);
 
 		//ODNOM odnom = DBSimulator.getODNOM();
 		//ODSTP_ODNOM_Processed_Orbits_FileGenerator.CreateODNOMFile(odnom);
