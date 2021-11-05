@@ -10,15 +10,13 @@ public class Utilities {
      */
 
     public static String LeftJustify(String s, int n) throws OutOfRangeException {
-/*
+
         if (s.length() > n) {
             throw new OutOfRangeException("String " + s + " is longer than the maximum allowed range " + n );
         } else {
-
+            return String.format("%-" + n + "." + n + "s", s);
         }
 
- */
-        return String.format("%-" + n + "." + n + "s", s);
     }
 
     public static String LeftJustify(Double f, int n) throws OutOfRangeException {

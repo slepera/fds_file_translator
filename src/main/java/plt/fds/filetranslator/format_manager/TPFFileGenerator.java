@@ -67,9 +67,6 @@ public class TPFFileGenerator {
             case TP1: opth1 = "!TP1" + new_line; break;
             case TP2: opth1 = "!TP2" + new_line; break;
         }
-        /*
-           remove everything (setText) that might be before and adds opth1
-         */
         TPF.setText(opth1);
 
 
@@ -80,14 +77,14 @@ public class TPFFileGenerator {
 
             String h1, h2, h3, h4, h5;
 
-            h1 = Utilities.LeftJustify(tpf.tpfHeader.taskName, TASK_NAME) + " " + Utilities.LeftJustify(tpf.tpfHeader.taskType.name(), TASK_TYPE)
+            h1 = Utilities.LeftJustify(tpf.tpfHeader.taskName, TASK_NAME) + " " + Utilities.LeftJustify(tpf.tpfHeader.taskType.name().substring(0,1), TASK_TYPE)
                     + " " + Utilities.LeftJustify(tpf.tpfHeader.parameterSetName, PARAMETER_SET_NAME) + " "
                     + Utilities.LeftJustify(tpf.tpfHeader.parameterValueSetName, PARAMETER_VALUE_SET_NAME) + new_line;
 
         /*
         h2[0]Field not used by SCOS2000 by is inserted anyway as 11 empty spaces
          */
-            h2 = "           " + Utilities.LeftJustify(tpf.tpfHeader.destination.name(), DESTINATION) + " " + Utilities.LeftJustify(tpf.tpfHeader.source, SOURCE)
+            h2 = "           " + Utilities.LeftJustify(tpf.tpfHeader.destination.name().substring(0,1), DESTINATION) + " " + Utilities.LeftJustify(tpf.tpfHeader.source, SOURCE)
                     + " " + Utilities.LeftJustify(tpf.tpfHeader.nbRecords, NBRECORDS) + new_line;
 
             h3 = Utilities.LeftJustify(tpf.tpfHeader.releaseTime, (tpfFileType == TPFFileType.STANDARD || tpfFileType == TPFFileType.TP1) ? RELEASE_TIME : RELEASE_TIME_EXTENDED) + " "
@@ -108,7 +105,7 @@ public class TPFFileGenerator {
             for (int g = 0; g < tpf.tpfBody.tpfRecord.size(); g++) {
                 String tpf_Body = "";
                 String parameterName = Utilities.LeftJustify(tpf.tpfBody.tpfRecord.get(g).paramName, PARAMETER_NAME);
-                String parameterValueType = Utilities.LeftJustify(tpf.tpfBody.tpfRecord.get(g).paramValueType.name(), PARAMETER_VALUE_TYPE);
+                String parameterValueType = Utilities.LeftJustify(tpf.tpfBody.tpfRecord.get(g).paramValueType.name().substring(0,1), PARAMETER_VALUE_TYPE);
 
                 String parameterValue = Utilities.LeftJustify(tpf.tpfBody.tpfRecord.get(g).paramValue, (tpfFileType == TPFFileType.TPF || tpfFileType == TPFFileType.STANDARD) ? PARAMETER_VALUE : PARAMETER_VALUE_EXTENDED);
                 String parameterValueUnit = Utilities.LeftJustify(tpf.tpfBody.tpfRecord.get(g).paramValueUnit, PARAMETER_VALUE_UNIT);
@@ -124,9 +121,9 @@ public class TPFFileGenerator {
 
         } catch(OutOfRangeException outOfRangeException) {
             //when there is an exception creates an empty tag
-            TPF.setText(new_line);
+            TPF.setText("");
             outOfRangeException.printStackTrace();
-            System.out.println( " TPF information no added" );
+            System.out.println( "TPF information no added to the XML" );
         }
 
         return TPF;
@@ -135,12 +132,16 @@ public class TPFFileGenerator {
     public static void CreateTPFTextFile(TPF tpf) throws IOException {
         Element element = TPFFileGenerator.CreateTPFText(tpf, TPFFileType.TPF);
 
-        String europeanDatePattern = "dd.MM.yyyy  HH-mm-ss";
-        DateTimeFormatter europeanDateFormatter = DateTimeFormatter.ofPattern(europeanDatePattern);
-        FileOutputStream fileOutputStream = new FileOutputStream("./data/output/tpf_file/tpf_" + TypeOfTPF(TPFFileType.TPF) + " "+ europeanDateFormatter.format(LocalDateTime.now()) + ".txt");
+        if (element.getText().length() == 0) {
+            System.out.println("TPF File no created");
+        } else {
+            String europeanDatePattern = "dd.MM.yyyy  HH-mm-ss";
+            DateTimeFormatter europeanDateFormatter = DateTimeFormatter.ofPattern(europeanDatePattern);
+            FileOutputStream fileOutputStream = new FileOutputStream("./data/output/tpf_file/tpf_" + TypeOfTPF(TPFFileType.TPF) + " " + europeanDateFormatter.format(LocalDateTime.now()) + ".txt");
 
-        fileOutputStream.write(element.getText().getBytes(StandardCharsets.UTF_8));
-        fileOutputStream.close();
+            fileOutputStream.write(element.getText().getBytes(StandardCharsets.UTF_8));
+            fileOutputStream.close();
+        }
     }
 
 

@@ -96,7 +96,7 @@ public class ODSTP_ODNOM_Processed_Orbits_FileGenerator {
             odstp_bw.close();
             odstp_file.delete();
             outOfRangeException.printStackTrace();
-            System.out.println( "File ODSTP no created" );
+            System.out.println( "ODSTP File no created" );
 
         }
 
@@ -143,7 +143,7 @@ public class ODSTP_ODNOM_Processed_Orbits_FileGenerator {
             odnom_bw.close();
             odnom_file.delete();
             outOfRangeException.printStackTrace();
-            System.out.println( " file ODNOM no created" );
+            System.out.println( "ODNOM File no created" );
         }
 
 
@@ -178,7 +178,7 @@ public class ODSTP_ODNOM_Processed_Orbits_FileGenerator {
             processedorbits_bw.close();
             processedorbits_file.delete();
             outOfRangeException.printStackTrace();
-            System.out.println( " file processedorbits  no created" );
+            System.out.println( "ProcessedOrbits File no created" );
         }
 
     }
