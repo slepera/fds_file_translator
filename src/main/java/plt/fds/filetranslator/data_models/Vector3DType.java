@@ -10,4 +10,5 @@ public class Vector3DType {
         Double y = this.y;
         Double z = this.z;
     }
+
 }

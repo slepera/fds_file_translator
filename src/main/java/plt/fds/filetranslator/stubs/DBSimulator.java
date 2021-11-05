@@ -598,13 +598,13 @@ public class DBSimulator {
         odstp.odstpRecord.get(0).orbitNumber = "orbitnumber";
         odstp.odstpRecord.get(0).mjdEpoch = 123456.7897;
         odstp.odstpRecord.get(0).position.x = 76596.867;
-        odstp.odstpRecord.get(0).position.y = 13462734.978;
+        odstp.odstpRecord.get(0).position.y = 13.6098765432;
         odstp.odstpRecord.get(0).position.z = 43.238575641;
         odstp.odstpRecord.get(0).velocity.x = 65576454.763;
         odstp.odstpRecord.get(0).velocity.y = 6453.1;
         odstp.odstpRecord.get(0).velocity.z = 52387654.983000;
         odstp.addODSTPRecord(new ODSTPRecord());
-        odstp.odstpRecord.get(1).delta_T_Cod_Pod = 574645353.53;
+        odstp.odstpRecord.get(1).delta_T_Cod_Pod = 574649.8;
         odstp.odstpRecord.get(1).sunDirection.x = 4635535;
         odstp.odstpRecord.get(1).sunDirection.y = 635232;
         odstp.odstpRecord.get(1).sunDirection.z = 867565;

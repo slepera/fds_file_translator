@@ -4,6 +4,7 @@ import org.jdom2.Element;
 import plt.fds.filetranslator.Utilities;
 import plt.fds.filetranslator.data_models.TPFFileType;
 import plt.fds.filetranslator.data_models.TPF;
+import plt.fds.filetranslator.exceptions.OutOfRangeException;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -67,7 +68,7 @@ public class TPFFileGenerator {
             case TP2: opth1 = "!TP2" + new_line; break;
         }
         /*
-        remove everything (setText) that might be before and adds opth1
+           remove everything (setText) that might be before and adds opth1
          */
         TPF.setText(opth1);
 
@@ -75,52 +76,59 @@ public class TPFFileGenerator {
         //String fileStructure = LeftJustify(FILE_FORMAT, FILE_TYPE) + " " + LeftJustify(SEQUENCE_COUNTER, COUNTER) + "\n";
         //TPF.setText(fileStructure);
 
-        String h1, h2, h3, h4, h5;
+        try {
 
-        h1 = Utilities.LeftJustify(tpf.tpfHeader.taskName, TASK_NAME) + " " + Utilities.LeftJustify(tpf.tpfHeader.taskType.name(),TASK_TYPE)
-                + " " + Utilities.LeftJustify(tpf.tpfHeader.parameterSetName, PARAMETER_SET_NAME) + " "
-                + Utilities.LeftJustify(tpf.tpfHeader.parameterValueSetName, PARAMETER_VALUE_SET_NAME) + new_line;
+            String h1, h2, h3, h4, h5;
+
+            h1 = Utilities.LeftJustify(tpf.tpfHeader.taskName, TASK_NAME) + " " + Utilities.LeftJustify(tpf.tpfHeader.taskType.name(), TASK_TYPE)
+                    + " " + Utilities.LeftJustify(tpf.tpfHeader.parameterSetName, PARAMETER_SET_NAME) + " "
+                    + Utilities.LeftJustify(tpf.tpfHeader.parameterValueSetName, PARAMETER_VALUE_SET_NAME) + new_line;
 
         /*
         h2[0]Field not used by SCOS2000 by is inserted anyway as 11 empty spaces
          */
-        h2 = "           " + Utilities.LeftJustify(tpf.tpfHeader.destination.name(), DESTINATION) + " " + Utilities.LeftJustify(tpf.tpfHeader.source,SOURCE)
-                + " " + Utilities.LeftJustify(String.valueOf(tpf.tpfHeader.nbRecords), NBRECORDS) + new_line;
+            h2 = "           " + Utilities.LeftJustify(tpf.tpfHeader.destination.name(), DESTINATION) + " " + Utilities.LeftJustify(tpf.tpfHeader.source, SOURCE)
+                    + " " + Utilities.LeftJustify(tpf.tpfHeader.nbRecords, NBRECORDS) + new_line;
 
-        h3 = Utilities.LeftJustify(tpf.tpfHeader.releaseTime, (tpfFileType == TPFFileType.STANDARD || tpfFileType == TPFFileType.TP1) ? RELEASE_TIME : RELEASE_TIME_EXTENDED) + " "
-                + Utilities.LeftJustify(tpf.tpfHeader.earliestReleaseTime, (tpfFileType == TPFFileType.STANDARD || tpfFileType == TPFFileType.TP1) ? EARLIEST_RELEASE_TIME : EARLIEST_RELEASE_TIME_EXTENDED)
-                + " " + Utilities.LeftJustify(tpf.tpfHeader.latestReleaseTime, (tpfFileType == TPFFileType.STANDARD || tpfFileType == TPFFileType.TP1) ? LATEST_RELEASE_TIME : LATEST_RELEASE_TIME_EXTENDED) + new_line;
+            h3 = Utilities.LeftJustify(tpf.tpfHeader.releaseTime, (tpfFileType == TPFFileType.STANDARD || tpfFileType == TPFFileType.TP1) ? RELEASE_TIME : RELEASE_TIME_EXTENDED) + " "
+                    + Utilities.LeftJustify(tpf.tpfHeader.earliestReleaseTime, (tpfFileType == TPFFileType.STANDARD || tpfFileType == TPFFileType.TP1) ? EARLIEST_RELEASE_TIME : EARLIEST_RELEASE_TIME_EXTENDED)
+                    + " " + Utilities.LeftJustify(tpf.tpfHeader.latestReleaseTime, (tpfFileType == TPFFileType.STANDARD || tpfFileType == TPFFileType.TP1) ? LATEST_RELEASE_TIME : LATEST_RELEASE_TIME_EXTENDED) + new_line;
 
-        h4 = Utilities.LeftJustify(tpf.tpfHeader.executionTime, (tpfFileType == TPFFileType.STANDARD || tpfFileType == TPFFileType.TP1) ? EXECUTION_TIME : EXECUTION_TIME_EXTENDED) + " "
-                + Utilities.LeftJustify(String.valueOf(tpf.tpfHeader.subScheduleID), SUBSCHEDULE_ID ) + new_line;
+            h4 = Utilities.LeftJustify(tpf.tpfHeader.executionTime, (tpfFileType == TPFFileType.STANDARD || tpfFileType == TPFFileType.TP1) ? EXECUTION_TIME : EXECUTION_TIME_EXTENDED) + " "
+                    + Utilities.LeftJustify(tpf.tpfHeader.subScheduleID, SUBSCHEDULE_ID) + new_line;
 
-        h5 = Utilities.LeftJustify(tpf.tpfHeader.tpfRemarks, TPF_REMARKS) + new_line;
+            h5 = Utilities.LeftJustify(tpf.tpfHeader.tpfRemarks, TPF_REMARKS) + new_line;
 
-        String tpf_Header = h1 + h2 + h3 + h4 + h5;
+            String tpf_Header = h1 + h2 + h3 + h4 + h5;
 
-        TPF.addContent(tpf_Header);
-        //System.out.println("Header: " + tpf_Header);
+            TPF.addContent(tpf_Header);
+            //System.out.println("Header: " + tpf_Header);
 
 
-        for (int g = 0; g <tpf.tpfBody.tpfRecord.size(); g++)
-        {
-            String tpf_Body = "";
-            String parameterName = Utilities.LeftJustify(tpf.tpfBody.tpfRecord.get(g).paramName, PARAMETER_NAME);
-            String parameterValueType = Utilities.LeftJustify(tpf.tpfBody.tpfRecord.get(g).paramValueType.name(), PARAMETER_VALUE_TYPE);
+            for (int g = 0; g < tpf.tpfBody.tpfRecord.size(); g++) {
+                String tpf_Body = "";
+                String parameterName = Utilities.LeftJustify(tpf.tpfBody.tpfRecord.get(g).paramName, PARAMETER_NAME);
+                String parameterValueType = Utilities.LeftJustify(tpf.tpfBody.tpfRecord.get(g).paramValueType.name(), PARAMETER_VALUE_TYPE);
 
-            String parameterValue = Utilities.LeftJustify(tpf.tpfBody.tpfRecord.get(g).paramValue,(tpfFileType == TPFFileType.TPF || tpfFileType == TPFFileType.STANDARD)  ? PARAMETER_VALUE: PARAMETER_VALUE_EXTENDED);
-            String parameterValueUnit = Utilities.LeftJustify(tpf.tpfBody.tpfRecord.get(g).paramValueUnit, PARAMETER_VALUE_UNIT);
-            String parameterValueRadix = Utilities.LeftJustify(tpf.tpfBody.tpfRecord.get(g).paramValueRadix, PARAMETER_VALUE_RADIX);
-            String parameterRemarks = Utilities.LeftJustify(tpf.tpfBody.tpfRecord.get(g).paramRemarks, PARAMETER_REMARKS);
+                String parameterValue = Utilities.LeftJustify(tpf.tpfBody.tpfRecord.get(g).paramValue, (tpfFileType == TPFFileType.TPF || tpfFileType == TPFFileType.STANDARD) ? PARAMETER_VALUE : PARAMETER_VALUE_EXTENDED);
+                String parameterValueUnit = Utilities.LeftJustify(tpf.tpfBody.tpfRecord.get(g).paramValueUnit, PARAMETER_VALUE_UNIT);
+                String parameterValueRadix = Utilities.LeftJustify(tpf.tpfBody.tpfRecord.get(g).paramValueRadix, PARAMETER_VALUE_RADIX);
+                String parameterRemarks = Utilities.LeftJustify(tpf.tpfBody.tpfRecord.get(g).paramRemarks, PARAMETER_REMARKS);
 
-            tpf_Body = parameterName + " " + parameterValueType + " " + parameterValue + " " + parameterValueUnit + " "
-                    + parameterValueRadix + " " + parameterRemarks + new_line;
+                tpf_Body = parameterName + " " + parameterValueType + " " + parameterValue + " " + parameterValueUnit + " "
+                        + parameterValueRadix + " " + parameterRemarks + new_line;
 
-            TPF.addContent(tpf_Body);
-            //System.out.println("Body: " + tpf_Body);
+                TPF.addContent(tpf_Body);
+                //System.out.println("Body: " + tpf_Body);
+            }
+
+        } catch(OutOfRangeException outOfRangeException) {
+            //when there is an exception creates an empty tag
+            TPF.setText(new_line);
+            outOfRangeException.printStackTrace();
+            System.out.println( " TPF information no added" );
         }
 
-        //System.out.println(TPF.getText());
         return TPF;
     }
 
@@ -134,7 +142,6 @@ public class TPFFileGenerator {
         fileOutputStream.write(element.getText().getBytes(StandardCharsets.UTF_8));
         fileOutputStream.close();
     }
-
 
 
 }

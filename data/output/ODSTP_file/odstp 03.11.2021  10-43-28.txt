@@ -1,5 +1,0 @@
-{"referenceFrame":"referenceframe","columnLabelsAndUnits":"columnlabels","principalPlane":"principalframe","signalID":"signalID","recipientID":"recipientID","validityTimeWindow":"timewindow","missionID":"missionID","satelliteID":"satelliteID","originatorID":"originatorID","originatorRole":"originatorRole","creationTime":"creationtime","subjectType":"subjecttype","spare":"spare","signalAim":"signalaim"}
-
-
-1.2345678910111 7.6596867498 1.3462734978 43.238575641 6.5576454763 6453.1       5.2387654983 0.856444 985.2283 234.856 0.03243 1234.37 0.85554 23.76514 1252396.7833 12.873       8.5746465109 2 orbitnumber         
-56.353          7.6596867498 1.3462734978 43.238575641 6.5576454763 6453.1       5.2387654983 6463535. 9345.0   43346.6 0.03243 1234.3  0.85556 5.746453 4635535.0    635232.0     867565.0     1 orbitnumber         
