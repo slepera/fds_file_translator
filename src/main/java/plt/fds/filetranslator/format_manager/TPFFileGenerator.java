@@ -123,7 +123,7 @@ public class TPFFileGenerator {
             //when there is an exception creates an empty tag
             TPF.setText("");
             outOfRangeException.printStackTrace();
-            System.out.println( "TPF information no added to the XML" );
+            System.out.println( "TPF information no added" );
         }
 
         return TPF;
