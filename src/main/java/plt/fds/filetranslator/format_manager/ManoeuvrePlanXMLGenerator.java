@@ -26,14 +26,6 @@ public class ManoeuvrePlanXMLGenerator {
 
         Document doc = new Document();
 
-        /*
-        Transformer t = TransformerFactory.newInstance().newTransformer();
-        t.setOutputProperty(OutputKeys.INDENT, "yes");
-        t.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "5");
-
-         */
-
-
         doc.setRootElement(new Element("Manoeuvre_Plan"));
         Element header = new Element("Man_Plan_Header");
         header.addContent(new Element("nbManLeg").setText(String.valueOf(mp.manPlanHeader.nbManLeg)));
@@ -86,16 +78,6 @@ public class ManoeuvrePlanXMLGenerator {
         File file = new File("./data/output/manoeuvre_plan_xml/manoeuvre_plan " + europeanDateFormatter.format(LocalDateTime.now()) + ".xml");
         FileOutputStream fos = new FileOutputStream(file);
 
-        /*
-        JDOMSource in = new JDOMSource(doc);
-        JDOMResult out = new JDOMResult();
-        ByteArrayOutputStream s = new ByteArrayOutputStream();
-        t.transform(new DOMSource(doc),new StreamResult(s)) ;
-        t.transform(in, out);
-
-        xmlOutputter.output(out.getDocument(), fos);
-
-         */
         xmlOutputter.output(doc, fos);
         fos.close();
     }
