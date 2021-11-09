@@ -1,5 +1,7 @@
 package plt.fds.filetranslator;
 
+import org.jdom2.output.Format;
+import org.jdom2.output.LineSeparator;
 import plt.fds.filetranslator.exceptions.OutOfRangeException;
 
 import java.math.BigDecimal;
@@ -45,7 +47,13 @@ public class Utilities {
         return String.format("%" + n + "." + n + "s", s);
     }
 
-
+    public static Format getCustomizedFormat() {
+        Format f = Format.getRawFormat();
+        f.setIndent("     ");
+        f.setTextMode(Format.TextMode.TRIM_FULL_WHITE);
+        f.setOmitDeclaration(true);
+        return f;
+    }
 
 }
 

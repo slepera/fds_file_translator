@@ -1,0 +1,231 @@
+<Manoeuvre_Plan>
+     <Man_Plan_Header>
+          <nbManLeg>123</nbManLeg>
+          <signalID>324</signalID>
+          <recipientID>1298</recipientID>
+          <validityTimeWindow>hi</validityTimeWindow>
+          <missionID>010101</missionID>
+          <satelliteID>S01</satelliteID>
+          <originatorID>8888</originatorID>
+          <originatorRole>bye</originatorRole>
+          <subjectType>role</subjectType>
+          <creationTime>12:02</creationTime>
+          <spare>food</spare>
+          <signalAim>good</signalAim>
+     </Man_Plan_Header>
+     <ManLegs>
+          <ManLeg>
+               <legID>209</legID>
+               <legManType>man</legManType>
+               <legStartTime>14:30</legStartTime>
+               <legStopTime>15:45</legStopTime>
+               <blockingFlag>woman</blockingFlag>
+               <legNBMan>763</legNBMan>
+               <remarks>adiós</remarks>
+          </ManLeg>
+          <Attitude_Manoeuvres>
+               <Attitude_Manoeuvre>
+                    <targetReferenceMode>CUSTOM</targetReferenceMode>
+                    <attManParams>23.9</attManParams>
+                    <attManParams>32.8</attManParams>
+                    <downlink_Parameter>
+                         <antennaVers>
+                              <X_antennaVers>756445.0</X_antennaVers>
+                              <Y_antennaVers>756445.0</Y_antennaVers>
+                              <Z_antennaVers>756445.0</Z_antennaVers>
+                         </antennaVers>
+                         <stationPos>
+                              <X_stationPos>243547.0</X_stationPos>
+                              <Y_stationPos>66343.0</Y_stationPos>
+                              <Z_stationPos>37454.0</Z_stationPos>
+                         </stationPos>
+                    </downlink_Parameter>
+                    <local_Orbital_Parameters>
+                         <Q1_q_ORB2BRF>27474.0</Q1_q_ORB2BRF>
+                         <Q2_q_ORB2BRF>27474.0</Q2_q_ORB2BRF>
+                         <Q3_q_ORB2BRF>86757.0</Q3_q_ORB2BRF>
+                         <Q4_q_ORB2BRF>27474.0</Q4_q_ORB2BRF>
+                    </local_Orbital_Parameters>
+                    <custom_Parameters>
+                         <nbWayPoints>964</nbWayPoints>
+                         <custom_WayPoint>
+                              <wayPointID>2534</wayPointID>
+                              <epoch>light</epoch>
+                              <q_ECI2BRF>
+                                   <Q1_q_ECI2BRF>12723.0</Q1_q_ECI2BRF>
+                                   <Q2_q_ECI2BRF>95757.0</Q2_q_ECI2BRF>
+                                   <Q3_q_ECI2BRF>12723.0</Q3_q_ECI2BRF>
+                                   <Q4_q_ECI2BRF>3425.0</Q4_q_ECI2BRF>
+                              </q_ECI2BRF>
+                              <w_BRF>
+                                   <X_w_BRF>436595.0</X_w_BRF>
+                                   <Y_w_BRF>436595.0</Y_w_BRF>
+                                   <Z_w_BRF>436595.0</Z_w_BRF>
+                              </w_BRF>
+                              <w_dot_BRF>
+                                   <X_w_dot_BRF>845343.0</X_w_dot_BRF>
+                                   <Y_w_dot_BRF>845343.0</Y_w_dot_BRF>
+                                   <Z_w_dot_BRF>845343.0</Z_w_dot_BRF>
+                              </w_dot_BRF>
+                         </custom_WayPoint>
+                         <custom_WayPoint>
+                              <wayPointID>98754</wayPointID>
+                              <epoch>today</epoch>
+                              <q_ECI2BRF>
+                                   <Q1_q_ECI2BRF>2554.0</Q1_q_ECI2BRF>
+                                   <Q2_q_ECI2BRF>5627.0</Q2_q_ECI2BRF>
+                                   <Q3_q_ECI2BRF>9458.0</Q3_q_ECI2BRF>
+                                   <Q4_q_ECI2BRF>2554.0</Q4_q_ECI2BRF>
+                              </q_ECI2BRF>
+                              <w_BRF>
+                                   <X_w_BRF>435262.0</X_w_BRF>
+                                   <Y_w_BRF>435262.0</Y_w_BRF>
+                                   <Z_w_BRF>435262.0</Z_w_BRF>
+                              </w_BRF>
+                              <w_dot_BRF>
+                                   <X_w_dot_BRF>87675.0</X_w_dot_BRF>
+                                   <Y_w_dot_BRF>87675.0</Y_w_dot_BRF>
+                                   <Z_w_dot_BRF>87675.0</Z_w_dot_BRF>
+                              </w_dot_BRF>
+                         </custom_WayPoint>
+                         <custom_WayPoint>
+                              <wayPointID>21133</wayPointID>
+                              <epoch>tomorrow</epoch>
+                              <q_ECI2BRF>
+                                   <Q1_q_ECI2BRF>83646.0</Q1_q_ECI2BRF>
+                                   <Q2_q_ECI2BRF>83646.0</Q2_q_ECI2BRF>
+                                   <Q3_q_ECI2BRF>83646.0</Q3_q_ECI2BRF>
+                                   <Q4_q_ECI2BRF>83646.0</Q4_q_ECI2BRF>
+                              </q_ECI2BRF>
+                              <w_BRF>
+                                   <X_w_BRF>2437859.0</X_w_BRF>
+                                   <Y_w_BRF>2437859.0</Y_w_BRF>
+                                   <Z_w_BRF>2437859.0</Z_w_BRF>
+                              </w_BRF>
+                              <w_dot_BRF>
+                                   <X_w_dot_BRF>9635343.0</X_w_dot_BRF>
+                                   <Y_w_dot_BRF>9635343.0</Y_w_dot_BRF>
+                                   <Z_w_dot_BRF>9635343.0</Z_w_dot_BRF>
+                              </w_dot_BRF>
+                         </custom_WayPoint>
+                    </custom_Parameters>
+                    <Manoeuvre>
+                         <manID>no room</manID>
+                         <execStartTime>16:07</execStartTime>
+                         <execStopTime>16:35</execStopTime>
+                         <initalAttitude>
+                              <Q1_intialAttitude>937467.0</Q1_intialAttitude>
+                              <Q2_intialAttitude>937467.0</Q2_intialAttitude>
+                              <Q3_intialAttitude>937467.0</Q3_intialAttitude>
+                              <Q4_intialAttitude>937467.0</Q4_intialAttitude>
+                         </initalAttitude>
+                         <finalAttitude>
+                              <Q1_finalAttitude>23746.0</Q1_finalAttitude>
+                              <Q2_finalAttitude>625235.0</Q2_finalAttitude>
+                              <Q3_finalAttitude>23746.0</Q3_finalAttitude>
+                              <Q4_finalAttitude>975.0</Q4_finalAttitude>
+                         </finalAttitude>
+                         <manType>ATTITUDE</manType>
+                    </Manoeuvre>
+                    <TPF>
+!TPF
+mmwm     C ñwññ     owoo    
+           M q 958
+rwrr                       ssws                       ttwt                      
+uuwu                       22224
+vvwv                                                                                                                                                                                                                                                          
+twww     E xxxr                 ryyy z z2zr                                      
+www34r   E xxx67r               y3r2 u z2z98r                                    
+</TPF>
+               </Attitude_Manoeuvre>
+          </Attitude_Manoeuvres>
+          <Orbital_Manoeuvres>
+               <Orbital_Manoeuvre>
+                    <orbManParams>2.1</orbManParams>
+                    <orbManParams>32.4</orbManParams>
+                    <orbManParams>18.33</orbManParams>
+                    <Manoeuvre>
+                         <manID>sunny</manID>
+                         <execStartTime>09:26</execStartTime>
+                         <execStopTime>11:30</execStopTime>
+                         <intialAttitude>
+                              <Q1_initialAttitude>63545.0</Q1_initialAttitude>
+                              <Q2_initialAttitude>63545.0</Q2_initialAttitude>
+                              <Q3_initialAttitude>63545.0</Q3_initialAttitude>
+                              <Q4_initialAttitude>63545.0</Q4_initialAttitude>
+                         </intialAttitude>
+                         <finalAttitude>
+                              <Q1_finalAttitude>17363.0</Q1_finalAttitude>
+                              <Q2_finalAttitude>9534.0</Q2_finalAttitude>
+                              <Q3_finalAttitude>17363.0</Q3_finalAttitude>
+                              <Q4_finalAttitude>8243.0</Q4_finalAttitude>
+                         </finalAttitude>
+                         <manType>ORBITAL</manType>
+                    </Manoeuvre>
+                    <TPF>
+!TPF
+mmm      S ñññ      ooo     
+           A q 987
+rrr                        sss                        ttt                       
+uuu                        22222
+vvv                                                                                                                                                                                                                                                           
+www      R xxx                  yyy  z z2z                                       
+www34    R xxx67                y32y z z2z98                                     
+prue     R p                    p    p prue                                      
+</TPF>
+                    <TPF>
+!TPF
+mmm      C ñññ      ooo     
+           M q 987
+rrr                        sss                        ttt                       
+uuu                        22222
+vvv                                                                                                                                                                                                                                                           
+www      R xxx                  yyy  z z2z                                       
+www34    R xxx67                y32y z z2z98                                     
+</TPF>
+               </Orbital_Manoeuvre>
+               <Orbital_Manoeuvre>
+                    <orbManParams>7.8</orbManParams>
+                    <orbManParams>0.9</orbManParams>
+                    <Manoeuvre>
+                         <manID>cloudy</manID>
+                         <execStartTime>09:26</execStartTime>
+                         <execStopTime>11:30</execStopTime>
+                         <intialAttitude>
+                              <Q1_initialAttitude>25484.0</Q1_initialAttitude>
+                              <Q2_initialAttitude>25484.0</Q2_initialAttitude>
+                              <Q3_initialAttitude>25484.0</Q3_initialAttitude>
+                              <Q4_initialAttitude>25484.0</Q4_initialAttitude>
+                         </intialAttitude>
+                         <finalAttitude>
+                              <Q1_finalAttitude>125353.0</Q1_finalAttitude>
+                              <Q2_finalAttitude>0.0</Q2_finalAttitude>
+                              <Q3_finalAttitude>0.0</Q3_finalAttitude>
+                              <Q4_finalAttitude>0.0</Q4_finalAttitude>
+                         </finalAttitude>
+                         <manType>ORBITAL</manType>
+                    </Manoeuvre>
+                    <TPF>
+!TPF
+mmm      S ñññ      ooo     
+           A q 987
+rrr                        sss                        ttt                       
+uuu                        22222
+vvv                                                                                                                                                                                                                                                           
+www      E xxx                  yyy  z z2z                                       
+www34    E xxx67                y32y 4 z2z98                                     
+</TPF>
+                    <TPF>
+!TPF
+taskname C setname  valueset
+           A s 987
+releasetime                earliestreleasetime        latestreleasetime         
+executiontime              22222
+vvv                                                                                                                                                                                                                                                           
+paramnam R xxx                  yyy  z z2z                                       
+www34    R paramValue           unit 7 z2z98                                     
+</TPF>
+               </Orbital_Manoeuvre>
+          </Orbital_Manoeuvres>
+     </ManLegs>
+</Manoeuvre_Plan>

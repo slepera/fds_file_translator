@@ -3,11 +3,17 @@ package plt.fds.filetranslator.format_manager;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.output.Format;
+import org.jdom2.output.LineSeparator;
 import org.jdom2.output.XMLOutputter;
+import org.jdom2.transform.JDOMResult;
+import org.jdom2.transform.JDOMSource;
+import plt.fds.filetranslator.Utilities;
 import plt.fds.filetranslator.data_models.TPFFileType;
 import plt.fds.filetranslator.data_models.*;
 
 import javax.xml.transform.*;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -19,12 +25,14 @@ public class ManoeuvrePlanXMLGenerator {
     public static void GenerateManoeuvreFileXML(ManoeuvrePlan mp) throws IOException, TransformerException {
 
         Document doc = new Document();
+
         /*
         Transformer t = TransformerFactory.newInstance().newTransformer();
         t.setOutputProperty(OutputKeys.INDENT, "yes");
         t.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "5");
 
          */
+
 
         doc.setRootElement(new Element("Manoeuvre_Plan"));
         Element header = new Element("Man_Plan_Header");
@@ -69,17 +77,20 @@ public class ManoeuvrePlanXMLGenerator {
         }
         doc.getRootElement().addContent(header);
         doc.getRootElement().addContent(manoeuvreFileXML);
-        XMLOutputter xmlOutputter = new XMLOutputter();
-        xmlOutputter.setFormat(Format.getPrettyFormat());
+
+        XMLOutputter xmlOutputter = new XMLOutputter(Utilities.getCustomizedFormat());
+        //xmlOutputter.setFormat(Format.getPrettyFormat()); //2-space indents
+        //xmlOutputter.setFormat(Format.getCompactFormat()); //the info in ONE line
         String europeanDatePattern = "dd.MM.yyyy  HH-mm-ss";
         DateTimeFormatter europeanDateFormatter = DateTimeFormatter.ofPattern(europeanDatePattern);
         File file = new File("./data/output/manoeuvre_plan_xml/manoeuvre_plan " + europeanDateFormatter.format(LocalDateTime.now()) + ".xml");
         FileOutputStream fos = new FileOutputStream(file);
+
         /*
         JDOMSource in = new JDOMSource(doc);
         JDOMResult out = new JDOMResult();
         ByteArrayOutputStream s = new ByteArrayOutputStream();
-        //t.transform(new DOMSource(doc),new StreamResult(s)) ;
+        t.transform(new DOMSource(doc),new StreamResult(s)) ;
         t.transform(in, out);
 
         xmlOutputter.output(out.getDocument(), fos);

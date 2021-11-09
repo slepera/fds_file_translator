@@ -1,14 +1,23 @@
 package plt.fds.filetranslator.format_manager;
 
+import org.jdom2.CDATA;
 import org.jdom2.Element;
+import org.jdom2.output.Format;
+import org.jdom2.output.LineSeparator;
 import plt.fds.filetranslator.Utilities;
 import plt.fds.filetranslator.data_models.TPFFileType;
 import plt.fds.filetranslator.data_models.TPF;
 import plt.fds.filetranslator.exceptions.OutOfRangeException;
 
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.text.Normalizer;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -59,6 +68,8 @@ public class TPFFileGenerator {
     public static Element CreateTPFText(TPF tpf, TPFFileType tpfFileType) {
 
         Element TPF = new Element("TPF");
+        Format format = Format.getPrettyFormat();
+        format.setTextMode(Format.TextMode.PRESERVE);
 
         String opth1 = "";
         switch (tpfFileType) {
@@ -67,7 +78,8 @@ public class TPFFileGenerator {
             case TP1: opth1 = "!TP1" + new_line; break;
             case TP2: opth1 = "!TP2" + new_line; break;
         }
-        TPF.setText(opth1);
+
+        TPF.setText(new_line + opth1);
 
 
         //String fileStructure = LeftJustify(FILE_FORMAT, FILE_TYPE) + " " + LeftJustify(SEQUENCE_COUNTER, COUNTER) + "\n";
@@ -82,7 +94,7 @@ public class TPFFileGenerator {
                     + Utilities.LeftJustify(tpf.tpfHeader.parameterValueSetName, PARAMETER_VALUE_SET_NAME) + new_line;
 
         /*
-        h2[0]Field not used by SCOS2000 by is inserted anyway as 11 empty spaces
+        h2[0]Field not used by SCOS2000 but is inserted anyway as 11 empty spaces
          */
             h2 = "           " + Utilities.LeftJustify(tpf.tpfHeader.destination.name().substring(0,1), DESTINATION) + " " + Utilities.LeftJustify(tpf.tpfHeader.source, SOURCE)
                     + " " + Utilities.LeftJustify(tpf.tpfHeader.nbRecords, NBRECORDS) + new_line;
@@ -117,6 +129,7 @@ public class TPFFileGenerator {
 
                 TPF.addContent(tpf_Body);
                 //System.out.println("Body: " + tpf_Body);
+
             }
 
         } catch(OutOfRangeException outOfRangeException) {
