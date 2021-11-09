@@ -4,6 +4,7 @@ import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.output.Format;
 import org.jdom2.output.XMLOutputter;
+import plt.fds.filetranslator.Utilities;
 import plt.fds.filetranslator.data_models.AttitudeFile;
 import plt.fds.filetranslator.data_models.FDSFileHeader;
 
@@ -73,8 +74,7 @@ public class AttitudeFileXMLGenerator {
         doc.getRootElement().addContent(attitudeFileXML);
 
 
-        XMLOutputter xmlOutputter = new XMLOutputter();
-        xmlOutputter.setFormat(Format.getPrettyFormat());
+        XMLOutputter xmlOutputter = new XMLOutputter(Utilities.getCustomizedFormat());
 
         String europeanDatePattern = "dd.MM.yyyy  HH-mm-ss";
         DateTimeFormatter europeanDateFormatter = DateTimeFormatter.ofPattern(europeanDatePattern);
