@@ -746,5 +746,74 @@ public class DBSimulator {
 
     }
 
+    public static FDSReport getFDSReport() {
+
+        FDSReport fdsReport = new FDSReport();
+
+        fdsReport.systemReportType.reportFileName = "file name";
+        fdsReport.systemReportType.glbReportHeaderType.addkeyParamID("hola");
+        fdsReport.systemReportType.glbReportHeaderType.addkeyParamID("adios");
+        fdsReport.systemReportType.glbReportHeaderType.startTimestamp = "vacaciones";
+        fdsReport.systemReportType.glbReportHeaderType.stopTimestamp = "finestra";
+        fdsReport.systemReportType.glbReportHeaderType.missionID = "7464";
+        fdsReport.systemReportType.glbReportHeaderType.satelliteID = EnumSatID.S02;
+        fdsReport.systemReportType.glbReportHeaderType.originatorID = "coche";
+        fdsReport.systemReportType.glbReportHeaderType.originatorRole = "shfyf";
+        fdsReport.systemReportType.glbReportHeaderType.creationTime = "12:11";
+        fdsReport.systemReportType.glbReportHeaderType.subjectType = "euro";
+        fdsReport.systemReportType.glbReportHeaderType.spare = "tiempo";
+        fdsReport.systemReportType.glbReportHeaderType.signalAim ="avión";
+
+        fdsReport.systemReportType.addkeyParamBodyType(new KeyParamBodyType());
+        fdsReport.systemReportType.keyParamBodyType.get(0).addkeyParamTimestamp("denuevo");
+        fdsReport.systemReportType.keyParamBodyType.get(0).addkeyParamTimestamp("again");
+        fdsReport.systemReportType.keyParamBodyType.get(0).addkeyParamTimestamp("nuovo");
+        fdsReport.systemReportType.keyParamBodyType.get(0).addkeyParamValue(7465.);
+        fdsReport.systemReportType.keyParamBodyType.get(0).addkeyParamValue(745.73);
+        fdsReport.systemReportType.keyParamBodyType.get(0).addkeyParamEngineeringValue("no sé");
+        fdsReport.systemReportType.keyParamBodyType.get(0).reportMessage = "silla";
+
+        fdsReport.systemReportType.addkeyParamBodyType(new KeyParamBodyType());
+        fdsReport.systemReportType.keyParamBodyType.get(1).addkeyParamTimestamp("final");
+        fdsReport.systemReportType.keyParamBodyType.get(1).addkeyParamTimestamp("the end");
+        fdsReport.systemReportType.keyParamBodyType.get(1).addkeyParamValue(947.5);
+        fdsReport.systemReportType.keyParamBodyType.get(1).addkeyParamValue(00.7);
+        fdsReport.systemReportType.keyParamBodyType.get(1).addkeyParamEngineeringValue("idea");
+        fdsReport.systemReportType.keyParamBodyType.get(1).addkeyParamEngineeringValue("luz");
+        fdsReport.systemReportType.keyParamBodyType.get(1).addkeyParamEngineeringValue("noche");
+        fdsReport.systemReportType.keyParamBodyType.get(1).reportMessage = "sofá";
+
+        return fdsReport;
+
+    }
+
+    public static FDSLog getFDSLog() {
+
+        FDSLog fdsLog = new FDSLog();
+
+        fdsLog.logType.logName = "file";
+        fdsLog.logType.addLogEntryType(new LogEntryType());
+        fdsLog.logType.logEntryType.get(0).logTimestamp = "18:08";
+        fdsLog.logType.logEntryType.get(0).severityLevel = "high";
+        fdsLog.logType.logEntryType.get(0).processName = "processing";
+        fdsLog.logType.logEntryType.get(0).logMessage = "fine";
+        fdsLog.logType.logEntryType.get(0).eventID = "packed";
+        fdsLog.logType.addLogEntryType(new LogEntryType());
+        fdsLog.logType.logEntryType.get(1).logTimestamp = "18:00";
+        fdsLog.logType.logEntryType.get(1).severityLevel = "low";
+        fdsLog.logType.logEntryType.get(1).processName = "advance";
+        fdsLog.logType.logEntryType.get(1).logMessage = "bad";
+        fdsLog.logType.logEntryType.get(1).eventID = "empty";
+        fdsLog.logType.addLogEntryType(new LogEntryType());
+        fdsLog.logType.logEntryType.get(2).logTimestamp = "12:56";
+        fdsLog.logType.logEntryType.get(2).severityLevel = "medium";
+        fdsLog.logType.logEntryType.get(2).processName = "beginner";
+        fdsLog.logType.logEntryType.get(2).logMessage = "regular";
+        fdsLog.logType.logEntryType.get(2).eventID = "nobody";
+
+
+        return fdsLog;
+    }
+
 
 }
