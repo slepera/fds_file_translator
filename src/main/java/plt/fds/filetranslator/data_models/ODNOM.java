@@ -16,19 +16,4 @@ public class ODNOM {
         this.odnomRecord.add(odnomRecord);
     }
 
-    public FDSFileHeader getFdsFileHeader() {
-        return fdsFileHeader;
-    }
-
-    public void setFdsFileHeader(FDSFileHeader fdsFileHeader) {
-        this.fdsFileHeader = fdsFileHeader;
-    }
-
-    public ArrayList<ODNOMRecord> getOdnomRecord() {
-        return odnomRecord;
-    }
-
-    public void setOdnomRecord(ArrayList<ODNOMRecord> odnomRecord) {
-        this.odnomRecord = odnomRecord;
-    }
 }

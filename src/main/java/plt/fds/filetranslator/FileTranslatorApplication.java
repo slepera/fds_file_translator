@@ -17,8 +17,8 @@ FileTranslatorApplication {
 	public static void main(String[] args) throws IOException, TransformerException, OutOfRangeException {
 		SpringApplication.run(FileTranslatorApplication.class, args);
 
-		PassPlan passPlan = DBSimulator.getPassPlan();
-		PassPlanXMLGenerator.GeneratePassPlanXML(passPlan);
+		//PassPlan passPlan = DBSimulator.getPassPlan();
+		//PassPlanXMLGenerator.GeneratePassPlanXML(passPlan);
 
 		//AttitudeFile attitudeFile = DBSimulator.getAttitudeFile();
 		//AttitudeFileXMLGenerator.GenerateAttitudeFileXML(attitudeFile);
@@ -44,8 +44,11 @@ FileTranslatorApplication {
 		//FDSReport fdsReport = DBSimulator.getFDSReport();
 		//FDSReportGenerator.CreateFDSReportFile(fdsReport);
 
-		FDSLog fdsLog = DBSimulator.getFDSLog();
-		FDSLogGenerator.CreateFDSLogFile(fdsLog);
+		//FDSLog fdsLog = DBSimulator.getFDSLog();
+		//FDSLogGenerator.CreateFDSLogFile(fdsLog);
+
+		ProcessedAttitude processedAttitude = DBSimulator.getProcessedAttitude();
+		ProcessedAttitudeGenerator.CreateProcessedOrbitsFile(processedAttitude);
 
 	}
 

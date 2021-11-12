@@ -7,7 +7,7 @@ public class SystemReportType {
     //public StrReportFileName reportFileName;
     public String reportFileName;
     public GLBReportHeaderType glbReportHeaderType;
-    public transient ArrayList<KeyParamBodyType> keyParamBodyType; //transient ignore the variable for the JSON
+    public ArrayList<KeyParamBodyType> keyParamBodyType;
 
     public SystemReportType() {
         reportFileName = new String();

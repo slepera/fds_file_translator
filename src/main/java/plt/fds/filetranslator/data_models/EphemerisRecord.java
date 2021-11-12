@@ -12,28 +12,4 @@ public class EphemerisRecord {
         this.velocity = new Vector3DType();
     }
 
-    public Double getMjdEpoch() {
-        return mjdEpoch;
-    }
-
-    public void setMjdEpoch(Double mjdEpoch) {
-        this.mjdEpoch = mjdEpoch;
-    }
-
-    public Vector3DType getPosition() {
-        return position;
-    }
-
-    public void setPosition(Vector3DType position) {
-        this.position = position;
-    }
-
-    public Vector3DType getVelocity() {
-        return velocity;
-    }
-
-    public void setVelocity(Vector3DType velocity) {
-        this.velocity = velocity;
-    }
-
 }

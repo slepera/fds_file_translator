@@ -1,6 +1,7 @@
 package plt.fds.filetranslator.format_manager;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import plt.fds.filetranslator.Utilities;
 import plt.fds.filetranslator.data_models.FDSReport;
 import plt.fds.filetranslator.data_models.SystemReportType;
@@ -10,16 +11,21 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Modifier;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class FDSReportGenerator {
+       /*
+    the structure of FDSReport to be confirmed
+     */
 
     static String new_line = "\n";
 
     public static String BuildFDSReportHeader (SystemReportType systemReportType) {
 
-        Gson gson = new Gson();
+        //Gson gson = new Gson(); //exclude the transient fields
+        Gson gson = new GsonBuilder().excludeFieldsWithModifiers(Modifier.TRANSIENT).create();
         String jsonObj = gson.toJson(systemReportType);
 
         return jsonObj;
@@ -32,42 +38,43 @@ public class FDSReportGenerator {
         File fdsrecords_file = new File ("./data/output/FDS_Records_file/fdsRecord " + europeanDateFormatter.format(LocalDateTime.now()) + ".txt");
         BufferedWriter fdsrecord_bw = new BufferedWriter(new FileWriter(fdsrecords_file));
 
-        String header = BuildFDSReportHeader(fdsReport.systemReportType) + new_line + new_line + new_line;
+        //class FDSReport == class SystemReportType
+        String header = BuildFDSReportHeader(fdsReport) + new_line + new_line + new_line;
         fdsrecord_bw.write(header);
 
         //String body = "";
-        for (int i = 0; i < fdsReport.systemReportType.keyParamBodyType.size(); i++) {
+        for (int i = 0; i < fdsReport.keyParamBodyType.size(); i++) {
             String body = "";
             String paramTimestamp;
-            for (int j = 0; j < fdsReport.systemReportType.keyParamBodyType.get(i).keyParamTimestamp.size(); j++) {
-                if (j == (fdsReport.systemReportType.keyParamBodyType.get(i).keyParamTimestamp.size()) -1) {
-                    paramTimestamp = fdsReport.systemReportType.keyParamBodyType.get(i).keyParamTimestamp.get(j) + " ";
+            for (int j = 0; j < fdsReport.keyParamBodyType.get(i).keyParamTimestamp.size(); j++) {
+                if (j == (fdsReport.keyParamBodyType.get(i).keyParamTimestamp.size()) -1) {
+                    paramTimestamp = fdsReport.keyParamBodyType.get(i).keyParamTimestamp.get(j) + " ";
                 } else {
-                    paramTimestamp = fdsReport.systemReportType.keyParamBodyType.get(i).keyParamTimestamp.get(j) + "|";
+                    paramTimestamp = fdsReport.keyParamBodyType.get(i).keyParamTimestamp.get(j) + "|";
                 }
                 body += paramTimestamp;
             }
 
             String paramValue;
-            for (int j = 0; j < fdsReport.systemReportType.keyParamBodyType.get(i).keyParamValue.size(); j++) {
-                if (j == (fdsReport.systemReportType.keyParamBodyType.get(i).keyParamValue.size()) -1) {
-                    paramValue = fdsReport.systemReportType.keyParamBodyType.get(i).keyParamValue.get(j) + " ";
+            for (int j = 0; j < fdsReport.keyParamBodyType.get(i).keyParamValue.size(); j++) {
+                if (j == (fdsReport.keyParamBodyType.get(i).keyParamValue.size()) -1) {
+                    paramValue = fdsReport.keyParamBodyType.get(i).keyParamValue.get(j) + " ";
                 } else {
-                    paramValue = fdsReport.systemReportType.keyParamBodyType.get(i).keyParamValue.get(j) + "|";
+                    paramValue = fdsReport.keyParamBodyType.get(i).keyParamValue.get(j) + "|";
                 }
                 body += paramValue;
             }
 
             String paramEngineeringValue;
-            for (int j = 0; j < fdsReport.systemReportType.keyParamBodyType.get(i).keyParamEngineeringValue.size(); j++) {
-                if (j == (fdsReport.systemReportType.keyParamBodyType.get(i).keyParamEngineeringValue.size()) -1) {
-                    paramEngineeringValue = fdsReport.systemReportType.keyParamBodyType.get(i).keyParamEngineeringValue.get(j) + " ";
+            for (int j = 0; j < fdsReport.keyParamBodyType.get(i).keyParamEngineeringValue.size(); j++) {
+                if (j == (fdsReport.keyParamBodyType.get(i).keyParamEngineeringValue.size()) -1) {
+                    paramEngineeringValue = fdsReport.keyParamBodyType.get(i).keyParamEngineeringValue.get(j) + " ";
                 } else {
-                    paramEngineeringValue = fdsReport.systemReportType.keyParamBodyType.get(i).keyParamEngineeringValue.get(j) + "|";
+                    paramEngineeringValue = fdsReport.keyParamBodyType.get(i).keyParamEngineeringValue.get(j) + "|";
                 }
                 body += paramEngineeringValue;
             }
-            body += fdsReport.systemReportType.keyParamBodyType.get(i).reportMessage + new_line;
+            body += fdsReport.keyParamBodyType.get(i).reportMessage + new_line;
             fdsrecord_bw.write(body);
         }
 

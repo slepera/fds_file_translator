@@ -589,12 +589,12 @@ public class DBSimulator {
         odstp.odstpRecord.get(0).sunDirection.y = 12.873;
         odstp.odstpRecord.get(0).sunDirection.z = 85746.465109;
         odstp.odstpRecord.get(0).eclipseFlag = 2;
-        odstp.odstpRecord.get(0).keplerianElements.setSemiMajorAxis(0.856444);
-        odstp.odstpRecord.get(0).keplerianElements.setEccentricity(985.2283);
-        odstp.odstpRecord.get(0).keplerianElements.setInclination(234.856);
-        odstp.odstpRecord.get(0).keplerianElements.setRaan(00.03243);
-        odstp.odstpRecord.get(0).keplerianElements.setArgOfPerigee(1234.37);
-        odstp.odstpRecord.get(0).keplerianElements.setTrueAnomaly(0.85554);
+        odstp.odstpRecord.get(0).keplerianElements.semiMajorAxis = 0.856444;
+        odstp.odstpRecord.get(0).keplerianElements.eccentricity = (985.2283);
+        odstp.odstpRecord.get(0).keplerianElements.inclination = (234.856);
+        odstp.odstpRecord.get(0).keplerianElements.raan = (00.03243);
+        odstp.odstpRecord.get(0).keplerianElements.argOfPerigee = (1234.37);
+        odstp.odstpRecord.get(0).keplerianElements.trueAnomaly = (0.85554);
         odstp.odstpRecord.get(0).orbitNumber = "orbitnumber";
         odstp.odstpRecord.get(0).mjdEpoch = 123456.7897;
         odstp.odstpRecord.get(0).position.x = 76596.8677;
@@ -609,12 +609,12 @@ public class DBSimulator {
         odstp.odstpRecord.get(1).sunDirection.y = 635232;
         odstp.odstpRecord.get(1).sunDirection.z = 867565;
         odstp.odstpRecord.get(1).eclipseFlag = 1;
-        odstp.odstpRecord.get(1).keplerianElements.setSemiMajorAxis(646353.);
-        odstp.odstpRecord.get(1).keplerianElements.setEccentricity(9345.);
-        odstp.odstpRecord.get(1).keplerianElements.setInclination(43346.6);
-        odstp.odstpRecord.get(1).keplerianElements.setRaan(00.03243);
-        odstp.odstpRecord.get(1).keplerianElements.setArgOfPerigee(1234.3);
-        odstp.odstpRecord.get(1).keplerianElements.setTrueAnomaly(0.85556);
+        odstp.odstpRecord.get(1).keplerianElements.semiMajorAxis = (646353.);
+        odstp.odstpRecord.get(1).keplerianElements.eccentricity = (9345.);
+        odstp.odstpRecord.get(1).keplerianElements.inclination = (43346.6);
+        odstp.odstpRecord.get(1).keplerianElements.raan = (00.03243);
+        odstp.odstpRecord.get(1).keplerianElements.argOfPerigee = (1234.3);
+        odstp.odstpRecord.get(1).keplerianElements.trueAnomaly = (0.85556);
         odstp.odstpRecord.get(1).orbitNumber = "orbitnumber";
         odstp.odstpRecord.get(1).mjdEpoch = 56.353;
         odstp.odstpRecord.get(1).position.x = 765968674.98;
@@ -652,12 +652,12 @@ public class DBSimulator {
         odnom.odnomRecord.get(0).sunDirection.y =(12.873);
         odnom.odnomRecord.get(0).sunDirection.z =(857464651.0900);
         odnom.odnomRecord.get(0).eclipseFlag = 200;
-        odnom.odnomRecord.get(0).keplerianElements.setSemiMajorAxis(0.856444);
-        odnom.odnomRecord.get(0).keplerianElements.setEccentricity(985.2283);
-        odnom.odnomRecord.get(0).keplerianElements.setInclination(234.8506);
-        odnom.odnomRecord.get(0).keplerianElements.setRaan(00.03243);
-        odnom.odnomRecord.get(0).keplerianElements.setArgOfPerigee(1234.3);
-        odnom.odnomRecord.get(0).keplerianElements.setTrueAnomaly(0.855564);
+        odnom.odnomRecord.get(0).keplerianElements.semiMajorAxis = (0.856444);
+        odnom.odnomRecord.get(0).keplerianElements.eccentricity = (985.2283);
+        odnom.odnomRecord.get(0).keplerianElements.inclination = (234.8506);
+        odnom.odnomRecord.get(0).keplerianElements.raan = (00.03243);
+        odnom.odnomRecord.get(0).keplerianElements.argOfPerigee = (1234.3);
+        odnom.odnomRecord.get(0).keplerianElements.trueAnomaly = (0.855564);
         odnom.odnomRecord.get(0).orbitNumber = "orbitnumber";
         odnom.odnomRecord.get(0).mjdEpoch = 54.98;
         odnom.odnomRecord.get(0).position.x =(765968674.9800);
@@ -671,12 +671,12 @@ public class DBSimulator {
         odnom.odnomRecord.get(1).sunDirection.y =(635232);
         odnom.odnomRecord.get(1).sunDirection.z =(867565);
         odnom.odnomRecord.get(1).eclipseFlag = 100;
-        odnom.odnomRecord.get(1).keplerianElements.setSemiMajorAxis(6463535.55);
-        odnom.odnomRecord.get(1).keplerianElements.setEccentricity(9345.);
-        odnom.odnomRecord.get(1).keplerianElements.setInclination(43346.6);
-        odnom.odnomRecord.get(1).keplerianElements.setRaan(00.03243);
-        odnom.odnomRecord.get(1).keplerianElements.setArgOfPerigee(1234.3);
-        odnom.odnomRecord.get(1).keplerianElements.setTrueAnomaly(0.855564);
+        odnom.odnomRecord.get(1).keplerianElements.semiMajorAxis = (6463535.55);
+        odnom.odnomRecord.get(1).keplerianElements.eccentricity = (9345.);
+        odnom.odnomRecord.get(1).keplerianElements.inclination = (43346.6);
+        odnom.odnomRecord.get(1).keplerianElements.raan = (00.03243);
+        odnom.odnomRecord.get(1).keplerianElements.argOfPerigee = (1234.3);
+        odnom.odnomRecord.get(1).keplerianElements.trueAnomaly = (0.855564);
         odnom.odnomRecord.get(1).orbitNumber = "orbitnumber";
         odnom.odnomRecord.get(1).mjdEpoch = 56.353;
         odnom.odnomRecord.get(1).position.x =(765968674.9800);
@@ -750,38 +750,38 @@ public class DBSimulator {
 
         FDSReport fdsReport = new FDSReport();
 
-        fdsReport.systemReportType.reportFileName = "file name";
-        fdsReport.systemReportType.glbReportHeaderType.addkeyParamID("hola");
-        fdsReport.systemReportType.glbReportHeaderType.addkeyParamID("adios");
-        fdsReport.systemReportType.glbReportHeaderType.startTimestamp = "vacaciones";
-        fdsReport.systemReportType.glbReportHeaderType.stopTimestamp = "finestra";
-        fdsReport.systemReportType.glbReportHeaderType.missionID = "7464";
-        fdsReport.systemReportType.glbReportHeaderType.satelliteID = EnumSatID.S02;
-        fdsReport.systemReportType.glbReportHeaderType.originatorID = "coche";
-        fdsReport.systemReportType.glbReportHeaderType.originatorRole = "shfyf";
-        fdsReport.systemReportType.glbReportHeaderType.creationTime = "12:11";
-        fdsReport.systemReportType.glbReportHeaderType.subjectType = "euro";
-        fdsReport.systemReportType.glbReportHeaderType.spare = "tiempo";
-        fdsReport.systemReportType.glbReportHeaderType.signalAim ="avión";
+        fdsReport.reportFileName = "file name";
+        fdsReport.glbReportHeaderType.addkeyParamID("hola");
+        fdsReport.glbReportHeaderType.addkeyParamID("adios");
+        fdsReport.glbReportHeaderType.startTimestamp = "vacaciones";
+        fdsReport.glbReportHeaderType.stopTimestamp = "finestra";
+        fdsReport.glbReportHeaderType.missionID = "7464";
+        fdsReport.glbReportHeaderType.satelliteID = EnumSatID.S02;
+        fdsReport.glbReportHeaderType.originatorID = "coche";
+        fdsReport.glbReportHeaderType.originatorRole = "shfyf";
+        fdsReport.glbReportHeaderType.creationTime = "12:11";
+        fdsReport.glbReportHeaderType.subjectType = "euro";
+        fdsReport.glbReportHeaderType.spare = "tiempo";
+        fdsReport.glbReportHeaderType.signalAim ="avión";
 
-        fdsReport.systemReportType.addkeyParamBodyType(new KeyParamBodyType());
-        fdsReport.systemReportType.keyParamBodyType.get(0).addkeyParamTimestamp("denuevo");
-        fdsReport.systemReportType.keyParamBodyType.get(0).addkeyParamTimestamp("again");
-        fdsReport.systemReportType.keyParamBodyType.get(0).addkeyParamTimestamp("nuovo");
-        fdsReport.systemReportType.keyParamBodyType.get(0).addkeyParamValue(7465.);
-        fdsReport.systemReportType.keyParamBodyType.get(0).addkeyParamValue(745.73);
-        fdsReport.systemReportType.keyParamBodyType.get(0).addkeyParamEngineeringValue("no sé");
-        fdsReport.systemReportType.keyParamBodyType.get(0).reportMessage = "silla";
+        fdsReport.addkeyParamBodyType(new KeyParamBodyType());
+        fdsReport.keyParamBodyType.get(0).addkeyParamTimestamp("denuevo");
+        fdsReport.keyParamBodyType.get(0).addkeyParamTimestamp("again");
+        fdsReport.keyParamBodyType.get(0).addkeyParamTimestamp("nuovo");
+        fdsReport.keyParamBodyType.get(0).addkeyParamValue(7465.);
+        fdsReport.keyParamBodyType.get(0).addkeyParamValue(745.73);
+        fdsReport.keyParamBodyType.get(0).addkeyParamEngineeringValue("no sé");
+        fdsReport.keyParamBodyType.get(0).reportMessage = "silla";
 
-        fdsReport.systemReportType.addkeyParamBodyType(new KeyParamBodyType());
-        fdsReport.systemReportType.keyParamBodyType.get(1).addkeyParamTimestamp("final");
-        fdsReport.systemReportType.keyParamBodyType.get(1).addkeyParamTimestamp("the end");
-        fdsReport.systemReportType.keyParamBodyType.get(1).addkeyParamValue(947.5);
-        fdsReport.systemReportType.keyParamBodyType.get(1).addkeyParamValue(00.7);
-        fdsReport.systemReportType.keyParamBodyType.get(1).addkeyParamEngineeringValue("idea");
-        fdsReport.systemReportType.keyParamBodyType.get(1).addkeyParamEngineeringValue("luz");
-        fdsReport.systemReportType.keyParamBodyType.get(1).addkeyParamEngineeringValue("noche");
-        fdsReport.systemReportType.keyParamBodyType.get(1).reportMessage = "sofá";
+        fdsReport.addkeyParamBodyType(new KeyParamBodyType());
+        fdsReport.keyParamBodyType.get(1).addkeyParamTimestamp("final");
+        fdsReport.keyParamBodyType.get(1).addkeyParamTimestamp("the end");
+        fdsReport.keyParamBodyType.get(1).addkeyParamValue(947.5);
+        fdsReport.keyParamBodyType.get(1).addkeyParamValue(00.7);
+        fdsReport.keyParamBodyType.get(1).addkeyParamEngineeringValue("idea");
+        fdsReport.keyParamBodyType.get(1).addkeyParamEngineeringValue("luz");
+        fdsReport.keyParamBodyType.get(1).addkeyParamEngineeringValue("noche");
+        fdsReport.keyParamBodyType.get(1).reportMessage = "sofá";
 
         return fdsReport;
 
@@ -791,28 +791,69 @@ public class DBSimulator {
 
         FDSLog fdsLog = new FDSLog();
 
-        fdsLog.logType.logName = "file";
-        fdsLog.logType.addLogEntryType(new LogEntryType());
-        fdsLog.logType.logEntryType.get(0).logTimestamp = "18:08";
-        fdsLog.logType.logEntryType.get(0).severityLevel = "high";
-        fdsLog.logType.logEntryType.get(0).processName = "processing";
-        fdsLog.logType.logEntryType.get(0).logMessage = "fine";
-        fdsLog.logType.logEntryType.get(0).eventID = "packed";
-        fdsLog.logType.addLogEntryType(new LogEntryType());
-        fdsLog.logType.logEntryType.get(1).logTimestamp = "18:00";
-        fdsLog.logType.logEntryType.get(1).severityLevel = "low";
-        fdsLog.logType.logEntryType.get(1).processName = "advance";
-        fdsLog.logType.logEntryType.get(1).logMessage = "bad";
-        fdsLog.logType.logEntryType.get(1).eventID = "empty";
-        fdsLog.logType.addLogEntryType(new LogEntryType());
-        fdsLog.logType.logEntryType.get(2).logTimestamp = "12:56";
-        fdsLog.logType.logEntryType.get(2).severityLevel = "medium";
-        fdsLog.logType.logEntryType.get(2).processName = "beginner";
-        fdsLog.logType.logEntryType.get(2).logMessage = "regular";
-        fdsLog.logType.logEntryType.get(2).eventID = "nobody";
+        fdsLog.logName = "file";
+        fdsLog.addLogEntryType(new LogEntryType());
+        fdsLog.logEntryType.get(0).logTimestamp = "18:08";
+        fdsLog.logEntryType.get(0).severityLevel = "high";
+        fdsLog.logEntryType.get(0).processName = "processing";
+        fdsLog.logEntryType.get(0).logMessage = "fine";
+        fdsLog.logEntryType.get(0).eventID = "packed";
+        fdsLog.addLogEntryType(new LogEntryType());
+        fdsLog.logEntryType.get(1).logTimestamp = "18:00";
+        fdsLog.logEntryType.get(1).severityLevel = "low";
+        fdsLog.logEntryType.get(1).processName = "advance";
+        fdsLog.logEntryType.get(1).logMessage = "bad";
+        fdsLog.logEntryType.get(1).eventID = "empty";
+        fdsLog.addLogEntryType(new LogEntryType());
+        fdsLog.logEntryType.get(2).logTimestamp = "12:56";
+        fdsLog.logEntryType.get(2).severityLevel = "medium";
+        fdsLog.logEntryType.get(2).processName = "beginner";
+        fdsLog.logEntryType.get(2).logMessage = "regular";
+        fdsLog.logEntryType.get(2).eventID = "nobody";
 
 
         return fdsLog;
+    }
+
+    public static ProcessedAttitude getProcessedAttitude() {
+
+        ProcessedAttitude processedAttitude = new ProcessedAttitude();
+
+        processedAttitude.fdsFileHeader.referenceFrame = "hola";
+        processedAttitude.fdsFileHeader.principalPlane = "adiós";
+        processedAttitude.fdsFileHeader.columnLabelsAndUnits = "bye";
+        processedAttitude.fdsFileHeader.signalID = "hi";
+        processedAttitude.fdsFileHeader.recipientID = "see";
+        processedAttitude.fdsFileHeader.validityTimeWindow = "soon";
+        processedAttitude.fdsFileHeader.missionID = "royal";
+        processedAttitude.fdsFileHeader.satelliteID = EnumSatID.S01;
+        processedAttitude.fdsFileHeader.originatorID = "lunch";
+        processedAttitude.fdsFileHeader.originatorRole = "dinner";
+        processedAttitude.fdsFileHeader.creationTime = "liability";
+        processedAttitude.fdsFileHeader.subjectType = "desayuno";
+        processedAttitude.fdsFileHeader.spare = "meghan";
+        processedAttitude.fdsFileHeader.signalAim = "finish";
+
+        processedAttitude.addAttitudeRecords(new AttitudeRecords());
+        processedAttitude.attitudeRecords.get(0).mjdEpoch = 6374.9;
+        processedAttitude.attitudeRecords.get(0).quaternion.q1 = 6454.2;
+        processedAttitude.attitudeRecords.get(0).quaternion.q2 = 1827.96;
+        processedAttitude.attitudeRecords.get(0).quaternion.q3 = 6454.2;
+        processedAttitude.attitudeRecords.get(0).quaternion.q4 = 3625.7;
+        processedAttitude.attitudeRecords.get(0).angularVelocity.x = 243.6;
+        processedAttitude.attitudeRecords.get(0).angularVelocity.y = 98.6;
+        processedAttitude.attitudeRecords.get(0).angularVelocity.z = 55.2;
+        processedAttitude.addAttitudeRecords(new AttitudeRecords());
+        processedAttitude.attitudeRecords.get(1).mjdEpoch = 8374.;
+        processedAttitude.attitudeRecords.get(1).quaternion.q1 = 242.5;
+        processedAttitude.attitudeRecords.get(1).quaternion.q2 = 64542.8;
+        processedAttitude.attitudeRecords.get(1).quaternion.q3 = 6454.2;
+        processedAttitude.attitudeRecords.get(1).quaternion.q4 = 3625.7;
+        processedAttitude.attitudeRecords.get(1).angularVelocity.x = 967.1;
+        processedAttitude.attitudeRecords.get(1).angularVelocity.y = 98.6;
+        processedAttitude.attitudeRecords.get(1).angularVelocity.z = 333.4;
+
+        return processedAttitude;
     }
 
 

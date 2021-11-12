@@ -20,4 +20,5 @@ public class GLBReportHeaderType extends HeaderType {
         this.keyParamID.add(keyParamID);
     }
 
+
 }

@@ -16,19 +16,4 @@ public class ODSTP {
         this.odstpRecord.add(odstpRecord);
     }
 
-    public FDSFileHeader getFdsFileHeader() {
-        return fdsFileHeader;
-    }
-
-    public void setFdsFileHeader(FDSFileHeader fdsFileHeader) {
-        this.fdsFileHeader = fdsFileHeader;
-    }
-
-    public ArrayList<ODSTPRecord> getOdstpRecord() {
-        return odstpRecord;
-    }
-
-    public void setOdstpRecord(ArrayList<ODSTPRecord> odstpRecord) {
-        this.odstpRecord = odstpRecord;
-    }
 }

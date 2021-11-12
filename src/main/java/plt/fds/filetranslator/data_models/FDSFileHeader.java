@@ -14,28 +14,4 @@ public class FDSFileHeader extends SignalHeaderType{
         this.columnLabelsAndUnits = new String();
     }
 
-    public String getReferenceFrame() {
-        return referenceFrame;
-    }
-
-    public void setReferenceFrame(String referenceFrame) {
-        this.referenceFrame = referenceFrame;
-    }
-
-    public String getPrincipalPlane() {
-        return principalPlane;
-    }
-
-    public void setPrincipalPlane(String principalPlane) {
-        this.principalPlane = principalPlane;
-    }
-
-    public String getColumnLabelsAndUnits() {
-        return columnLabelsAndUnits;
-    }
-
-    public void setColumnLabelsAndUnits(String columnLabelsAndUnits) {
-        this.columnLabelsAndUnits = columnLabelsAndUnits;
-    }
-
 }

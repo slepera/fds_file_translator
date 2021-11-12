@@ -14,28 +14,4 @@ public class SignalHeaderType extends HeaderType{
         this.validityTimeWindow = new String();
     }
 
-    public String getSignalID() {
-        return signalID;
-    }
-
-    public void setSignalID(String signalID) {
-        this.signalID = signalID;
-    }
-
-    public String getRecipientID() {
-        return recipientID;
-    }
-
-    public void setRecipientID(String recipientID) {
-        this.recipientID = recipientID;
-    }
-
-    public String getValidityTimeWindow() {
-        return validityTimeWindow;
-    }
-
-    public void setValidityTimeWindow(String validityTimeWindow) {
-        this.validityTimeWindow = validityTimeWindow;
-    }
-
 }

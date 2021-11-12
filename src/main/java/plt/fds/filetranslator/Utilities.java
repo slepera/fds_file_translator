@@ -49,7 +49,7 @@ public class Utilities {
 
     public static Format getCustomizedFormat() {
         Format f = Format.getRawFormat();
-        f.setIndent("     ");
+        f.setIndent("\t");
         f.setTextMode(Format.TextMode.TRIM_FULL_WHITE);
         f.setOmitDeclaration(true);
         return f;
